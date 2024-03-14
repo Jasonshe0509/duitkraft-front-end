@@ -1,137 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
 }
 
-.app-container {
-    background: #f3f3ff;
-    min-height: 940px;
-    width: 100%;
-    height: 100vh;
+h1 {
+    font-size: 32px;
+    font-family: 'Noto Sans Khojki';
 }
 
-.circle {
-    width: 450px;
-    height: 450px;
-    background: linear-gradient(to bottom, #fa39ad 40%, #fe6c4c 50%);
-    filter: blur(120px);
+h2 {
+    font-size: 24px;
+    font-family: 'Noto Sans Khojki';
 }
 
-.red {
-    background: #fe624d;
-    border: 2px solid #ee5e4b;
+h3 {
+    font-size: 18px;
+    font-family: 'Noto Sans Khojki';
 }
 
-.yellow {
-    background: #FFC432;
-    border: 2px solid #F2BD3A;
+p {
+    font-size: 15px;
+    font-family: 'Ubuntu';
 }
-
-.green {
-    background: #5BDE47;
-    border: 2px solid #5FC651;
-}
-
-.app-color-yellow {
-    color: #FFA41D;
-}
-
-.app-color-black {
-    color: #292B48;
-}
-
-.app-color-gray {
-    color: #877F95;
-}
-
-.app-color-lavendar {
-    color: #9EA1CF;
-}
-
-.app-color-pink {
-    color: #FB28CD;
-}
-
-.app-bg-lavendar {
-    background: #D5D7FF;
-
-}
-
-.app-bg-light-white {
-    background: #F7F8FF;
-}
-
-.app-bg-light-white-2 {
-    background: #EFF2FC;
-}
-
-.app-color-dribbble {
-    color: #E04B85;
-}
-
-.app-shadow {
-    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.03);
-}
-
-.app-title {
-    background: linear-gradient(45deg, #fb28cd, #7c65d7);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
-span.active {
-    position: relative;
-    color: #292b48;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-span.active::after {
-    content: '';
-    width: 200%;
-    height: 2px;
-    background: #292b48;
-    position: absolute;
-    bottom: -20px;
-}
-
-.switch-checkbox {
-    display: none;
-}
-
-.switch {
-    position: relative;
-}
-
-.switch-bg {
-    height: 24px;
-    width: 44px;
-    background: #fb28cd;
-    border-radius: 15px;
-}
-
-.switch-indicator {
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: #fb28cd;
-    border: 5px solid white;
-    border-radius: 50%;
-    top: 2px;
-    left: 2px;
-    transition: .2s ease-out;
-}
-
-.switch-checkbox:checked~.switch-indicator {
-    transform: translateX(100%);
-}
-
-.switch-checkbox:checked~.switch-bg {
-    background: #e9ecfa;
-}
-
 .bg{
     background-image:url(../assets/dashboard_bg.png);
 
@@ -146,53 +36,134 @@ span.active::after {
     height: 3rem; 
 
 }
+.menu .logowithword{
+    background-image:url(../assets/Horizontal_Logo.png);
+
+    background-size: contain; /* Adjusted */
+    background-repeat: no-repeat; /* Ensures the background doesn't repeat */
+    background-position: center; /* Centers the background image */
+    width: 20rem;
+    height: 1.5rem;
+    margin: 15px;
+
+
+}
+
+.menu .profilecircle-div {
+    width: 3rem; /* Corresponds to w-12 */
+    height: 3rem; /* Corresponds to h-12 */
+    margin: 0.5rem; /* Corresponds to m-2 */
+    background-color: #3b82f6; /* Corresponds to bg-blue-500 */
+    border-radius: 50%; /* Corresponds to rounded-full */
+}
+.menu .iconcircle-span {
+    display: inline-block; /* Ensures the span behaves like a block element */
+    width: 1.75rem; /* Corresponds to w-7 */
+    height: 1.75rem; /* Corresponds to h-7 */
+    background-color: #3b82f6; /* Corresponds to bg-blue-500 */
+    border-radius: 50%; /* Corresponds to rounded-full */
+}
 
 .menu .lines {
         width: 30px;
         min-height: 1px; /* Ensure the line has some height */
         background-color: rgb(239, 239, 239);
-        margin: 20px;
+        margin: 25px;
         margin-bottom: 10px;
+        font-family: 'Ubuntu';
+
         
        
   }
 
   .menu .username {
     font-size: 16px;
-    color: #FFFFFF;
+    font-family: 'Ubuntu';
+    margin-bottom: 2px;
+   
 
 }
 .menu .username2 {
     justify-content: center; /* Horizontally center the content */
   align-items: center; 
-    font-size: 14px;
-    margin-left: 2px;
+    font-size: 13px;
     margin-right: 2px;
     padding-left: 10%;
     padding-right: 10%;
-
+    font-family: 'Ubuntu';
     height: 20px; /* Adjust height as needed */
     background-image: linear-gradient(to right, hwb(264 44% 32%), #2525b9); /* Define the gradient */
     border-radius: 15px;
-    color: #FFFFFF;
+   
 
 }
-.menu .username3 {
-    font-size: 14px;
-    margin-left: 2px;
-    margin-right: 2px;
 
-    color: #FFFFFF;
+.menu .username3 {
+    font-size: 13px;
+    margin-left: 2px;
+    font-family: 'Ubuntu';
+  
 
 }
 .menu {
     background-color: rgba(128, 128, 128, 0.1);
     padding: 10px;
     justify-content: center;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: auto; 
+    max-width: 15rem;
+    min-width: 5rem;
 
+    padding-right: 20px;
 }
 
+.menu::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  .menu::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Border radius of the scrollbar thumb */
+  }
+  
+  .menu::-webkit-scrollbar-thumb:hover {
+    display: none;/* Color of the scrollbar thumb on hover */
+  }
+
+  
+  .menu::-webkit-scrollbar-thumb:horizontal {
+    display: none;
+}
 
 .menu .menuone {
     background-color: rgba(0, 0, 0, 0.201);
     }
+
+    .search {
+        display: flex; /* Use Flexbox */
+        justify-content: flex-end; /* Align items to the end (right side) */
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+.searchbar {
+    min-width: 10%;
+    max-width: 100%;
+  }
+  
+  /* Responsive Classes */
+  @media screen and (max-width: 768px) {
+    .searchbar {
+      max-width: 60px; /* Adjust the min-width for smaller screens */
+    }
+    .menu {
+     
+        max-width: 15rem;
+        min-width: 5rem;
+        display: absolute;
+        position: relative; /* Change position to absolute */
+        z-index: 10; 
+    }
+    
+  }
+  
