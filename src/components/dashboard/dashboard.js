@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "../navigation/navistyle.css";
+import "../dashboard/dashboard.css";
 
 const App = () => {
     const [open, setOpen] = useState(true);
@@ -58,10 +59,11 @@ const App = () => {
               </div>
             </div>
           </div>
-    
+          
           <div className="   w-screen justify-between">
-            <div className="search ml-4 relative">
-            <h1 className=" title text-black">Dashboard</h1>
+            <div className="search ml-4 relative bg-white">
+            <h1 className=" title  text-black">Dashboard</h1>
+
               <div className="search relative flex justify-end mb-3 xl:w-96">
                 <div className="relative mb-4 flex w-full flex-wrap items-stretch">
                   <input
@@ -81,10 +83,26 @@ const App = () => {
                   <div className="w-5 h-5 m-2 bg-white rounded-full"></div>
                 </div>
               </div>
-            </div>
-    
+            </div> {/* the code paste here */}
+           
+            <div className=" flex ">
+
             <div className="new-container relative ">
-              {/* the code paste here */}
+             
+              <div className={"dashboardbg h-100 w-608  m-5 pt-10 relative shadow-xl"}>
+              dashboard
+              
+              </div> 
+              <div className={"dashboardbg h-100 w-608  m-5 pt-10 relative shadow-xl"}>
+              my module
+              
+              </div> 
+             
+        </div>
+              <div className={"dashboardbg h-100 w-608  m-5 pt-10 relative shadow-xl"}>
+              recommended
+              
+              </div> 
             </div>
           </div>
         </div>

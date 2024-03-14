@@ -150,7 +150,8 @@ p {
     min-width: 10%;
     max-width: 100%;
   }
-  
+
+
   /* Responsive Classes */
   @media screen and (max-width: 768px) {
     .searchbar {
@@ -167,3 +168,11 @@ p {
     
   }
   
+  .title{
+    display: absolute; 
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    top: 0; /* Adjust top position as needed */
+    
+;  }
