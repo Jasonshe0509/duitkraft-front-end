@@ -11,7 +11,7 @@ module.exports = {
       xl: '1440px',
     },
     colors:{
-      'lightGrey':'#808080',
+      'white':'#808080',
       'fontColor':'#E1ECF4',
     },
     extend: {
