@@ -114,7 +114,7 @@ p {
   outline: none;
   background: transparent;
 }
-.duitkraft .outerColumn .container1 .login-box .user-box input:focus + label {
+.duitkraft .outerColumn .container1 .login-box .user-box input:focus + label, .duitkraft .outerColumn .container1 .login-box .user-box input:valid + label {
   top: -20px;
   font-size: 14px;
   color: #bdb8b8;

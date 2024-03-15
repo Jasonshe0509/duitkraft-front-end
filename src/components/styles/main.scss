@@ -162,7 +162,7 @@ p {
                         outline: none;
                         background: transparent;
 
-                        &:focus {
+                        &:focus, &:valid {
                             +label {
                                 top: -20px;
                                 font-size: 14px;
