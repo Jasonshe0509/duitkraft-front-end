@@ -13,10 +13,16 @@ module.exports = {
     colors:{
       'white':'#808080',
       'fontColor':'#E1ECF4',
+      'profilecircle':'#70B7F9',
+      'hoverr':'#636262',
+      'blueGray':'#808080',
+  
     },
+  
     extend: {
     },
   },
   plugins: [],
+  
 }
 
