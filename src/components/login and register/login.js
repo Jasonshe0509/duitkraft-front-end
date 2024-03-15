@@ -7,7 +7,7 @@ function Login() {
 
   return (
     <div className='duitkraft'>
-      <img src={bg} className='bg1 flex relative' alt='background' />
+      <img src={bg} className='bg1 flex' alt='background' />
       {/* <div className='container m-auto'> */}
         <div className='columns-2xs gap-5 flex-row outerColumn max-md:flex-col-reverse gap-y-0'>
           <div className='container1 p-12 max-md:px-14 pb-8'>
@@ -32,6 +32,7 @@ function Login() {
                 <div className="user-box">
                   <input type="password" name="" required />
                   <label>Password</label>
+                  <div className='w-[30px] h-[30px] rounded-[50%] flex absolute right-0' style={{backgroundColor:"blue", top:"5px"}}></div>
                 </div>
               </form>
               <button className='loginBtn max-md:translate-x-[-50%] translate-y-[50%]'>

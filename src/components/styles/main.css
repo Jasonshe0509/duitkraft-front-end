@@ -29,6 +29,8 @@ p {
   width: 100%;
   -o-object-position: center;
      object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: fixed;
 }
 .duitkraft .title {
