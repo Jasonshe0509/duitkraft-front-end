@@ -25,15 +25,17 @@ p {
 }
 
 .duitkraft {
-    background-image: url('../assets/bg1.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-image: url('../assets/bg1.png');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
     // padding: 12px;
-    // .bg1 {
-    //     height: 100vh;
-    //     width: 100vw;
-    // }
+    .bg1 {
+        height: 100%;
+        width: 100%;
+        object-position: center;
+        position: fixed;
+    }
 
     .title {
         font-size: 64px;

@@ -24,11 +24,12 @@ p {
   font-family: "Ubuntu";
 }
 
-.duitkraft {
-  background-image: url("../assets/bg1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.duitkraft .bg1 {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  position: fixed;
 }
 .duitkraft .title {
   font-size: 64px;

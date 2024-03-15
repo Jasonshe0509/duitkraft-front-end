@@ -1,13 +1,13 @@
 import vLogo from '../assets/Vertical_Logo.png';
-// import bg from '../assets/bg1.png'
+import bg from '../assets/bg1.png'
 import '../../components/styles/main.css';
 
 function Login() {
 
 
   return (
-    <div className='duitkraft w-screen h-screen flex'>
-      {/* <img src={bg} className='bg1 flex relative' alt='background' /> */}
+    <div className='duitkraft'>
+      <img src={bg} className='bg1 flex relative' alt='background' />
       {/* <div className='container m-auto'> */}
         <div className='columns-2xs gap-5 flex-row outerColumn max-md:flex-col-reverse gap-y-0'>
           <div className='container1 p-12 max-md:px-14 pb-8'>
