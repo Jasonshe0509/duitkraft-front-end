@@ -32,6 +32,7 @@
     background-color: rgb(37, 164, 45);
     overflow-x: hidden;
     overflow-y: hidden;
+    /* align-items: flex-start; */
     display: flex;
     width:100%; /* Maximum width is 100% of the screen width minus the menu's minimum width */
     max-width: calc(100% - 1%); /* Maximum width is 100% of the screen width minus the menu's minimum width */
@@ -93,15 +94,17 @@
     }
     
  
+    .dashboard-container{
+        flex-wrap: wrap;
+    }
+    
     
     .dashboard-container2{
-        position: flex;
-        width: 93%;    
+        width: 100%;    
     }
     
     .dashboard-container3{
-        display: flex;
-        width: 93%;    
+        width: 100%;    
     }
     
 

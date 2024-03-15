@@ -141,6 +141,7 @@ p {
 
     .search {
         display: flex; /* Use Flexbox */
+        flex-wrap: wrap;
         justify-content: flex-end; /* Align items to the end (right side) */
         margin-top: 10px;
         margin-right: 10px;
@@ -167,8 +168,7 @@ p {
         z-index: 10; 
     }
     .title{
-        padding: auto;
-
+        padding-top: 50px;
     }
     
   }

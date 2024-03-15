@@ -62,8 +62,8 @@ const App = () => {
       
             <div className="   w-screen justify-between ">
               <div className="search ml-4 relative ">
-              <h1 className=" title text-fontColor">Dashboard</h1>
-                <div className="search relative  justify-end mb-3 xl:w-96">
+                <div className="search flex  justify-end mb-3 xl:w-96">
+                <div > <h1 className=" title text-fontColor">Dashboard</h1></div>
                   <div className="relative mb-4 flex w-full flex-wrap items-stretch">
                     <input
                       type="search"
@@ -85,6 +85,9 @@ const App = () => {
               </div>
               <div className="dashboard-container transition-all flex-1">
               <div className="  dashboard-container2 ">
+              <div className={" dashboardedu1 text-fontColour m-5  pt-10  shadow-xl"}>dashboard</div> 
+              <div className={"  dashboardedu2 text-fontColour m-5 pt-15  shadow-xl"}>my modul</div> 
+
             </div>
             <div className=" relative dashboard-container3  ">
 
