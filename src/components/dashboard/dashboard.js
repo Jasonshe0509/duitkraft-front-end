@@ -92,7 +92,8 @@ const App = () => {
             <div className=" relative dashboard-container3  ">
 
 
-              
+            <div className={"  dashboardedu3 text-fontColour m-5 pt-15  shadow-xl"}>recomended</div> 
+
             </div>
             </div>
 
