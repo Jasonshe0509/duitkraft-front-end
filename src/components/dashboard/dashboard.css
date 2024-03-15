@@ -24,12 +24,12 @@
     justify-content: center;
     font:white;
     overflow-y: auto; 
-    display: flex;
+    display: relative;
 
 }
 
 .dashboard-container {
-    background-color: rgb(37, 164, 45);
+    /* background-color: rgb(37, 164, 45); */
     overflow-x: hidden;
     overflow-y: hidden;
     /* align-items: flex-start; */
@@ -41,12 +41,15 @@
 }
 
 .dashboard-container2{
-    width: 60%;      background-color: rgb(132, 88, 88);
+    width: 60%;      
+    /* background-color: rgb(132, 88, 88); */
+    z-index: 5;
   
 }
 
 .dashboard-container3{
-    width: 38%;     background-color: rgb(88, 93, 132);
+    width: 38%;    
+     /* background-color: rgb(88, 93, 132); */
 }
 .dashboardedu3::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
@@ -70,7 +73,7 @@
 
     .dashboardedu1 {
         background-color: rgba(128, 128, 128,0.1);
-        width: 85%;
+        width: 93%;
         height: 45%;
         justify-content: center;
         font:white;
@@ -78,14 +81,14 @@
     
     .dashboardedu2 {
         background-color: rgba(128, 128, 128,0.1);
-        width: 85%;
+        width: 93%;
         height: 50%;
         justify-content: center;
         font:white;
     }
     .dashboardedu3 {
         background-color: rgba(128, 128, 128,0.1);
-        width: 85%;    
+        width: 93%;    
         height: 50%;
         justify-content: center;
         font:white;
@@ -110,7 +113,8 @@
     }
     
     .dashboard-container3{
-        width: 100%;        
+        width: 100%;     
+        padding-top: 20px;
         height: 100%;
    
     }

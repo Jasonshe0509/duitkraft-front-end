@@ -10,7 +10,8 @@ const App = () => {
 
     return (
       <div className="absolute justify-between">
-        <div className="bg h-screen w-screen flex">
+        <div className="bg h-screen w-screen flex relative">
+          <img src={dashboard_bg} className="bg flex relative"/>
           <div className={`menu h-screen p-5 pt-8 ${open ? "min-width" : "max-width"} relative transition-all duration-300 shadow-xl`}>
             <div className="flex flex-col items-center justify-between">
               <div style={{ backgroundColor: 'rgba(128,128,128, 0.2)' }} className={`bg-fontColor outline-none absolute right-0 top-1/2 transform -translate-y-1/2 h-screen cursor-pointer ${!open && "rotate-180"}`} onClick={() => setOpen(!open)}>
