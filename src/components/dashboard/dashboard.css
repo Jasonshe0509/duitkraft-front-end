@@ -1,7 +1,108 @@
-.dashboardbg {
+.dashboardedu1 {
     background-color: rgba(128, 128, 128,0.1);
-    padding: 15px;
+    padding: 10px;
+    width: 98%;
+    height: 50%;
     justify-content: center;
     font:white;
 }
 
+.dashboardedu2 {
+    background-color: rgba(128, 128, 128,0.1);
+    padding: 10px;
+    width: 98%;
+    height: 250px;
+    justify-content: center;
+    font:white;
+    display: relative;
+}
+.dashboardedu3 {
+    background-color: rgba(128, 128, 128,0.1);
+    width: 80%;    
+    padding: 10px;
+    height: 100px;
+    justify-content: center;
+    font:white;
+    overflow-y: auto; 
+    display: flex;
+
+}
+
+.dashboard-container {
+    background-color: rgb(37, 164, 45);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    width:100%; /* Maximum width is 100% of the screen width minus the menu's minimum width */
+    max-width: calc(100% - 1%); /* Maximum width is 100% of the screen width minus the menu's minimum width */
+    min-width: calc(100% - 20%);
+    height: 100vh; /* Ensure the dashboard container fills the screen height */
+}
+
+.dashboard-container2{
+    width: 60%;      background-color: rgb(132, 88, 88);
+  
+}
+
+.dashboard-container3{
+    width: 38%;     background-color: rgb(88, 93, 132);
+}
+.dashboardedu3::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  .dashboardedu3::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Border radius of the scrollbar thumb */
+  }
+  
+  .dashboardedu3::-webkit-scrollbar-thumb:hover {
+    display: none;/* Color of the scrollbar thumb on hover */
+  }
+
+  
+  .dashboardedu3::-webkit-scrollbar-thumb:horizontal {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .dashboardedu1 {
+        background-color: rgba(128, 128, 128,0.1);
+        width: 98%;
+        height: 50%;
+        justify-content: center;
+        font:white;
+    }
+    
+    .dashboardedu2 {
+        background-color: rgba(128, 128, 128,0.1);
+        width: 98%;
+        height: 250px;
+        justify-content: center;
+        font:white;
+    }
+    .dashboardedu3 {
+        background-color: rgba(128, 128, 128,0.1);
+        width: 95%;    
+        height: 100px;
+        justify-content: center;
+        font:white;
+        overflow-y: hidden; 
+    
+    }
+    
+ 
+    
+    .dashboard-container2{
+        position: flex;
+        width: 93%;    
+    }
+    
+    .dashboard-container3{
+        display: flex;
+        width: 93%;    
+    }
+    
+
+}

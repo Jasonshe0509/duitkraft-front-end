@@ -7,6 +7,7 @@ const App = () => {
     const Menus = [ {title: "Dashboard" },{title: "Education",submenu:true,submenuItems:[{title: "Module" },{title: "Skill Path" }] },{title: "News" },{title: "Market Value" },];
 
 
+
     return (
       <div className="absolute justify-between">
         <div className="bg h-screen w-screen flex">
@@ -59,10 +60,10 @@ const App = () => {
             </div>
           </div>
     
-          <div className="   w-screen justify-between">
-            <div className="search ml-4 relative">
-            <h1 className=" title text-black">Dashboard</h1>
-              <div className="search relative flex justify-end mb-3 xl:w-96">
+          <div className="   w-screen justify-between ">
+            <div className="search ml-4 relative ">
+            <h1 className=" title text-fontColor">Dashboard</h1>
+              <div className="search relative  justify-end mb-3 xl:w-96">
                 <div className="relative mb-4 flex w-full flex-wrap items-stretch">
                   <input
                     type="search"
@@ -82,7 +83,6 @@ const App = () => {
                 </div>
               </div>
             </div>
-    
             <div className="new-container relative ">
               {/* the code paste here */}
             </div>
