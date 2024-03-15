@@ -3,7 +3,7 @@ import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid'
 import vLogo from '../assets/Vertical_Logo.png';
 import bg from '../assets/bg1.png'
 import '../../components/styles/main.css';
-
+import { Link } from "react-router-dom";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -28,7 +28,7 @@ function Login() {
               <div className="user-box">
                 <input
                   type={showPassword ? 'text' : 'password'}
-                  name="password" 
+                  name="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)} // Update password on change
                   required
@@ -39,9 +39,11 @@ function Login() {
                 </div>
               </div>
             </form>
-            <button className='loginBtn max-md:translate-x-[-50%] translate-y-[50%]'>
-              <p className='text-fontColor'>Login</p>
-            </button>
+            <Link to='/dashboard'>
+              <button className='loginBtn max-md:translate-x-[-50%] translate-y-[50%]'>
+                <p className='text-fontColor'>Login</p>
+              </button>
+            </Link>
             <p className='text-fontColor mt-20 text-center' style={{ fontSize: "14px" }}>Do not have an account?</p>
             <p className='text-fontColor underline underline-offset-8 mb-12 text-center signUp' style={{ fontSize: "14px" }}>Sign Up Now!</p>
           </div>
