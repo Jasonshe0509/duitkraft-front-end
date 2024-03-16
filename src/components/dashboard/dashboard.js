@@ -63,58 +63,63 @@ const App = () => {
               </div>
             </div>
       
-            <div className="   w-screen justify-between ">
-              <div className="search ml-4 relative ">
-              <h1 className=" title text-fontColor">Dashboard</h1>
-                <div className="search flex  justify-end mb-3 xl:w-96">
-                  <div className="relative mb-4 flex w-full flex-wrap items-stretch">
-                    <input
-                      type="search"
-                      className="searchbar relative m-0 flex-auto rounded bg-transparent px-3"
-                      placeholder="Search"
-                      aria-label="Search"
-                      aria-describedby="button-addon2"
-                    />
-                    <span className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base" id="basic-addon2">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" className="h-5 w-5">
-                        <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clipRule="evenodd" />
-                      </svg>
-                    </span>
-                    <div className="w-5 h-5 m-2 bg-white rounded-full"></div>
-                    <div className="w-5 h-5 m-2 bg-white rounded-full"></div>
-                    <div className="w-5 h-5 m-2 bg-white rounded-full"></div>
-                  </div>
+            <div className=" grid  w-screen ">
+            <div className="search ml-4 relative ">
+            <h1 className=" title text-fontColor">Dashboard</h1>
+              <div className="search relative  justify-end mb-3 xl:w-96">
+                <div className="relative mb-4 flex w-full flex-wrap items-stretch">
+                  <input
+                    type="search"
+                    className="searchbar relative m-0 flex-auto rounded bg-transparent px-3"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="button-addon2"
+                  />
+                  <span className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base" id="basic-addon2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" className="h-5 w-5">
+                      <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <div className="w-5 h-5 m-2 bg-white rounded-full"></div>
+                  <div className="w-5 h-5 m-2 bg-white rounded-full"></div>
+                  <div className="w-5 h-5 m-2 bg-white rounded-full"></div>
                 </div>
               </div>
+            </div>
               <div className="dashboard-container transition-all flex-1">
               <div className="  dashboard-container2 ">
               <div className={" dashboardedu1 text-fontColor m-5  pt-10  shadow-xl"}>dashboard
               </div> 
-              <div className={"  dashboardedu2 text-fontColor m-5 mb-10  shadow-xl"}>my module
+              <div className={"  dashboardedu2 text-fontColor m-5 mb-10  shadow-xl"}>
+                <div className="mb-4 mt-2"><p>Course Bar</p></div>
                <div className="">
     <div className="relative flex flex-col min-w-0 break-words w-full shadow-lg rounded  ">
       
                     <table className="items-center w-full border-collapse text-blueGray-700  ">
-                    <thead className="thead-light ">
+                    <thead className="thead-light CourseBar rounded">
                         <tr>
-                        <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                            Referral
+                        <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle  border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                        Name
                         </th>
-                        <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                            Visitors
+                        <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle  border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                        Progress
                         </th>
-                        <th className="px-6 bg-blueGray-50 text-blueGray-700 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px" />
+                        <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle  border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                        Difficulty
+                        </th>
+                        <th className="px-8 bg-blueGray-50 text-blueGray-700 align-middle  border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px" />
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                        <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                            Facebook
+                        <th className="border-t-0 px-6 align-middle border-l-0 border border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                            FacebookFacebookFacebookFacebookFacebook Facebook
                         </th>
-                        <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                        
+                        <td className="border-t-0 px-6 align-middle border-l-0 border border-r-0 text-xs whitespace-nowrap p-4 ">
                             1,480
                         </td>
-                        <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                        <td className="border-t-0 px-6 align-middle border-l-0 border border-r-0 text-xs whitespace-nowrap p-4">
                             <div className="flex items-center">
                             <span className="mr-2">60%</span>
                             <div className="relative w-full">

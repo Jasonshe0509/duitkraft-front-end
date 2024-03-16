@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import "../navigation/navistyle.css";
+import dashboard_bg from "../assets/dashboard_bg.png";
+
 
 const App = () => {
     const [open, setOpen] = useState(true);
@@ -61,7 +63,7 @@ const App = () => {
             </div>
           </div>
     
-          <div className="   w-screen justify-between ">
+          <div className=" grid  w-screen ">
             <div className="search ml-4 relative ">
             <h1 className=" title text-fontColor">Dashboard</h1>
               <div className="search relative  justify-end mb-3 xl:w-96">

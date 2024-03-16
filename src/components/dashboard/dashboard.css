@@ -27,21 +27,26 @@
     display: relative;
 
 }
+.CourseBar{
+    background-color: rgba(0, 0, 0, 0.215)
 
+
+}
 .dashboard-container {
     /* background-color: rgb(37, 164, 45); */
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: hidden;
     /* align-items: flex-start; */
     display: flex;
-    width:100%; /* Maximum width is 100% of the screen width minus the menu's minimum width */
+    width:90%; /* Maximum width is 100% of the screen width minus the menu's minimum width */
     max-width: calc(100% - 1%); /* Maximum width is 100% of the screen width minus the menu's minimum width */
     min-width: calc(100% - 20%);
     height: 85vh; /* Ensure the dashboard container fills the screen height */
 }
 
 .dashboard-container2{
-    width: 60%;      
+    width: 60%;     
+ 
     /* background-color: rgb(132, 88, 88); */
     z-index: 5;
   
@@ -68,7 +73,12 @@
   .dashboardedu3::-webkit-scrollbar-thumb:horizontal {
     display: none;
 }
-
+.grid {
+    display: grid;
+  }
+  .justify-between {
+    justify-content: space-between; /* Align grid items along the main axis with space between them */
+  }
 @media screen and (max-width: 768px) {
 
     .dashboardedu1 {
@@ -102,6 +112,7 @@
         overflow-y: auto;
         overflow-x: hidden;
         max-height: max-content;
+        width: 80%;
 
     }
     

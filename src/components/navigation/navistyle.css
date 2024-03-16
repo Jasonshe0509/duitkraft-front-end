@@ -147,6 +147,7 @@ position: fixed;
         margin-top: 10px;
         margin-right: 10px;
         margin-right: 10px;
+        
 
     }
 
@@ -175,8 +176,11 @@ position: fixed;
     }
     .search{
         padding-bottom: 20px;
+        display: flex; /* Use Flexbox */
+        flex-wrap: wrap;
+        justify-content: flex-end; /* Align items to the end (right side) */
     }
-    
+  
   }
   
   .title{
@@ -187,3 +191,4 @@ position: fixed;
     top: 0; /* Adjust top position as needed */
     
 ;  }
+
