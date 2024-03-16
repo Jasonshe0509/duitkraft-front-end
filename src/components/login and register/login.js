@@ -38,14 +38,17 @@ function Login() {
                   {showPassword ? <EyeIcon className='h-5 w-5' /> : <EyeSlashIcon className='h-5 w-5' />}
                 </div>
               </div>
+              <Link to='/dashboard'>
+                <button className='loginBtn max-md:translate-x-[-50%] translate-y-[50%]'>
+                  <p className='text-fontColor'>Login</p>
+                </button>
+              </Link>
             </form>
-            <Link to='/dashboard'>
-              <button className='loginBtn max-md:translate-x-[-50%] translate-y-[50%]'>
-                <p className='text-fontColor'>Login</p>
-              </button>
-            </Link>
             <p className='text-fontColor mt-20 text-center' style={{ fontSize: "14px" }}>Do not have an account?</p>
-            <p className='text-fontColor underline underline-offset-8 mb-12 text-center signUp' style={{ fontSize: "14px" }}>Sign Up Now!</p>
+            <Link to='/register'>
+              <p className='text-fontColor underline underline-offset-8 mb-12 text-center signUp' style={{ fontSize: "14px" }}>Sign Up Now!</p>
+            </Link>
+
           </div>
         </div>
         <div className='container1 p-12 max-md:px-14 pt-8'>
