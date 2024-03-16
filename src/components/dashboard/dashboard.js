@@ -8,8 +8,8 @@ const Dashboard = () => {
   return (
     <main>
       <div className="absolute justify-between">
-        <img src={dashboard_bg} className="bg" />
-        <div className="h-screen w-screen flex relative">
+        <img src={dashboard_bg} className="bg"/>
+        <div class="bg h-screen w-screen flex relative overflow-x-auto overflow-y-hidden"> <div class="white-space: nowrap"> </div>
           <Navigation />
           <div className="w-screen justify-between ">
             <Header title={"Dashboard"}/>

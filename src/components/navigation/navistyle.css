@@ -43,8 +43,7 @@ p {
     background-size: contain; /* Adjusted */
     background-repeat: no-repeat; /* Ensures the background doesn't repeat */
     background-position: center; /* Centers the background image */
-    width: 20rem;
-    height: 1.5rem;
+    width: 12rem;
     margin: 15px;
 
 

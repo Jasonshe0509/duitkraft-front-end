@@ -1,10 +1,18 @@
 import { useState } from "react";
 import "../navigation/navistyle.css";
+import profile_image from "../assets/profile_image.png"
+import { AcademicCapIcon, ChartBarIcon, DocumentDuplicateIcon, DocumentIcon, HomeIcon, NewspaperIcon } from '@heroicons/react/24/solid'
 
 
 const Navigation = () => {
   const [open, setOpen] = useState(true);
-  const Menus = [{ title: "Dashboard" }, { title: "Education", submenu: true, submenuItems: [{ title: "Module" }, { title: "Skill Path" }] }, { title: "News" }, { title: "Market Value" },];
+  const Menus = [{ title: "Dashboard", icon: <HomeIcon className="w-6 h-6 text-fontColor" /> },
+  {
+    title: "Education", icon: <AcademicCapIcon className="w-6 h-6 text-fontColor" />,
+    submenu: true, submenuItems: [{ title: "Course", icon: <DocumentIcon className="w-6 h-6 text-fontColor" /> }, { title: "Module", icon: <DocumentDuplicateIcon className="w-6 h-6 text-fontColor" /> }]
+  },
+  { title: "News", icon: <NewspaperIcon className="w-6 h-6 text-fontColor" /> },
+  { title: "Market Value", icon: <ChartBarIcon className="w-6 h-6 text-fontColor" /> }];
 
 
 
@@ -19,7 +27,9 @@ const Navigation = () => {
           <div className={`logowithword w-12 h-12 text-fontColor p-1 ${open ? "" : "hidden"}`}></div>
           <div className={`logoonly w-12 h-12 text-fontColor p-1 ${open && "hidden"}`}></div>
 
-          <div className="w-12 h-12 m-2 bg-profilecircle rounded-full"></div>
+          <div >
+            <img src={profile_image} className="w-16 h-16 m-2 rounded-full" />
+          </div>
 
           <div className={`username text-fontColor focus:outline-none ${!open && "hidden"}`}>username</div>
           <div className="flex justify-center">
@@ -31,7 +41,7 @@ const Navigation = () => {
             {Menus.map((menu, index) => (
               <li key={index} className={`flex flex-col rounded-md p-2 cursor-pointer hover:bg-hoverr text-fontColor text-sm gap-x-2 ${Menus.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-gray-900"}`}>
                 <div className="flex items-center gap-x-2">
-                  <span className="w-7 h-7 bg-profilecircle rounded-full"></span>
+                  {menu.icon}
                   <span className={`focus:outline-none ${!open && "hidden"}`}>
                     <p>{menu.title}</p>
                   </span>
@@ -41,7 +51,7 @@ const Navigation = () => {
                     {menu.submenuItems.map((submenu, subIndex) => (
                       <li key={subIndex} className={`cursor-pointer rounded-md p-1 hover:bg-white text-fontColor text-sm items-center gap-x-5 mr-2 gap-x-2 ${Menus.gap ? "mt-9" : "mt-2"}`}>
                         <div className="flex items-center gap-x-2">
-                          <span className="ml-4 w-7 h-7 bg-profilecircle rounded-full"></span>
+                          {submenu.icon}
                           <span className={`focus:outline-none ${!open && "hidden"}`}>
                             <p>{submenu.title}</p>
                           </span>
