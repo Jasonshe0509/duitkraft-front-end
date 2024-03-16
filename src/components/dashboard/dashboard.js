@@ -8,10 +8,10 @@ const Dashboard = () => {
   return (
     <main>
       <div className="absolute justify-between">
-        <img src={dashboard_bg} className="bg flex relative" />
-        <div className="bg h-screen w-screen flex relative">
+        <img src={dashboard_bg} className="bg" />
+        <div className="h-screen w-screen flex relative">
           <Navigation />
-          <div className="   w-screen justify-between ">
+          <div className="w-screen justify-between ">
             <Header title={"Dashboard"}/>
             <div className="dashboard-container transition-all flex-1">
               <div className="  dashboard-container2 ">
