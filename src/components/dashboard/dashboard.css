@@ -20,7 +20,7 @@
     background-color: rgba(128, 128, 128,0.1);
     width: 80%;    
     padding: 10px;
-    height: 100px;
+    height: 80%;
     justify-content: center;
     font:white;
     overflow-y: auto; 
@@ -38,14 +38,14 @@
     overflow-y: hidden;
     /* align-items: flex-start; */
     display: flex;
-    width:90%; /* Maximum width is 100% of the screen width minus the menu's minimum width */
+    width:95%; /* Maximum width is 100% of the screen width minus the menu's minimum width */
     max-width: calc(100% - 1%); /* Maximum width is 100% of the screen width minus the menu's minimum width */
     min-width: calc(100% - 20%);
     height: 85vh; /* Ensure the dashboard container fills the screen height */
 }
 
 .dashboard-container2{
-    width: 60%;     
+    width: 65%;     
  
     /* background-color: rgb(132, 88, 88); */
     z-index: 5;
@@ -59,7 +59,10 @@
 .dashboardedu3::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
   }
-  
+  .mycourse::-webkit-scrollbar {
+    display: none;
+}
+
   .dashboardedu3::-webkit-scrollbar-thumb {
     background-color: #888; /* Color of the scrollbar thumb */
     border-radius: 4px; /* Border radius of the scrollbar thumb */
@@ -73,12 +76,34 @@
   .dashboardedu3::-webkit-scrollbar-thumb:horizontal {
     display: none;
 }
-.grid {
-    display: grid;
-  }
-  .justify-between {
-    justify-content: space-between; /* Align grid items along the main axis with space between them */
-  }
+.difficult {
+    background-color: rgba(38, 38, 38, 0.587);
+    border-radius: 5px;
+    text-align: center; /* Center the text horizontally */
+    padding: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 10px;
+    display: inline-block;
+}
+
+.continue {
+    background-color: rgba(159,239,0);
+    border-radius: 5px;
+    text-align: center; /* Center the text horizontally */
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.mycouse{
+    overflow-x: scroll;
+    overflow: auto;
+}
+
 @media screen and (max-width: 768px) {
 
     .dashboardedu1 {
@@ -99,10 +124,8 @@
     .dashboardedu3 {
         background-color: rgba(128, 128, 128,0.1);
         width: 93%;    
-        height: 50%;
         justify-content: center;
         font:white;
-        overflow-y: hidden; 
     
     }
     
@@ -112,7 +135,7 @@
         overflow-y: auto;
         overflow-x: hidden;
         max-height: max-content;
-        width: 80%;
+        width: 90%;
 
     }
     

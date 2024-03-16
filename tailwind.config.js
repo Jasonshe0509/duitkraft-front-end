@@ -16,7 +16,15 @@ module.exports = {
       'profilecircle':'#70B7F9',
       'hoverr':'#636262',
       'blueGray':'#808080',
-  
+      'black':'#000000',
+
+      'progressbar':'#141326',
+      'progressbarline':'#49E33C',
+      'continuebutton':'#9FEF00',
+
+
+
+      
     },
   
     extend: {

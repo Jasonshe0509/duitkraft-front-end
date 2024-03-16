@@ -5,7 +5,7 @@ import { ArrowLeftEndOnRectangleIcon, BellIcon, CurrencyDollarIcon, MagnifyingGl
 const Header = ({ title }) => {
     return (
         <main>
-            <div className="search ml-4 relative ">
+            <div className="search ml-4 relative  ">
                 <h1 className=" title text-fontColor">{title}</h1>
                 <div className="search relative  justify-end mb-3 xl:w-96">
                     <div className="relative mb-4 flex w-full flex-wrap items-stretch">
@@ -26,6 +26,6 @@ const Header = ({ title }) => {
                 </div>
             </div>
         </main>
-    );
+    )
 }
 export default Header;
