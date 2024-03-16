@@ -23,11 +23,11 @@ p {
     font-family: 'Ubuntu';
 }
 .bg{
-    background-image:url(../assets/dashboard_bg.png);
     width: 100%; 
     height: 100%;
     object-position: center;
-position: fixed;
+    position: fixed;
+    object-fit: cover;
 }
 .menu .logoonly{
     background-image:url(../assets/Logo_only.png);
@@ -43,8 +43,7 @@ position: fixed;
     background-size: contain; /* Adjusted */
     background-repeat: no-repeat; /* Ensures the background doesn't repeat */
     background-position: center; /* Centers the background image */
-    width: 20rem;
-    height: 1.5rem;
+    width: 12rem;
     margin: 15px;
 
 
