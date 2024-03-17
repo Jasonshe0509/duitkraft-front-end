@@ -8,11 +8,16 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Register from './components/login and register/register.js';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
+  },
+  {
+    path:"register",
+    element: <Register/>
   },
   {
     path: "dashboard",

@@ -24,7 +24,14 @@ p {
     font-family: 'Ubuntu';
 }
 
+ul {
+    font-size: 16px;
+    font-family: 'Ubuntu';
+    list-style-type: disc;
+}
+
 .duitkraft {
+
     // background-image: url('../assets/bg1.png');
     // background-position: center;
     // background-repeat: no-repeat;
@@ -53,6 +60,7 @@ p {
         left: 48%;
         transform: translate(-50%, 18vh);
         margin: 0 20px;
+
         @media screen and (width<768px) {
             top: -15%;
             left: 45%;
@@ -64,37 +72,43 @@ p {
             width: 480px;
             height: 480px;
             border-radius: 15px;
+
             @media screen and (width<768px) {
                 width: 360px;
                 height: fit-content;
-                &:first-child{
+
+                &:first-child {
                     border-radius: 0 0 15px 15px;
                     padding: 0 3.5rem;
-                    h2, p{
+
+                    h2,
+                    p {
                         position: relative;
                         top: -10%;
                     }
-                    
-                    .login-box{
+
+                    .login-box {
                         position: relative;
                         top: -15%;
-                        .signUp{
+
+                        .signUp {
                             margin-bottom: 30px;
                         }
                     }
                 }
-    
-                &:last-child{
+
+                &:last-child {
                     border-radius: 15px 15px 0 0;
                     padding-bottom: 0;
                     min-height: 0;
                     padding-top: 0;
 
-                    img{
+                    img {
                         margin-top: 30px;
                     }
                 }
             }
+
             // .form-control {
             //     position: relative;
             //     margin: 20px 0 40px;
@@ -162,7 +176,8 @@ p {
                         outline: none;
                         background: transparent;
 
-                        &:focus, &:valid {
+                        &:focus,
+                        &:valid {
                             +label {
                                 top: -20px;
                                 font-size: 14px;
@@ -195,7 +210,7 @@ p {
                     left: 50%;
                     transform: translate(-50%, 30%);
 
-                    &:hover{
+                    &:hover {
                         background-color: #3b5d7e;
                     }
 
@@ -205,7 +220,257 @@ p {
                 }
             }
 
+        }
+    }
+    .OuterColumnRegister {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 48%;
+        transform: translate(-50%,3vh);
+        margin: 0 20px;
 
+        @media screen and (width<768px) {
+            top: -15%;
+            left: 45%;
+            // height: 450px;
+        }
+
+        .container2 {
+            background-color: rgb(128, 128, 128, 0.1);
+            width: 480px;
+            height: 650px;
+            border-radius: 15px;
+
+            @media screen and (width<768px) {
+                width: 360px;
+                height: fit-content;
+                margin-bottom: 0px;
+
+                &:first-child {
+                    border-radius: 0 0 15px 15px;
+                    padding: 0 3.5rem;
+
+                    h2,
+                    p {
+                        position: relative;
+                        top: -10%;
+                    }
+
+                    .register-box {
+                        position: relative;
+                        top: -15%;
+                    }
+                }
+
+                &:last-child {
+                    border-radius: 15px 15px 0 0;
+                    padding-bottom: 0;
+                    min-height: 0;
+                    padding-top: 0;
+                    margin-top: 100px;
+
+                    img {
+                        margin-top: 30px;
+                    }
+                }
+            }
+
+            .register-box {
+                position: relative;
+                max-width: 370px;
+                padding-top: 30px;
+
+                @media screen and (width<768px) {
+                    padding-top: 20px;
+                }
+
+                .user-box {
+                    position: relative;
+
+                    input {
+                        width: 100%;
+                        padding: 10px 0;
+                        font-size: 16px;
+                        color: #fff;
+                        margin-bottom: 20px;
+                        border: none;
+                        border-bottom: 1px solid #fff;
+                        outline: none;
+                        background: transparent;
+
+                        &:focus,
+                        &:valid {
+                            +label {
+                                top: -20px;
+                                font-size: 14px;
+                                color: #bdb8b8;
+                            }
+                        }
+
+                        @media screen and (width<768px) {
+                            margin-bottom: 15px;
+                        }
+                    }
+                    .phone-number {
+                        top: -20px;
+                        font-size: 14px;
+                        color: #bdb8b8;
+                    }
+
+                    select {
+                        width: 100%;
+                        padding: 10px 0;
+                        font-size: 16px;
+                        color: #fff;
+                        margin-bottom: 20px;
+                        border: none;
+                        border-bottom: 1px solid #fff;
+                        outline: none;
+                        background: transparent;
+
+                        &:focus,
+                        &:valid {
+                            +label {
+                                top: -20px;
+                                font-size: 14px;
+                                color: #bdb8b8;
+                            }
+                        }
+
+                        @media screen and (width<768px) {
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    label {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 11px 0;
+                        font-size: 16px;
+                        color: #fff;
+                        pointer-events: none;
+                        transition: 0.5s;
+                    }
+                }
+
+                .ui-checkbox {
+                    --primary-color: #12497b;
+                    --secondary-color: #fff;
+                    --primary-hover-color: #4096ff;
+                    --checkbox-diameter: 20px;
+                    --checkbox-border-radius: 3px;
+                    --checkbox-border-color: #d9d9d9;
+                    --checkbox-border-width: 1px;
+                    --checkbox-border-style: solid;
+                    --checkmark-size: 1.2;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    width: var(--checkbox-diameter);
+                    height: var(--checkbox-diameter);
+                    border-radius: var(--checkbox-border-radius);
+                    background: var(--secondary-color);
+                    border: var(--checkbox-border-width) var(--checkbox-border-style) var(--checkbox-border-color);
+                    -webkit-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                    cursor: pointer;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+                        box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+                        border-radius: inherit;
+                        opacity: 0;
+                        -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+                        -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+                        transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+                    }
+
+                    &::before {
+                        top: 40%;
+                        left: 50%;
+                        content: "";
+                        position: absolute;
+                        width: 4px;
+                        height: 7px;
+                        border-right: 2px solid var(--secondary-color);
+                        border-bottom: 2px solid var(--secondary-color);
+                        -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+                        -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+                        transform: translate(-50%, -50%) rotate(45deg) scale(0);
+                        opacity: 0;
+                        -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+                        -o-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+                        transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+                    }
+
+                    &:hover {
+                        border-color: var(--primary-color);
+                    }
+
+                    &:checked {
+                        background: var(--primary-color);
+                        border-color: transparent;
+
+                        &::before {
+                            opacity: 1;
+                            -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+                            -ms-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+                            transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+                            -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+                            -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+                            transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+                        }
+                    }
+
+                    &:active {
+                        &:not(:checked)::after {
+                            -webkit-transition: none;
+                            -o-transition: none;
+                            -webkit-box-shadow: none;
+                            box-shadow: none;
+                            transition: none;
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .ui-checkbox,
+                .ui-checkbox *,
+                .ui-checkbox *::before,
+                .ui-checkbox *::after {
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+                .registerBtn {
+                    background-color: #12497b;
+                    border-radius: 30px;
+                    display: flex;
+                    position: relative;
+                    left: 50%;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    bottom: 15px;
+                    transform: translate(-50%, 30%);
+
+                    &:hover {
+                        background-color: #3b5d7e;
+                    }
+
+                    p {
+                        margin: 10px 30px;
+                    }
+                }
+            }
         }
     }
 }
