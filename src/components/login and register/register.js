@@ -59,8 +59,8 @@ function Register() {
                                     <option className=' optColor bg-dropdownColor text-fontColor' value="UK">UK +44</option>
                                     <option className=' optColor bg-dropdownColor text-fontColor' value="Canada">CA +1</option>
                                 </select>
-                                <label className='phone-number'>Phone Number</label>
-                                <input type="text" name="" required className=' max-md:col-start-3 col-end-4' placeholder='Phone Number' />
+                                <label className='contact-number'>Contact Number</label>
+                                <input type="text" name="" required className=' max-md:col-start-3 col-end-4' placeholder='Contact Number' />
                             </div>
                             <div className="user-box">
                                 <input
