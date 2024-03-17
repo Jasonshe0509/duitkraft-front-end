@@ -16,7 +16,7 @@ module.exports = {
       'profilecircle':'#70B7F9',
       'hoverr':'#636262',
       'blueGray':'#808080',
-      'dropdownColor': 'rgb(20,46,62)',
+      'dropdownColor': '#142e3e',
     },
   
     extend: {
