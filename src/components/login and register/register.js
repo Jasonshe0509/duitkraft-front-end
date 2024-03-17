@@ -3,6 +3,7 @@ import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid'
 import vLogo from '../assets/Vertical_Logo.png';
 import bg from '../assets/bg1.png'
 import '../../components/styles/main.css';
+import '../login and register/register.css';
 import { Link } from "react-router-dom";
 
 function Register() {
