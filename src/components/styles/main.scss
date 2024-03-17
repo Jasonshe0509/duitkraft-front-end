@@ -221,13 +221,26 @@ ul {
             }
 
         }
+    }
+    .OuterColumnRegister {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 48%;
+        transform: translate(-50%,3vh);
+        margin: 0 20px;
+
+        @media screen and (width<768px) {
+            top: -15%;
+            left: 45%;
+            // height: 450px;
+        }
 
         .container2 {
             background-color: rgb(128, 128, 128, 0.1);
             width: 480px;
             height: 650px;
             border-radius: 15px;
-            margin-bottom: 20px;
 
             @media screen and (width<768px) {
                 width: 360px;
@@ -255,6 +268,7 @@ ul {
                     padding-bottom: 0;
                     min-height: 0;
                     padding-top: 0;
+                    margin-top: 100px;
 
                     img {
                         margin-top: 30px;
@@ -437,21 +451,6 @@ ul {
                     -webkit-box-sizing: border-box;
                     box-sizing: border-box;
                 }
-
-                // .registerBtn {
-                //     background-color: #12497b;
-                //     border-radius: 30px;
-                //     display: flex;
-                //     position: absolute;
-                //     transform: translate(-50%, 50%);
-                //     &:hover {
-                //         background-color: #3b5d7e;
-                //     }
-
-                //     p {
-                //         margin: 10px 30px;
-                //     }
-                // }
                 .registerBtn {
                     background-color: #12497b;
                     border-radius: 30px;

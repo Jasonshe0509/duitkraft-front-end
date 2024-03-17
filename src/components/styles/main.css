@@ -155,57 +155,71 @@ ul {
 .duitkraft .outerColumn .container1 .login-box .loginBtn p {
   margin: 10px 30px;
 }
-.duitkraft .outerColumn .container2 {
+.duitkraft .OuterColumnRegister {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 48%;
+  transform: translate(-50%, 3vh);
+  margin: 0 20px;
+}
+@media screen and (width < 768px) {
+  .duitkraft .OuterColumnRegister {
+    top: -15%;
+    left: 45%;
+  }
+}
+.duitkraft .OuterColumnRegister .container2 {
   background-color: rgba(128, 128, 128, 0.1);
   width: 480px;
   height: 650px;
   border-radius: 15px;
-  margin-bottom: 20px;
 }
 @media screen and (width < 768px) {
-  .duitkraft .outerColumn .container2 {
+  .duitkraft .OuterColumnRegister .container2 {
     width: 360px;
     height: -moz-fit-content;
     height: fit-content;
     margin-bottom: 0px;
   }
-  .duitkraft .outerColumn .container2:first-child {
+  .duitkraft .OuterColumnRegister .container2:first-child {
     border-radius: 0 0 15px 15px;
     padding: 0 3.5rem;
   }
-  .duitkraft .outerColumn .container2:first-child h2,
-  .duitkraft .outerColumn .container2:first-child p {
+  .duitkraft .OuterColumnRegister .container2:first-child h2,
+  .duitkraft .OuterColumnRegister .container2:first-child p {
     position: relative;
     top: -10%;
   }
-  .duitkraft .outerColumn .container2:first-child .register-box {
+  .duitkraft .OuterColumnRegister .container2:first-child .register-box {
     position: relative;
     top: -15%;
   }
-  .duitkraft .outerColumn .container2:last-child {
+  .duitkraft .OuterColumnRegister .container2:last-child {
     border-radius: 15px 15px 0 0;
     padding-bottom: 0;
     min-height: 0;
     padding-top: 0;
+    margin-top: 100px;
   }
-  .duitkraft .outerColumn .container2:last-child img {
+  .duitkraft .OuterColumnRegister .container2:last-child img {
     margin-top: 30px;
   }
 }
-.duitkraft .outerColumn .container2 .register-box {
+.duitkraft .OuterColumnRegister .container2 .register-box {
   position: relative;
   max-width: 370px;
   padding-top: 30px;
 }
 @media screen and (width < 768px) {
-  .duitkraft .outerColumn .container2 .register-box {
+  .duitkraft .OuterColumnRegister .container2 .register-box {
     padding-top: 20px;
   }
 }
-.duitkraft .outerColumn .container2 .register-box .user-box {
+.duitkraft .OuterColumnRegister .container2 .register-box .user-box {
   position: relative;
 }
-.duitkraft .outerColumn .container2 .register-box .user-box input {
+.duitkraft .OuterColumnRegister .container2 .register-box .user-box input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -216,22 +230,22 @@ ul {
   outline: none;
   background: transparent;
 }
-.duitkraft .outerColumn .container2 .register-box .user-box input:focus + label, .duitkraft .outerColumn .container2 .register-box .user-box input:valid + label {
+.duitkraft .OuterColumnRegister .container2 .register-box .user-box input:focus + label, .duitkraft .OuterColumnRegister .container2 .register-box .user-box input:valid + label {
   top: -20px;
   font-size: 14px;
   color: #bdb8b8;
 }
 @media screen and (width < 768px) {
-  .duitkraft .outerColumn .container2 .register-box .user-box input {
+  .duitkraft .OuterColumnRegister .container2 .register-box .user-box input {
     margin-bottom: 15px;
   }
 }
-.duitkraft .outerColumn .container2 .register-box .user-box .phone-number {
+.duitkraft .OuterColumnRegister .container2 .register-box .user-box .phone-number {
   top: -20px;
   font-size: 14px;
   color: #bdb8b8;
 }
-.duitkraft .outerColumn .container2 .register-box .user-box select {
+.duitkraft .OuterColumnRegister .container2 .register-box .user-box select {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -242,17 +256,17 @@ ul {
   outline: none;
   background: transparent;
 }
-.duitkraft .outerColumn .container2 .register-box .user-box select:focus + label, .duitkraft .outerColumn .container2 .register-box .user-box select:valid + label {
+.duitkraft .OuterColumnRegister .container2 .register-box .user-box select:focus + label, .duitkraft .OuterColumnRegister .container2 .register-box .user-box select:valid + label {
   top: -20px;
   font-size: 14px;
   color: #bdb8b8;
 }
 @media screen and (width < 768px) {
-  .duitkraft .outerColumn .container2 .register-box .user-box select {
+  .duitkraft .OuterColumnRegister .container2 .register-box .user-box select {
     margin-bottom: 15px;
   }
 }
-.duitkraft .outerColumn .container2 .register-box .user-box label {
+.duitkraft .OuterColumnRegister .container2 .register-box .user-box label {
   position: absolute;
   top: 0;
   left: 0;
@@ -262,7 +276,7 @@ ul {
   pointer-events: none;
   transition: 0.5s;
 }
-.duitkraft .outerColumn .container2 .register-box .ui-checkbox {
+.duitkraft .OuterColumnRegister .container2 .register-box .ui-checkbox {
   --primary-color: #12497b;
   --secondary-color: #fff;
   --primary-hover-color: #4096ff;
@@ -284,7 +298,7 @@ ul {
   cursor: pointer;
   position: relative;
 }
-.duitkraft .outerColumn .container2 .register-box .ui-checkbox::after {
+.duitkraft .OuterColumnRegister .container2 .register-box .ui-checkbox::after {
   content: "";
   position: absolute;
   top: 0;
@@ -296,7 +310,7 @@ ul {
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
 }
-.duitkraft .outerColumn .container2 .register-box .ui-checkbox::before {
+.duitkraft .OuterColumnRegister .container2 .register-box .ui-checkbox::before {
   top: 40%;
   left: 50%;
   content: "";
@@ -309,32 +323,32 @@ ul {
   opacity: 0;
   transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
 }
-.duitkraft .outerColumn .container2 .register-box .ui-checkbox:hover {
+.duitkraft .OuterColumnRegister .container2 .register-box .ui-checkbox:hover {
   border-color: var(--primary-color);
 }
-.duitkraft .outerColumn .container2 .register-box .ui-checkbox:checked {
+.duitkraft .OuterColumnRegister .container2 .register-box .ui-checkbox:checked {
   background: var(--primary-color);
   border-color: transparent;
 }
-.duitkraft .outerColumn .container2 .register-box .ui-checkbox:checked::before {
+.duitkraft .OuterColumnRegister .container2 .register-box .ui-checkbox:checked::before {
   opacity: 1;
   transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
   transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
 }
-.duitkraft .outerColumn .container2 .register-box .ui-checkbox:active:not(:checked)::after {
+.duitkraft .OuterColumnRegister .container2 .register-box .ui-checkbox:active:not(:checked)::after {
   -webkit-transition: none;
   -o-transition: none;
   box-shadow: none;
   transition: none;
   opacity: 1;
 }
-.duitkraft .outerColumn .container2 .register-box .ui-checkbox,
-.duitkraft .outerColumn .container2 .register-box .ui-checkbox *,
-.duitkraft .outerColumn .container2 .register-box .ui-checkbox *::before,
-.duitkraft .outerColumn .container2 .register-box .ui-checkbox *::after {
+.duitkraft .OuterColumnRegister .container2 .register-box .ui-checkbox,
+.duitkraft .OuterColumnRegister .container2 .register-box .ui-checkbox *,
+.duitkraft .OuterColumnRegister .container2 .register-box .ui-checkbox *::before,
+.duitkraft .OuterColumnRegister .container2 .register-box .ui-checkbox *::after {
   box-sizing: border-box;
 }
-.duitkraft .outerColumn .container2 .register-box .registerBtn {
+.duitkraft .OuterColumnRegister .container2 .register-box .registerBtn {
   background-color: #12497b;
   border-radius: 30px;
   display: flex;
@@ -345,9 +359,9 @@ ul {
   bottom: 15px;
   transform: translate(-50%, 30%);
 }
-.duitkraft .outerColumn .container2 .register-box .registerBtn:hover {
+.duitkraft .OuterColumnRegister .container2 .register-box .registerBtn:hover {
   background-color: #3b5d7e;
 }
-.duitkraft .outerColumn .container2 .register-box .registerBtn p {
+.duitkraft .OuterColumnRegister .container2 .register-box .registerBtn p {
   margin: 10px 30px;
 }/*# sourceMappingURL=main.css.map */

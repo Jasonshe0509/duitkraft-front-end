@@ -23,7 +23,7 @@ function Register() {
         <div className='duitkraft'>
             <img src={bg} className='bg1 flex' alt='background' />
             {/* <div className='container m-auto'> */}
-            <div className='columns-2xs pb-5 gap-5 flex-row outerColumn max-md:flex-col-reverse gap-y-0'>
+            <div className='columns-2xs pb-5 gap-5 flex-row OuterColumnRegister max-md:flex-col-reverse gap-y-0'>
                 <div className='container2 p-12 max-md:px-14 pb-8'>
                     <h2 className='subtitle text-fontColor'>Register</h2>
                     <p className='text-fontColor text-lg'>Welcome guest, </p>
