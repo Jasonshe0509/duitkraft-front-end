@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Register from './components/login and register/register.js';
+import RegisterModal from './components/login and register/registerModal.js';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     path: "dashboard",
     element: <Dashboard />,
   },
+  {
+    path:"test",
+    element: <RegisterModal/>
+  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

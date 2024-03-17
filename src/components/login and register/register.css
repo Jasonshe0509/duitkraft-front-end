@@ -68,6 +68,7 @@
   position: relative;
   max-width: 370px;
   padding-top: 30px;
+  /* Add a class for blurring the content behind the modal (example) */
 }
 @media screen and (width < 768px) {
   .duitkraft .OuterColumnRegister .container2 .register-box {
@@ -222,4 +223,15 @@
 }
 .duitkraft .OuterColumnRegister .container2 .register-box .registerBtn p {
   margin: 10px 30px;
+}
+.duitkraft .OuterColumnRegister .container2 .register-box .blurOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Adjust opacity for blur strength */
+  z-index: 1;
+  /* Ensure overlay is behind the modal content */
 }/*# sourceMappingURL=register.css.map */

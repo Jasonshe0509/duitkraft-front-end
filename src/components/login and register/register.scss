@@ -20,12 +20,13 @@
     .subtitle {
         font-size: 36px;
     }
+
     .OuterColumnRegister {
         display: flex;
         position: absolute;
         top: 0;
         left: 48%;
-        transform: translate(-50%,3vh);
+        transform: translate(-50%, 3vh);
         margin: 0 20px;
 
         @media screen and (width<768px) {
@@ -110,6 +111,7 @@
                             margin-bottom: 15px;
                         }
                     }
+
                     .contact-number {
                         top: -20px;
                         font-size: 14px;
@@ -249,6 +251,7 @@
                     -webkit-box-sizing: border-box;
                     box-sizing: border-box;
                 }
+
                 .registerBtn {
                     background-color: #12497b;
                     border-radius: 30px;
@@ -267,6 +270,19 @@
                     p {
                         margin: 10px 30px;
                     }
+                }
+
+                /* Add a class for blurring the content behind the modal (example) */
+                .blurOverlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    /* Adjust opacity for blur strength */
+                    z-index: 1;
+                    /* Ensure overlay is behind the modal content */
                 }
             }
         }
