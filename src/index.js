@@ -9,7 +9,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Register from './components/login and register/register.js';
-import RegisterModal from './components/login and register/registerModal.js';
+import Chatbot from './components/chatbot/chatbot.js';
+import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
+
+Kommunicate.init("APP_ID", {
+  automaticChatOpenOnNavigation: true,
+  popupWidget: true
+});
 
 const router = createBrowserRouter([
   {
@@ -26,7 +32,7 @@ const router = createBrowserRouter([
   },
   {
     path:"test",
-    element: <RegisterModal/>
+    element: <Chatbot/>
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
