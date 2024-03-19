@@ -2,8 +2,7 @@
     background-color: rgba(128, 128, 128,0.1);
     padding: 10px;
     width: 95%;
-    height: 40%;
-    justify-content: center;
+height: max-content;    justify-content: center;
     font:white;
 }
 
@@ -11,16 +10,26 @@
     background-color: rgba(128, 128, 128,0.1);
     padding: 10px;
     width: 95%;
-    height: 50%;
+    max-height: 80%;
     justify-content: center;
     font:white;
     display: relative;
+    overflow-y: auto; 
+    overflow-y: auto; 
+
+
+}
+.sortby{
+    background-color: rgba(50,42,42,0.3);
+    font-size: 11px;
+    font-weight: lighter;
+
 }
 .dashboardedu3 {
     background-color: rgba(128, 128, 128,0.1);
     width: 80%;    
     padding: 10px;
-    height: 80%;
+    height: 116%;
     justify-content: center;
     font:white;
     overflow-y: auto; 
@@ -29,14 +38,10 @@
 }
 .CourseBar{
     background-color: rgba(0, 0, 0, 0.215)
-
-
 }
 .dashboard-container {
-    /* background-color: rgb(37, 164, 45); */
     overflow-x: auto;
-    overflow-y: hidden;
-    /* align-items: flex-start; */
+    overflow-y: auto;
     display: flex;
     width:95%; /* Maximum width is 100% of the screen width minus the menu's minimum width */
     max-width: calc(100% - 1%); /* Maximum width is 100% of the screen width minus the menu's minimum width */
@@ -47,7 +52,6 @@
 .dashboard-container2{
     width: 65%;     
  
-    /* background-color: rgb(132, 88, 88); */
     z-index: 5;
   
 }
@@ -56,33 +60,33 @@
     width: 38%;    
      /* background-color: rgb(88, 93, 132); */
 }
-.dashboardedu3::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
   }
   .mycourse::-webkit-scrollbar {
     display: none;
 }
-
-  .dashboardedu3::-webkit-scrollbar-thumb {
+.dashboardedu3::-webkit-scrollbar {
+    display: none;
+}
+::-webkit-scrollbar-thumb {
     background-color: #888; /* Color of the scrollbar thumb */
     border-radius: 4px; /* Border radius of the scrollbar thumb */
   }
   
-  .dashboardedu3::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     display: none;/* Color of the scrollbar thumb on hover */
   }
 
   
-  .dashboardedu3::-webkit-scrollbar-thumb:horizontal {
+::-webkit-scrollbar-thumb:horizontal {
     display: none;
 }
 .difficult {
     background-color: rgba(38, 38, 38, 0.587);
     border-radius: 5px;
     text-align: center; /* Center the text horizontally */
-    padding: 2px;
-    padding-left: 20px;
-    padding-right: 20px;
+
     font-size: 10px;
     display: inline-block;
 }
@@ -90,13 +94,17 @@
 .continue {
     background-color: rgba(159,239,0);
     border-radius: 5px;
-    text-align: center; /* Center the text horizontally */
-    padding: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
+    /* text-align: center; Center the text horizontally */
     font-size: 10px;
     display: inline-block;
-    width: 100%;
+
+
+}
+
+.viewmore {
+    font-size: 10px;
+    
+    
 }
 
 .mycouse{
@@ -104,28 +112,48 @@
     overflow: auto;
 }
 
+.coursecat {
+    background-color: rgba(38, 38, 38, 0.587);
+    border-radius: 5px;
+    text-align: center; /* Center the text horizontally */
+
+    font-size: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    display: inline-block;
+}
+.courseblog {
+    background-color: rgba(2,2,2,0.38);
+}
+.mySvg {
+    fill: rgb(90, 202, 29);
+    width: 50px;
+    height: 50px;
+  }
+  
 @media screen and (max-width: 768px) {
 
     .dashboardedu1 {
         background-color: rgba(128, 128, 128,0.1);
         width: 93%;
-        height: 45%;
+        height:max-content;
         justify-content: center;
         font:white;
     }
     
     .dashboardedu2 {
         background-color: rgba(128, 128, 128,0.1);
-        width: 93%;
-        height: 50%;
+                width: 93%;
         justify-content: center;
         font:white;
+        padding-bottom: 100;
     }
     .dashboardedu3 {
         background-color: rgba(128, 128, 128,0.1);
-        width: 93%;    
+                width: 93%;    
         justify-content: center;
         font:white;
+        
     
     }
     
@@ -134,7 +162,6 @@
         flex-wrap: wrap;
         overflow-y: auto;
         overflow-x: hidden;
-        max-height: max-content;
         width: 90%;
 
     }
@@ -142,14 +169,14 @@
     
     .dashboard-container2{
         width: 100%;    
-        height: 100%;
+        padding: -10;
 
     }
     
     .dashboard-container3{
         width: 100%;     
-        padding-top: 20px;
-        height: 100%;
+        height: 120%;
+        margin-top: -20px;
    
     }
     
