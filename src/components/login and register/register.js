@@ -26,7 +26,7 @@ function Register() {
             {/* <div className='container m-auto'> */}
             <div className='columns-2xs pb-5 gap-5 flex-row OuterColumnRegister max-md:flex-col-reverse gap-y-0'>
                 <div className='container2 p-12 max-md:px-14 pb-8'>
-                    <h2 className='subtitle text-fontColor'>Register</h2>
+                    <h2 className='subtitleFont text-fontColor'>Register</h2>
                     <p className='text-fontColor text-lg'>Welcome guest, </p>
                     <div className="register-box">
                         <form>

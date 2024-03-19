@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Login from './components/login and register/login';
 import Dashboard from './components/dashboard/dashboard.js';
+import Profile from './components/profilePage/profilePage.js';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "profile",
+    element: <Profile />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

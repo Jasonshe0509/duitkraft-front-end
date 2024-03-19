@@ -10,7 +10,7 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 22px;
   font-family: "Noto Sans Khojki";
 }
 
@@ -28,4 +28,12 @@ ul {
   font-size: 16px;
   font-family: "Ubuntu";
   list-style-type: disc;
+}
+
+.titleFont {
+  font-size: 64px;
+}
+
+.subtitleFont {
+  font-size: 36px;
 }/*# sourceMappingURL=main.css.map */

@@ -18,7 +18,7 @@ function Login() {
       {/* <div className='container m-auto'> */}
       <div className='columns-2xs gap-5 flex-row outerColumn max-md:flex-col-reverse gap-y-0'>
         <div className='container1 p-12 max-md:px-14 pb-8'>
-          <h2 className='subtitle text-fontColor'>Login</h2>
+          <h2 className='subtitleFont text-fontColor'>Login</h2>
           <p className='text-fontColor text-lg'>Welcome back, </p>
           <div className="login-box">
             <form>
