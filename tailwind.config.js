@@ -7,7 +7,7 @@ module.exports = {
     screens: {
       sm: '480px',
       md: '768px',
-      lg: '976px',
+      lg: '1024px',
       xl: '1440px',
     },
     colors:{
@@ -16,6 +16,12 @@ module.exports = {
       'profilecircle':'#70B7F9',
       'hoverr':'#636262',
       'blueGray':'#808080',
+      'darkYellow': '#E3B53C',
+      'darkGray':'rgba(17,17,17,0.5)',
+      'red':'#E3463C',
+      'lightBlue':'#C7DDFF',
+      'blackOpacity':'rgba(128, 128, 128, 0.1)',
+      'grayOpacity':'rgba(50, 42, 42, 0.3)',
       'dropdownColor': '#142e3e',
     },
   

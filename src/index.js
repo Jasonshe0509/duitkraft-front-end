@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Login from './components/login and register/login';
 import Dashboard from './components/dashboard/dashboard.js';
+import Profile from './components/profilePage/profilePage.js';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -23,17 +24,21 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path:"register",
-    element: <Register/>
+    path: "register",
+    element: <Register />
   },
   {
     path: "dashboard",
     element: <Dashboard />,
   },
   {
-    path:"test",
-    element: <Chatbot/>
-  }
+    path: "profile",
+    element: <Profile />,
+  },
+  {
+    path: "test",
+    element: <Chatbot />,
+  },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../navigation/navistyle.css";
 import profile_image from "../assets/profile_image.png"
 import { AcademicCapIcon, ChartBarIcon, DocumentDuplicateIcon, DocumentIcon, HomeIcon, NewspaperIcon } from '@heroicons/react/24/solid'
-
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [open, setOpen] = useState(true);
@@ -27,11 +27,12 @@ const Navigation = () => {
           <div className={`logowithword w-12 h-12 text-fontColor p-1 ${open ? "" : "hidden"}`}></div>
           <div className={`logoonly w-12 h-12 text-fontColor p-1 ${open && "hidden"}`}></div>
 
-          <div >
-            <img src={profile_image} className="w-16 h-16 m-2 rounded-full" />
-          </div>
-
+          <Link to='/profile'>
+            <div >
+              <img src={profile_image} className="w-16 h-16 m-2 rounded-full" />
+            </div>
           <div className={`username text-fontColor focus:outline-none ${!open && "hidden"}`}>username</div>
+          </Link>
           <div className="flex justify-center">
             <span className={`username2 text-fontColor focus:outline-none ${!open && "hidden"}`}>lvl1</span>
             <span className={`username3 text-fontColor focus:outline-none ${!open && "hidden"}`}>hiadddaa</span>
