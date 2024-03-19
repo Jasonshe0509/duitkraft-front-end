@@ -48,7 +48,7 @@ const Navigation = () => {
                   </span>
                 </div>
                 {menu.submenu && open && menu.submenuItems && (
-                  <ul className="ml-4">
+                  <ul className="ml-4 list-none">
                     {menu.submenuItems.map((submenu, subIndex) => (
                       <li key={subIndex} className={`cursor-pointer rounded-md p-1 hover:bg-white text-fontColor text-sm items-center gap-x-5 mr-2 gap-x-2 ${Menus.gap ? "mt-9" : "mt-2"}`}>
                         <div className="flex items-center gap-x-2">

@@ -1,0 +1,42 @@
+.background {
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    position: fixed;
+    opacity: 0.8;
+}
+.profileModalContainer {
+    width: 320px;
+    height: 300px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.63);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .successIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+
+        img {
+            height: 100px;
+            object-fit: cover;
+        }
+    }
+
+    .body {
+        flex: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
