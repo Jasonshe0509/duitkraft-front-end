@@ -4,6 +4,7 @@ import Navigation from "../navigation/navigation";
 import Header from "../navigation/header";
 import news_bg from "../assets/bg2.png"
 import economy1 from "../assets/News/homebuilders.webp"
+import Chatbot from '../chatbot/chatbot';
 
 function EconomyNews() {
     const ecomonyTag = (
@@ -53,6 +54,7 @@ function EconomyNews() {
                     </div>
                 </div>
             </div>
+            <Chatbot/>
         </main>
     )
 }

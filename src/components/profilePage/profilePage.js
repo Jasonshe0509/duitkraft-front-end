@@ -13,7 +13,7 @@ import AccountModal from './accountModal';
 import ProVersionModal from './proVersionModal';
 import { MdLocalDrink } from "react-icons/md";
 import { PiBowlFoodFill } from "react-icons/pi";
-import { FaSquareParking,FaMoneyBillWave  } from "react-icons/fa6";
+import { FaSquareParking, FaMoneyBillWave } from "react-icons/fa6";
 import { RiRedPacketFill } from "react-icons/ri";
 import { GiPayMoney } from "react-icons/gi";
 import CategoryModal from './categoryModal';
@@ -34,7 +34,7 @@ function ProfilePage() {
   const [selectedFilter, setSelectedFilter] = useState('expenses');
   const categories = [
     { text: 'Expenses', value: 'expenses', subCategories: [{ name: 'food', icon: PiBowlFoodFill }, { name: 'beverage', icon: MdLocalDrink }, { name: 'parking', icon: FaSquareParking }] },
-    { text: 'Income', value: 'income', subCategories: [{ name: 'pocket money', icon: RiRedPacketFill }, { name: 'salary', icon: FaMoneyBillWave },{ name: 'interest', icon: GiPayMoney }] },
+    { text: 'Income', value: 'income', subCategories: [{ name: 'pocket money', icon: RiRedPacketFill }, { name: 'salary', icon: FaMoneyBillWave }, { name: 'interest', icon: GiPayMoney }] },
   ];
 
   const handleFilterChange = (event) => {
@@ -44,7 +44,10 @@ function ProfilePage() {
 
   //Edit Profile
   const [showPassword, setShowPassword] = useState(false);
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('11223344');
+  const [fullName, setFullName] = useState("Bernard Ong");
+  const [username, setUsername] = useState("bernard_ong");
+  const [email, setEmail] = useState("bernard_ong@gmail.com");
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedGender, setSelectedGender] = useState("");
 
@@ -114,15 +117,15 @@ function ProfilePage() {
                   <div className="register-box max-w-[380px] lg:max-w-[480px]">
                     <form onSubmit={handleSubmit}>
                       <div className="user-box">
-                        <input type="text" name="" value="Bernard Ong" readOnly={!editMode} />
+                        <input type="text" name="" value={fullName} onChange={(e) => setFullName(e.target.value)} readOnly={!editMode} />
                         <label>Fullname</label>
                       </div>
                       <div className="user-box">
-                        <input type="text" name="" value="bernard_ong" readOnly={!editMode} />
+                        <input type="text" name="" value={username} onChange={(e) => setUsername(e.target.value)} readOnly={!editMode} />
                         <label>Username</label>
                       </div>
                       <div className="user-box">
-                        <input type="text" name="" value="bernard_ong@gmail.com" readOnly={!editMode} />
+                        <input type="text" name="" value={email} onChange={(e) => setEmail(e.target.value)} readOnly={!editMode} />
                         <label>Email</label>
                       </div>
                       <div className="user-box grid grid-cols-2 gap-3">
@@ -135,7 +138,6 @@ function ProfilePage() {
                             <option className='optColor bg-dropdownColor text-fontColor' value="Canada">Canada</option>
                           </select>
                           <label className='contact-number'>Country</label>
-                          {/* {selectedCountry && <label>Country</label>} */}
                         </div>
                         <div>
                           <select name="gender" value={selectedGender} onChange={handleSelectGender} className='mb-[30px]' disabled={!editMode}>
@@ -162,11 +164,10 @@ function ProfilePage() {
                         <input
                           type={showPassword ? 'text' : 'password'}
                           name="password"
-                          value={12345678}
+                          value={password}
                           onChange={(e) => setPassword(e.target.value)} // Update password on change
                           readOnly={!editMode}
-                        />
-                        <label>Password</label>
+                        />                        <label>Password</label>
                         <div className='flex absolute right-0 text-fontColor' style={{ top: "10px" }} onClick={handleTogglePasswordVisibility}>
                           {showPassword ? <EyeIcon className='h-5 w-5' /> : <EyeSlashIcon className='h-5 w-5' />}
                         </div>

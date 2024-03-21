@@ -4,6 +4,7 @@ import Navigation from "../navigation/navigation";
 import Header from "../navigation/header";
 import news_bg from "../assets/bg2.png"
 import market1 from "../assets/News/S&P500.webp"
+import Chatbot from '../chatbot/chatbot';
 
 function MarketNews() {
     const marketTag = (
@@ -92,6 +93,7 @@ function MarketNews() {
                     </div>
                 </div>
             </div>
+            <Chatbot/>
         </main>
     )
 }
