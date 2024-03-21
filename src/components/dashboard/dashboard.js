@@ -4,7 +4,7 @@ import dashboard_bg from "../assets/dashboard_bg.png";
 import Navigation from "../navigation/navigation.js";
 import Header from "../navigation/header.js";
 import ProgressBar from "./progress.js";
-// import coursebg from "../assets/coursebg.jpg";
+import coursebg from "../assets/coursebg.jpg";
 
 
 const Dashboard = () => {

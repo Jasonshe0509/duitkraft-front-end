@@ -2,21 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Login from './components/login and register/login';
-import Dashboard from './components/dashboard/dashboard.js';
+
+import Login from './components/login and register/login.js';
+//  import Dashboard2 from './components/dashboard/Modal.js';
+import Dashboard from './components/dashboard/Modal.js';
 import Profile from './components/profilePage/profilePage.js';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Register from './components/login and register/register.js';
+import Chatbot from './components/chatbot/chatbot.js';
 import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
-import News from './components/news/news.js'
-import MarketNews from './components/news/marketNews.js'
-import CryptoNews from './components/news/cryptoNews.js'
-import CompanyNews from './components/news/companyNews.js'
-import FinanceNews from './components/news/financeNews.js';
-import EconomyNews from './components/news/economyNews.js';
 
 Kommunicate.init("APP_ID", {
   automaticChatOpenOnNavigation: true,
@@ -41,28 +38,8 @@ const router = createBrowserRouter([
     element: <Profile />,
   },
   {
-    path: "news",
-    element: <News/>,
-  },
-  {
-    path: "news/marketNews",
-    element: <MarketNews />,
-  },
-  {
-    path: "news/cryptoNews",
-    element: <CryptoNews />,
-  },
-  {
-    path: "news/companyNews",
-    element: <CompanyNews />,
-  },
-  {
-    path: "news/financeNews",
-    element: <FinanceNews />,
-  },
-  {
-    path: "news/economyNews",
-    element: <EconomyNews />,
+    path: "test",
+    element: <Chatbot />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

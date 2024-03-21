@@ -11,7 +11,31 @@ import { useState } from "react";
 
 function Modal() {
 
-
+const filter =[
+  {allcontent: 'All',
+  content1: 'income1',
+  content2: 'income2',
+  content3: 'income3',
+  content4: 'income4',
+  content5: 'income5',
+  content6: 'income6',
+  content7: 'income7',} ,
+  {allcontent: 'All',
+  content1: 'expenses1',
+  content2: 'expenses2',
+  content3: 'expenses3',
+  content4: 'expenses4',
+  content5: 'expenses5',
+  content6: 'expenses6',
+  content7: 'expenses7',},
+  {allcontent: 'All',
+  content1: 'account1',
+  content2: 'account2',
+  content3: 'account3',
+  content4: 'account4',
+  content5: 'account5',
+}
+]
   const wee = [
     {
       date: '04/03/2024',
@@ -103,13 +127,20 @@ function Modal() {
   ];
 
   const [currentPage,setCurrentPage]=useState(1)
-const recordsPerPage=1;
+  const [filterPage,setCurrentFilter]=useState(1)
+  const defaultfilter = filter[0];
+  const rowData = Object.values(defaultfilter);
+
+const recordsPerPage=2;
+const totalRecords = wee.length;
 const lastIndex= currentPage*recordsPerPage;
 const firstIndex= lastIndex-recordsPerPage;
 const records =wee.slice(firstIndex,lastIndex);
 const npage=Math.ceil(wee.length/recordsPerPage);
 const nummbers=[...Array(npage+1).keys()].slice(1);
-
+const filterrecords =filter.slice(firstIndex,lastIndex);
+const filternpage=Math.ceil(filter.length/3);
+const filternummbers=[...Array(npage+1).keys()].slice(1);
     return (
 
         <main>
@@ -122,6 +153,46 @@ const nummbers=[...Array(npage+1).keys()].slice(1);
   <div className={"text-fontColor  m-2 mb-4"}>Monthy Transaction History</div>
   <div className={"  px-5 py-1 m-2 mb-4 sortby text-fontColor"}>Filter</div>
 </div>
+<table  className="table-fixed border-collapse my-2 TransBar rounded text-fontColor  " >
+                     
+                    <thead className="thead-light  " >
+                   
+                      <tr className="w-fulll text-xs "> 
+                        <th className="py-5 ">
+                          INCOME
+                        </th>
+                        <th>
+                          EXPENSES
+                        </th>
+                        <th>
+                          ACCOUNT
+                        </th>
+                      </tr>
+
+                    </thead>    
+                    <tbody>
+                    
+                    {Array.from({ length: Math.ceil(rowData.length / 3) }).map((_, rowIndex) => (
+                <tr key={rowIndex}>
+                    {Array.from({ length: 3 }).map((_, colIndex) => {
+                        const dataIndex = rowIndex * 3 + colIndex;
+                        return (
+                          
+                            <td key={colIndex} className=" text-xs pl-5">
+                                  <input id="default-checkbox" type="checkbox" value="" class="w-2 h-2 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                <span className="mx-2">{rowData[dataIndex]}</span>
+                            </td>
+                        );
+                    })}
+                </tr>
+            ))}
+            
+    </tbody>
+
+
+
+ </table>  
+
                   <div class="relative flex flex-col min-w-0 break-words rounded mycouse">
                   {records.map((item,i) => (
                     <table key={i} className="w-full border-collapse my-2 TransBar rounded text-fontColor " >
@@ -177,42 +248,37 @@ const nummbers=[...Array(npage+1).keys()].slice(1);
                     <div className="flex justify-between pt-3">
 
     <div class="hidden sm:flex justify-starts sm:flex-1 sm:items-center">
-      <div>
+    
+    <div>
         <p class="text-sm text-fontColor">
           Showing
-          <span class="font-medium text-fontColor px-2">1</span>
+          <span class="font-medium text-fontColor px-2">{currentPage}</span>
           to
-          <span class="font-medium text-fontColor px-2">10</span>
+          <span class="font-medium text-fontColor px-2">{recordsPerPage}</span>
           of
-          <span class="font-medium text-fontColor px-2">97</span>
+          <span class="font-medium text-fontColor px-2">{totalRecords}</span>
           results
         </p>
       </div>
     </div>
 
     <div>
-      <nav class="justify-starts rounded-md shadow-sm" aria-label="Pagination">
-      <li><a href="#" onClick={prePage}>Previous</a></li>
-        { nummbers.map((n,i) => (
-          <li className={`${currentPage === n? 'active':''}`}key={i}>
-            <a href="#" onClick={() => changeCPage(n)}>{n}</a>
-
-             </li>))
-        }
-        <li><a className="tableNotCurrentPage  bg-blueGray bg-opacity-80 text-littleGray" href="#" onClick={nextPage}>Next</a></li>
-        { nummbers.map((n,i) => (
-          <div className={`tableNotCurrentPage ${currentPage === n? 'active':''}`}key={i}>
-      <a href="" onClick={() => changeCPage(n)}>{n}</a></div>
-      ))
-        }
-        <a href="#" class="mx-2 rounded  items-center px-2 py-1 inline-block text-sm font-semibold text-littleGray hover:bg-blueGray bg-blueGray bg-opacity-80">2</a>
-        <a href="#" class=" rounded  items-center px-2 py-1 inline-block text-sm font-semibold text-littleGray hover:bg-blueGray bg-blueGray bg-opacity-80">3</a>
-        <span className="px-3 text-fontColor">..</span>
-        <a href="#" class="mx-2 rounded  items-center px-2 py-1 inline-block text-sm font-semibold text-littleGray hover:bg-blueGray bg-blueGray bg-opacity-80">9</a>
-        <a href="#" class="  rounded  items-center px-2 py-1 inline-block text-sm font-semibold text-littleGray hover:bg-blueGray bg-blueGray bg-opacity-80">10</a>
-       
-      </nav>
-    </div>
+    <nav className="justify-start rounded-md shadow-sm" aria-label="Pagination">
+  <ul className="inline-flex"> {/* Use ul for pagination lists */}
+    {/* <li className={`mx-2 rounded  items-center px-2 py-1 inline-block text-sm font-semibold  bg-blueGray bg-opacity-80 text-littleGray ${currentPage === 0 ? 'disabled' : ''}`}> 
+      <a href="#" onClick={prePage}>Previous</a>
+    </li> */}
+    {nummbers.map((n, i) => (
+      <li key={i} className={`mx-2 rounded  items-center px-2 py-1 inline-block text-sm font-semibold  bg-blueGray bg-opacity-80 text-littleGray inline-block ml-2 mr-2 ${currentPage === n ? 'active' : ''}`}> {/* Consistent spacing */}
+        <a href="#" onClick={() => changeCPage(n)}>{n}</a>
+      </li>
+    ))}
+    {/* <li className={`mx-2 rounded  items-center px-2 py-1 inline-block text-sm font-semibold  bg-blueGray bg-opacity-80 text-littleGray ${currentPage === nummbers.length - 1 ? 'disabled' : ''}`}> 
+      <a href="#" onClick={nextPage}>Next</a>
+    </li> */}
+  </ul>
+</nav>
+</div>
 </div>
 
 
@@ -223,21 +289,25 @@ const nummbers=[...Array(npage+1).keys()].slice(1);
         </main>
     );
 
-    function prePage(){
+    // function prePage(){
 
-      if(currentPage !== firstIndex){
-        setCurrentPage(currentPage-1)
-      }
-     };
+    //   if(currentPage !== firstIndex){
+    //     setCurrentPage(currentPage -1)
+    //   }
+    //  };
     function changeCPage(id){
       setCurrentPage(id)
     };
-    function nextPage(){
-      
-      if(currentPage !== firstIndex){
-        setCurrentPage(currentPage+1)
-      }
+
+    function changeFilter(id){
+      setCurrentFilter(id)
     };
+    // function nextPage(){
+      
+    //   if(currentPage !== firstIndex){
+    //     setCurrentPage(currentPage+1)
+    //   }
+    // };
 }
 
 export default Modal;
