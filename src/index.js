@@ -10,8 +10,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Register from './components/login and register/register.js';
-import Chatbot from './components/chatbot/chatbot.js';
 import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
+import ProVersionModal from './components/profilePage/proVersionModal.js';
 
 Kommunicate.init("APP_ID", {
   automaticChatOpenOnNavigation: true,
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
   },
   {
     path: "test",
-    element: <Chatbot />,
+    element: <ProVersionModal />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -6,7 +6,19 @@ import Header from "../navigation/header";
 import profile_bg from "../assets/bg3.png";
 import { PlusIcon, PencilIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid'
 import Select2 from 'react-select2';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Chatbot from '../chatbot/chatbot';
+import EditProfileModal from './editProfileModal';
+import AccountModal from './accountModal';
+import ProVersionModal from './proVersionModal';
+import { MdLocalDrink } from "react-icons/md";
+import { PiBowlFoodFill } from "react-icons/pi";
+import { FaSquareParking,FaMoneyBillWave  } from "react-icons/fa6";
+import { RiRedPacketFill } from "react-icons/ri";
+import { GiPayMoney } from "react-icons/gi";
+import CategoryModal from './categoryModal';
+
+
 
 
 function ProfilePage() {
@@ -21,8 +33,8 @@ function ProfilePage() {
   //Filter Expenses, Income
   const [selectedFilter, setSelectedFilter] = useState('expenses');
   const categories = [
-    { text: 'Expenses', value: 'expenses', subCategories: ['food', 'beverage', 'parking'] },
-    { text: 'Income', value: 'income', subCategories: ['pocket money', 'salary', 'interest'] },
+    { text: 'Expenses', value: 'expenses', subCategories: [{ name: 'food', icon: PiBowlFoodFill }, { name: 'beverage', icon: MdLocalDrink }, { name: 'parking', icon: FaSquareParking }] },
+    { text: 'Income', value: 'income', subCategories: [{ name: 'pocket money', icon: RiRedPacketFill }, { name: 'salary', icon: FaMoneyBillWave },{ name: 'interest', icon: GiPayMoney }] },
   ];
 
   const handleFilterChange = (event) => {
@@ -35,6 +47,7 @@ function ProfilePage() {
   const [password, setPassword] = useState('');
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedGender, setSelectedGender] = useState("");
+
   const handleTogglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -45,6 +58,42 @@ function ProfilePage() {
     setSelectedGender(event.target.value);
   };
 
+  //Edit Mode and Edit Profile Pop Up
+  const [editMode, setEditMode] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleToggleEditMode = () => {
+    setEditMode(!editMode); // Toggle edit mode
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setEditMode(false);
+    setSuccess(true);
+  };
+  useEffect(() => {
+    if (success) {
+      const timeoutId = setTimeout(() => {
+        setSuccess(false);
+      }, 2000);
+
+      return () => clearTimeout(timeoutId); // Cleanup on unmount
+    }
+  }, [success]);
+
+  //account
+  const [accountModalOpen, setAccountModalOpen] = useState(false);
+  const [accounts, setAccounts] = useState([]);
+
+  const handleAddAccount = (newAccount) => {
+    setAccounts([...accounts, newAccount]);
+  };
+
+  //pro version
+  const [proVersionModalOpen, setProVersionModalOpen] = useState(false);
+
+  //category
+  const [categoryModalOpen, setCategoryModalOpen] = useState(false);
+
   return (
     <main>
       <div className="absolute justify-between">
@@ -53,39 +102,43 @@ function ProfilePage() {
           <Navigation />
           <div className="w-screen justify-between ">
             <Header title={"Profile"} />
-            <div className="profileContainer transition-all flex-1">
+            <div className="profileContainer transition-all flex-1 overflow-y-auto	">
               <div className="grid grid-cols-1 gap-3 w-full p-5 md:grid-cols-2 gap-5">
                 {/* Edit Profile Details */}
                 <div className='row-span-7 container2 relative'>
                   <h2 className='text-fontColor'>Personal Details</h2>
-                  <PencilIcon className='h-5 w-5 text-fontColor flex absolute right-[3%] top-0 translate-y-[120%]'></PencilIcon>
+                  <PencilIcon
+                    className='h-5 w-5 text-fontColor flex absolute right-[3%] top-0 translate-y-[120%] cursor-pointer'
+                    onClick={handleToggleEditMode} // Toggle edit mode when pencil icon is clicked
+                  />
                   <div className="register-box max-w-[380px] lg:max-w-[480px]">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                       <div className="user-box">
-                        <input type="text" name=""/>
+                        <input type="text" name="" value="Bernard Ong" readOnly={!editMode} />
                         <label>Fullname</label>
                       </div>
                       <div className="user-box">
-                        <input type="text" name=""/>
+                        <input type="text" name="" value="bernard_ong" readOnly={!editMode} />
                         <label>Username</label>
                       </div>
                       <div className="user-box">
-                        <input type="text" name=""/>
+                        <input type="text" name="" value="bernard_ong@gmail.com" readOnly={!editMode} />
                         <label>Email</label>
                       </div>
                       <div className="user-box grid grid-cols-2 gap-3">
                         <div>
-                          <select name="country" value={selectedCountry} onChange={handleSelectChange} className='mb-[30px]'>
-                            <option className='optColor bg-dropdownColor text-fontColor' value="">Country</option>
+                          <select name="country" value={selectedCountry} onChange={handleSelectChange} className='mb-[30px]' disabled={!editMode}>
+                            {/* <option className='optColor bg-dropdownColor text-fontColor' value="">Country</option> */}
                             <option className='optColor bg-dropdownColor text-fontColor' value="MY">Malaysia</option>
                             <option className='optColor bg-dropdownColor text-fontColor' value="USA">USA</option>
                             <option className='optColor bg-dropdownColor text-fontColor' value="UK">UK</option>
                             <option className='optColor bg-dropdownColor text-fontColor' value="Canada">Canada</option>
                           </select>
-                          {selectedCountry && <label>Country</label>}
+                          <label className='contact-number'>Country</label>
+                          {/* {selectedCountry && <label>Country</label>} */}
                         </div>
                         <div>
-                          <select name="gender" value={selectedGender} onChange={handleSelectGender} className='mb-[30px]'>
+                          <select name="gender" value={selectedGender} onChange={handleSelectGender} className='mb-[30px]' disabled={!editMode}>
                             <option className='optColor bg-dropdownColor text-fontColor' value="">Gender</option>
                             <option className='optColor bg-dropdownColor text-fontColor' value="female">Female</option>
                             <option className='optColor bg-dropdownColor text-fontColor' value="male">Male</option>
@@ -96,21 +149,22 @@ function ProfilePage() {
                       <div className="user-box">
                         <label className='contact-number'>Contact Number</label>
                         <div className='grid grid-cols-5 gap-3'>
-                          <select name="dialcode" className='col-span-2' >
+                          <select name="dialcode" className='col-span-2' disabled={!editMode}>
                             <option className='optColor bg-dropdownColor text-fontColor' value="MY">MY +60</option>
                             <option className='optColor bg-dropdownColor text-fontColor' value="USA">US +1</option>
                             <option className='optColor bg-dropdownColor text-fontColor' value="UK">UK +44</option>
                             <option className='optColor bg-dropdownColor text-fontColor' value="Canada">CA +1</option>
                           </select>
-                          <input type="text" name="" placeholder='Contact Number' className='col-span-3'/>
+                          <input type="text" name="" value="172903819" placeholder='Contact Number' className='col-span-3' readOnly={!editMode} />
                         </div>
                       </div>
                       <div className="user-box">
                         <input
                           type={showPassword ? 'text' : 'password'}
                           name="password"
-                          value={password}
+                          value={12345678}
                           onChange={(e) => setPassword(e.target.value)} // Update password on change
+                          readOnly={!editMode}
                         />
                         <label>Password</label>
                         <div className='flex absolute right-0 text-fontColor' style={{ top: "10px" }} onClick={handleTogglePasswordVisibility}>
@@ -118,10 +172,10 @@ function ProfilePage() {
                         </div>
                       </div>
                       <div className='user-box'>
-                        <input type="date" min="1960-01-01" max="2024-12-31"/>
+                        <input type="date" min="1960-01-01" max="2024-12-31" readOnly={!editMode} />
                         <label>Date of Birth</label>
                       </div>
-                      <button className='saveBtn max-md:translate-x-[-50%] translate-y-[50%]'>
+                      <button className={`saveBtn max-md:translate-x-[-50%] translate-y-[50%]`} disabled={!editMode}>
                         <p className='text-fontColor'>Save</p>
                       </button>
                     </form>
@@ -133,17 +187,23 @@ function ProfilePage() {
                   <div className='grid grid-cols-1 gap-3 w-full p-5 md:grid-cols-2'>
                     <div className='container3'>
                       <p className='text-darkYellow'>Cash</p>
-                      <p className='text-fontColor'><span>MYR</span> 10, 000</p>
+                      <p className='text-fontColor'><span>MYR</span> 10000</p>
                     </div>
                     <div className='container3'>
                       <p className='text-darkYellow'>Cash</p>
-                      <p className='text-fontColor'><span>MYR</span> 10, 000</p>
+                      <p className='text-fontColor'><span>MYR</span> 10000</p>
                     </div>
                     <div className='container3'>
                       <p className='text-darkYellow'>Cash</p>
-                      <p className='text-fontColor'><span>MYR</span> 10, 000</p>
+                      <p className='text-fontColor'><span>MYR</span> 10000</p>
                     </div>
-                    <div className='container3'>
+                    {accounts.map((account, index) => (
+                      <div key={index} className='container3'>
+                        <p className='text-darkYellow'>{account.type}</p>
+                        <p className='text-fontColor'><span>MYR</span> {account.amount}</p>
+                      </div>
+                    ))}
+                    <div className='container3 cursor-pointer' onClick={() => { setAccountModalOpen(true); }}>
                       <PlusIcon className='h-5 w-5 text-fontColor flex relative top-0 left-[50%] translate-x-[-50%] translate-y-1/2'></PlusIcon>
                     </div>
                   </div>
@@ -151,7 +211,7 @@ function ProfilePage() {
                 {/* Experience Earned */}
                 <div className="row-span-2 container2 relative">
                   <h2 className='text-darkYellow flex relative h-fit'>Level 1</h2>
-                  <button className='proBtn text-[12px] text-fontColor flex absolute right-[3%] translate-y-[20%]'>Pro Version</button>
+                  <button className='proBtn text-[12px] text-fontColor flex absolute right-[3%] translate-y-[20%]' onClick={() => { setProVersionModalOpen(true); }}>Pro Version</button>
                   <p className='text-fontColor text-[18px] my-[10px]'>{formattedDate}</p>
                   <p className='text-[36px] text-lightBlue mb-[10px]'>12 <span className='text-[18px]'>/ 300 xp earned</span></p>
                   <div className="w-full bg-darkGray rounded-full h-2.5 mb-[10px]">
@@ -162,7 +222,6 @@ function ProfilePage() {
                 {/* Add Categories */}
                 <div className="row-span-3 container2 relative">
                   <h2 className='text-fontColor h-fit'>Category</h2>
-                  {/* <PlusIcon className='h-5 w-5 text-fontColor flex absolute left-[80%] translate-y-[-150%] translate-x-[-100%]'></PlusIcon> */}
                   <Select2 className='bg-grayOpacity text-fontColor p-2 rounded-[5px] text-[13px] flex absolute right-[3%] translate-y-[-90%] focus:border border-lightBlue hover:border border-lightBlue'
                     value={selectedFilter} onClick={handleFilterChange}
                     defaultValue={1}
@@ -224,8 +283,10 @@ function ProfilePage() {
                           <>
                             {category.subCategories.map((subCategory) => (
                               <div key={subCategory} className='container4'>
-                                <div className='bg-darkGray rounded-[50%] w-[50px] mr-[10px]'></div>
-                                <p className='text-fontColor my-auto text-[18px]'>{subCategory}</p>
+                                <div className='bg-darkGray rounded-[50%] w-[50px] mr-[10px]'>
+                                  <subCategory.icon className='w-[25px] h-[25px] text-fontColor ml-1 mt-1 text-center translate-x-[33%] translate-y-[35%]'></subCategory.icon>
+                                </div>
+                                <p className='text-fontColor my-auto text-[18px]'>{subCategory.name}</p>
                               </div>
                             ))}
                           </>
@@ -233,7 +294,7 @@ function ProfilePage() {
                       </>
                     )}
                     <div className='container4'>
-                      <div className='bg-darkGray rounded-[50%] w-[50px] mr-[10px]'>
+                      <div className='bg-darkGray rounded-[50%] w-[50px] mr-[10px] cursor-pointer' onClick={() => { setCategoryModalOpen(true); }}>
                         <PlusIcon className='w-[30px] text-fontColor text-center translate-x-[33%] translate-y-[35%]'></PlusIcon>
                       </div>
                       <p className='text-fontColor my-auto text-[18px]'>category</p>
@@ -245,6 +306,11 @@ function ProfilePage() {
           </div>
         </div>
       </div>
+      <Chatbot />
+      {success && <EditProfileModal />}
+      {accountModalOpen && <AccountModal setOpenModal={setAccountModalOpen} handleAddAccount={handleAddAccount} />}
+      {proVersionModalOpen && <ProVersionModal setOpenModal={setProVersionModalOpen} />}
+      {categoryModalOpen && <CategoryModal setOpenModal={setCategoryModalOpen} />}
       {/* </div> */}
     </main>
   );
