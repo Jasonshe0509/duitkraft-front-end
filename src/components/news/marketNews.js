@@ -22,7 +22,7 @@ function MarketNews() {
                 the Dow closed the session 0.2% higher.</p>
             <p className='mb-4'>Tesla (TSLA) shares led the way for the S&amp;P
                 500, popping 6.3% after the company announced a $1,000 price
-                    increase for the Model Y, its most popular electric vehicle (EV). starting April 1. Tesla had already
+                increase for the Model Y, its most popular electric vehicle (EV). starting April 1. Tesla had already
                 boosted Model Y price tags at the beginning of March after cutting prices on some of its vehicles in China, Europe,
                 and the U.S. earlier in the year.</p>
             <p className='mb-4'>Shares of Match Group (MTCH) gained 4.7% Monday. News emerged
@@ -31,13 +31,13 @@ function MarketNews() {
                 on a list of companies that could benefit from increased productivity thanks to AI.</p>
             <p className='mb-4'>Alphabet (GOOGL, GOOG) shares jumped after reports that
                 the Google parent company is in talks with
-                    Apple (AAPL) to incorporate Google's Gemini AI
+                Apple (AAPL) to incorporate Google's Gemini AI
                 technology in future iPhone operating systems. While Apple is reportedly developing its own AI capabilities, it may
                 license technologies from other companies for performing larger AI tasks like generating long texts and images.
                 Apple shares were up 0.6% on the day.</p>
             <p className='mb-4'>Super Micro Computer (SMCI) shares posted the steepest losses
                 on the S&amp;P 500 on their first day as a
-                    component of the benchmark index. After moving higher to start the day, shares of the tech firm reversed
+                component of the benchmark index. After moving higher to start the day, shares of the tech firm reversed
                 course, closing the session down 6.4%.</p>
             <p className='mb-4'>Shares of International Paper (IP) tumbled 3.9%
                 after reports that one of the company's directors sold around $21,000 worth of the stock. The paper and packaging
@@ -65,16 +65,27 @@ function MarketNews() {
                                     <div className='text-fontColor bg-darkGreen btnFinance hover:bg-grayGreen focus:bg-grayGreen'>Finance</div>
                                     <div className='text-fontColor bg-darkGreen1 btnEconomy hover:bg-grayGreen1 focus:bg-grayGreen1'>Economy</div>
                                 </div>
-                                <div className='bg-blackOpacity rounded-[15px] p-5'>
-                                    {Markets.map((market, index) => (
-                                        <div key={index}>
-                                            <img src={market.image} className='h-[250px] object-cover object-left'></img>
-                                            <h3 className='text-fontColor'>{market.title}</h3>
-                                            <p className='text-fontColor my-2'>Published on: {market.date}</p>
-                                            {marketTag}
-                                            <p className='text-fontColor text-justify'>{market.content}</p>
-                                        </div>
-                                    ))}
+                                <div className='grid grid-cols-1 gap-5 md:grid-cols-5'>
+                                    <div className='bg-blackOpacity rounded-[15px] p-5 md:p-10 col-span-3'>
+                                        {Markets.map((market, index) => (
+                                            <div key={index}>
+                                                <img src={market.image} className='h-[250px] object-cover object-left mb-4'></img>
+                                                <h3 className='text-fontColor'>{market.title}</h3>
+                                                <p className='text-fontColor my-2'>Published on: {market.date}</p>
+                                                {marketTag}
+                                                <p className='text-fontColor text-justify'>{market.content}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div className='bg-blackOpacity rounded-[15px] p-5 md:p-10 col-span-2'>
+                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
+                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
+                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
+                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
+                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
+                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
+                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

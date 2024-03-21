@@ -41,7 +41,7 @@ function TestNews() {
                                 <div className='grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-5'>
                                     {(selectedButton === 'Market' || selectedButton === 'All') && (
                                         <>
-                                            <Link to='/marketNews'>
+                                            <Link to='./marketNews'>
                                                 <div className="col-span-1 h-full flex w-full rounded-[15px] bg-blackOpacity p-[15px]">
                                                     <img className="object-cover object-left w-[30%] md:w-[40%] mr-3" src={market1}></img>
                                                     <div className="self-center w-[70%] md:w-[60%]">
@@ -59,96 +59,81 @@ function TestNews() {
                                     )}
                                     {(selectedButton === 'Crypto' || selectedButton === 'All') && (
                                         <>
-                                            <div className="col-span-1 h-full flex w-full rounded-[15px] bg-blackOpacity p-[15px]">
-                                                <img className="object-cover object-left w-[30%] md:w-[40%] mr-3" src={crypto1}></img>
-                                                <div className="w-[70%] md:w-[60%] self-center">
-                                                    <h3 className="text-fontColor">
-                                                        Bitcoin and Ether Prices Fall After Dencun Upgrade
-                                                    </h3>
-                                                    <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                    <div className="flex text-nowrap items-center justify-starts gap-1">
-                                                        {trendingTag}{cryptoTag}
+                                            <Link to='./cryptoNews'>
+                                                <div className="col-span-1 h-full flex w-full rounded-[15px] bg-blackOpacity p-[15px]">
+                                                    <img className="object-cover object-left w-[30%] md:w-[40%] mr-3" src={crypto1}></img>
+                                                    <div className="w-[70%] md:w-[60%] self-center">
+                                                        <h3 className="text-fontColor">
+                                                            Bitcoin and Ether Prices Fall After Dencun Upgrade
+                                                        </h3>
+                                                        <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
+                                                        <div className="flex text-nowrap items-center justify-starts gap-1">
+                                                            {trendingTag}{cryptoTag}
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </>
                                     )}
                                     {(selectedButton === 'Company' || selectedButton === 'All') && (
                                         <>
-                                            <div className="col-span-1 h-full flex w-full rounded-[15px] bg-blackOpacity p-[15px]">
-                                                <img className="object-cover object-left w-[30%] md:w-[40%] mr-3" src={company1}></img>
-                                                <div className="w-[70%] md:w-[60%] self-center">
-                                                    <h3 className="text-fontColor">
-                                                        Cisco Systems Completes Its $28 Billion Purchase of Splunk
-                                                    </h3>
-                                                    <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                    <div className="flex text-nowrap items-center justify-starts gap-1">
-                                                        {trendingTag}{companyTag}
+                                            <Link to='./companyNews'>
+                                                <div className="col-span-1 h-full flex w-full rounded-[15px] bg-blackOpacity p-[15px]">
+                                                    <img className="object-cover object-left w-[30%] md:w-[40%] mr-3" src={company1}></img>
+                                                    <div className="w-[70%] md:w-[60%] self-center">
+                                                        <h3 className="text-fontColor">
+                                                            Cisco Systems Completes Its $28 Billion Purchase of Splunk
+                                                        </h3>
+                                                        <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
+                                                        <div className="flex text-nowrap items-center justify-starts gap-1">
+                                                            {trendingTag}{companyTag}
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </>
                                     )}
                                     {(selectedButton === 'Finance' || selectedButton === 'All') && (
                                         <>
-                                            <div className="col-span-1 h-full flex w-full rounded-[15px] bg-blackOpacity p-[15px]">
-                                                <img className="object-cover object-left w-[30%] md:w-[40%] mr-3" src={finance1}></img>
-                                                <div className="w-[70%] md:w-[60%] self-center">
-                                                    <h3 className="text-fontColor">
-                                                        A Record Number Of Vanguard Savers Tapped 401ks for Emergency Funds In 2023
-                                                    </h3>
-                                                    <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                    <div className="flex text-nowrap items-center justify-starts gap-1">
-                                                        {trendingTag}{financeTag}
+                                            <Link to='./financeNews'>
+                                                <div className="col-span-1 h-full flex w-full rounded-[15px] bg-blackOpacity p-[15px]">
+                                                    <img className="object-cover object-left w-[30%] md:w-[40%] mr-3" src={finance1}></img>
+                                                    <div className="w-[70%] md:w-[60%] self-center">
+                                                        <h3 className="text-fontColor">
+                                                            A Record Number Of Vanguard Savers Tapped 401ks for Emergency Funds In 2023
+                                                        </h3>
+                                                        <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
+                                                        <div className="flex text-nowrap items-center justify-starts gap-1">
+                                                            {trendingTag}{financeTag}
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-
+                                            </Link>
                                         </>
                                     )}
                                     {(selectedButton === 'Economy' || selectedButton === 'All') && (
                                         <>
-                                            <div className="col-span-1 h-full flex w-full rounded-[15px] bg-blackOpacity p-[15px]">
-                                                <img className="object-cover object-left w-[30%] md:w-[40%] mr-3" src={economy1}></img>
-                                                <div className="w-[70%] md:w-[60%] self-center">
-                                                    <h3 className="text-fontColor">
-                                                        New York Area Business Activity Stays Steady in March
-                                                    </h3>
-                                                    <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                    <div className="flex text-nowrap items-center justify-starts gap-1">
-                                                        {trendingTag}{economyTag}
+                                            <Link to='./economyNews'>
+                                                <div className="col-span-1 h-full flex w-full rounded-[15px] bg-blackOpacity p-[15px]">
+                                                    <img className="object-cover object-left w-[30%] md:w-[40%] mr-3" src={economy1}></img>
+                                                    <div className="w-[70%] md:w-[60%] self-center">
+                                                        <h3 className="text-fontColor">
+                                                            Refinancing Mortgages Has Become Nearly Unheard Of
+                                                        </h3>
+                                                        <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
+                                                        <div className="flex text-nowrap items-center justify-starts gap-1">
+                                                            {trendingTag}{economyTag}
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </>
                                     )}
                                 </div>
                                 <div className='bg-blackOpacity rounded-[15px]'>
                                     {(selectedButton === 'Market' || selectedButton === 'All') && (
                                         <>
-                                            <Link to='/marketNews'>
-                                                <div className="flex p-[15px] md:max-h-[200px]">
-                                                    <img className="object-cover object-left w-[20%] mr-3" src={market1}></img>
-                                                    <div className="self-center w-[80%]">
-                                                        <h3 className="text-fontColor">
-                                                            Tesla Shares Jump After Model Y Price Increase
-                                                        </h3>
-                                                        <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                        {marketTag}
-                                                        <p className='text-fontColor my-2'>Major U.S. equities indexes jumped higher on Monday... </p>
-                                                    </div>
-                                                </div>
-                                                <div className="flex p-[15px] md:max-h-[200px]">
-                                                    <img className="object-cover object-left w-[20%] mr-3" src={market1}></img>
-                                                    <div className="self-center w-[80%]">
-                                                        <h3 className="text-fontColor">
-                                                            Tesla Shares Jump After Model Y Price Increase
-                                                        </h3>
-                                                        <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                        {marketTag}
-                                                        <p className='text-fontColor my-2'>Major U.S. equities indexes jumped higher on Monday... </p>
-                                                    </div>
-                                                </div>
+                                            <Link to='./marketNews'>
                                                 <div className="flex p-[15px] md:max-h-[200px]">
                                                     <img className="object-cover object-left w-[20%] mr-3" src={market1}></img>
                                                     <div className="self-center w-[80%]">
@@ -165,18 +150,7 @@ function TestNews() {
                                     )}
                                     {(selectedButton === 'Company' || selectedButton === 'All') && (
                                         <>
-                                            <Link to='/marketNews'>
-                                                <div className="flex p-[15px] md:max-h-[200px]">
-                                                    <img className="object-cover object-left w-[20%] mr-3" src={company1}></img>
-                                                    <div className="self-center w-[80%]">
-                                                        <h3 className="text-fontColor">
-                                                            Cisco Systems Completes Its $28 Billion Purchase of Splunk
-                                                        </h3>
-                                                        <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                        {companyTag}
-                                                        <p className='text-fontColor my-2'>(CISCO) said it closed its $28 billion acquisition of cybersecurity provider Splunk...</p>
-                                                    </div>
-                                                </div>
+                                            <Link to='./companyNews'>
                                                 <div className="flex p-[15px] md:max-h-[200px]">
                                                     <img className="object-cover object-left w-[20%] mr-3" src={company1}></img>
                                                     <div className="self-center w-[80%]">
@@ -193,80 +167,53 @@ function TestNews() {
                                     )}
                                     {(selectedButton === 'Crypto' || selectedButton === 'All') && (
                                         <>
-                                            <div className="flex p-[15px] md:max-h-[200px]">
-                                                <img className="object-cover object-left w-[20%] mr-3" src={crypto1}></img>
-                                                <div className="self-center w-[80%]">
-                                                    <h3 className="text-fontColor">
-                                                        Bitcoin and Ether Prices Fall After Dencun Upgrade
-                                                    </h3>
-                                                    <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                    {cryptoTag}
-                                                    <p className='text-fontColor my-2'>Last week proved to be a roller-coaster ride for bitcoin (BTC) investors...</p>
+                                            <Link to='./cryptoNews'>
+                                                <div className="flex p-[15px] md:max-h-[200px]">
+                                                    <img className="object-cover object-left w-[20%] mr-3" src={crypto1}></img>
+                                                    <div className="self-center w-[80%]">
+                                                        <h3 className="text-fontColor">
+                                                            Bitcoin and Ether Prices Fall After Dencun Upgrade
+                                                        </h3>
+                                                        <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
+                                                        {cryptoTag}
+                                                        <p className='text-fontColor my-2'>Last week proved to be a roller-coaster ride for bitcoin (BTC) investors...</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="flex p-[15px] md:max-h-[200px]">
-                                                <img className="object-cover object-left w-[20%] mr-3" src={crypto1}></img>
-                                                <div className="self-center w-[80%]">
-                                                    <h3 className="text-fontColor">
-                                                        Bitcoin and Ether Prices Fall After Dencun Upgrade
-                                                    </h3>
-                                                    <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                    {cryptoTag}
-                                                    <p className='text-fontColor my-2'>Last week proved to be a roller-coaster ride for bitcoin (BTC) investors...</p>
-                                                </div>
-                                            </div>
+                                            </Link>
                                         </>
                                     )}
                                     {(selectedButton === 'Finance' || selectedButton === 'All') && (
                                         <>
-                                            <div className="flex p-[15px] md:max-h-[200px]">
-                                                <img className="object-cover object-left w-[20%] mr-3" src={finance1}></img>
-                                                <div className="self-center w-[80%]">
-                                                    <h3 className="text-fontColor">
-                                                        A Record Number Of Vanguard Savers Tapped 401ks for Emergency Funds In 2023
-                                                    </h3>
-                                                    <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                    {financeTag}
-                                                    <p className='text-fontColor my-2'>As inflation and high interest rates pressure household budgets...</p>
+                                            <Link to='./financeNews'>
+                                                <div className="flex p-[15px] md:max-h-[200px]">
+                                                    <img className="object-cover object-left w-[20%] mr-3" src={finance1}></img>
+                                                    <div className="self-center w-[80%]">
+                                                        <h3 className="text-fontColor">
+                                                            A Record Number Of Vanguard Savers Tapped 401ks for Emergency Funds In 2023
+                                                        </h3>
+                                                        <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
+                                                        {financeTag}
+                                                        <p className='text-fontColor my-2'>As inflation and high interest rates pressure household budgets...</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="flex p-[15px] md:max-h-[200px]">
-                                                <img className="object-cover object-left w-[20%] mr-3" src={finance1}></img>
-                                                <div className="self-center w-[80%]">
-                                                    <h3 className="text-fontColor">
-                                                        A Record Number Of Vanguard Savers Tapped 401ks for Emergency Funds In 2023
-                                                    </h3>
-                                                    <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                    {financeTag}
-                                                    <p className='text-fontColor my-2'>As inflation and high interest rates pressure household budgets...</p>
-                                                </div>
-                                            </div>
+                                            </Link>
                                         </>
                                     )}
                                     {(selectedButton === 'Economy' || selectedButton === 'All') && (
                                         <>
-                                            <div className="flex p-[15px] md:max-h-[200px]">
-                                                <img className="object-cover object-left w-[20%] mr-3" src={economy1}></img>
-                                                <div className="self-center w-[80%]">
-                                                    <h3 className="text-fontColor">
-                                                        New York Area Business Activity Stays Steady in March
-                                                    </h3>
-                                                    <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                    {economyTag}
-                                                    <p className='text-fontColor my-2'>Business activity in the New York and Northern New Jersey area stabilized in March...</p>
+                                            <Link to='./economyNews'>
+                                                <div className="flex p-[15px] md:max-h-[200px]">
+                                                    <img className="object-cover object-left w-[20%] mr-3" src={economy1}></img>
+                                                    <div className="self-center w-[80%]">
+                                                        <h3 className="text-fontColor">
+                                                            Refinancing Mortgages Has Become Nearly Unheard Of
+                                                        </h3>
+                                                        <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
+                                                        {economyTag}
+                                                        <p className='text-fontColor my-2'>Business activity in the New York and Northern New Jersey area stabilized in March...</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="flex p-[15px] md:max-h-[200px]">
-                                                <img className="object-cover object-left w-[20%] mr-3" src={economy1}></img>
-                                                <div className="self-center w-[80%]">
-                                                    <h3 className="text-fontColor">
-                                                        New York Area Business Activity Stays Steady in March
-                                                    </h3>
-                                                    <p className='text-fontColor text-[12px] my-2'>Published on: 08 Mac 2024</p>
-                                                    {economyTag}
-                                                    <p className='text-fontColor my-2'>Business activity in the New York and Northern New Jersey area stabilized in March...</p>
-                                                </div>
-                                            </div>
+                                            </Link>
                                         </>
                                     )}
                                 </div>

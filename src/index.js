@@ -15,6 +15,10 @@ import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
 import News from './components/news/news.js'
 import TestNews from './components/news/TestNews.js'
 import MarketNews from './components/news/marketNews.js'
+import CryptoNews from './components/news/cryptoNews.js'
+import CompanyNews from './components/news/companyNews.js'
+import FinanceNews from './components/news/financeNews.js';
+import EconomyNews from './components/news/economyNews.js';
 
 Kommunicate.init("APP_ID", {
   automaticChatOpenOnNavigation: true,
@@ -47,8 +51,24 @@ const router = createBrowserRouter([
     element: <News/>,
   },
   {
-    path: "marketNews",
+    path: "news/marketNews",
     element: <MarketNews />,
+  },
+  {
+    path: "news/cryptoNews",
+    element: <CryptoNews />,
+  },
+  {
+    path: "news/companyNews",
+    element: <CompanyNews />,
+  },
+  {
+    path: "news/financeNews",
+    element: <FinanceNews />,
+  },
+  {
+    path: "news/economyNews",
+    element: <EconomyNews />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
