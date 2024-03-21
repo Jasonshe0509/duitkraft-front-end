@@ -11,7 +11,7 @@ const Navigation = () => {
     title: "Education", icon: <AcademicCapIcon className="w-6 h-6 text-fontColor" />,
     submenu: true, submenuItems: [{ title: "Course", icon: <DocumentIcon className="w-6 h-6 text-fontColor" />, link: "/dashboard" }, { title: "Module", icon: <DocumentDuplicateIcon className="w-6 h-6 text-fontColor" />, link: "/dashboard" }]
   },
-  { title: "News", icon: <NewspaperIcon className="w-6 h-6 text-fontColor" />, link: "/dashboard" },
+  { title: "News", icon: <NewspaperIcon className="w-6 h-6 text-fontColor" />, link: "/news" },
   { title: "Market Value", icon: <ChartBarIcon className="w-6 h-6 text-fontColor" />, link: "/dashboard" }];
 
 
