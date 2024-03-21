@@ -1,0 +1,119 @@
+.duitkraft .bg1 {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: fixed;
+}
+.duitkraft .outerColumn {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 48%;
+  transform: translate(-50%, 18vh);
+  margin: 0 20px;
+}
+@media screen and (width < 768px) {
+  .duitkraft .outerColumn {
+    top: -15%;
+    left: 45%;
+  }
+}
+.duitkraft .outerColumn .container1 {
+  background-color: rgba(128, 128, 128, 0.1);
+  width: 480px;
+  height: 480px;
+  border-radius: 15px;
+}
+@media screen and (width < 768px) {
+  .duitkraft .outerColumn .container1 {
+    width: 360px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .duitkraft .outerColumn .container1:first-child {
+    border-radius: 0 0 15px 15px;
+    padding: 0 3.5rem;
+  }
+  .duitkraft .outerColumn .container1:first-child h2,
+  .duitkraft .outerColumn .container1:first-child p {
+    position: relative;
+    top: -10%;
+  }
+  .duitkraft .outerColumn .container1:first-child .login-box {
+    position: relative;
+    top: -15%;
+  }
+  .duitkraft .outerColumn .container1:first-child .login-box .signUp {
+    margin-bottom: 30px;
+  }
+  .duitkraft .outerColumn .container1:last-child {
+    border-radius: 15px 15px 0 0;
+    padding-bottom: 0;
+    min-height: 0;
+    padding-top: 0;
+  }
+  .duitkraft .outerColumn .container1:last-child img {
+    margin-top: 30px;
+  }
+}
+.duitkraft .outerColumn .container1 .login-box {
+  position: relative;
+  max-width: 370px;
+  padding-top: 30px;
+}
+@media screen and (width < 768px) {
+  .duitkraft .outerColumn .container1 .login-box {
+    padding-top: 20px;
+  }
+}
+.duitkraft .outerColumn .container1 .login-box .user-box {
+  position: relative;
+}
+.duitkraft .outerColumn .container1 .login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.duitkraft .outerColumn .container1 .login-box .user-box input:focus + label, .duitkraft .outerColumn .container1 .login-box .user-box input:valid + label {
+  top: -20px;
+  font-size: 14px;
+  color: #bdb8b8;
+}
+@media screen and (width < 768px) {
+  .duitkraft .outerColumn .container1 .login-box .user-box input {
+    margin-bottom: 15px;
+  }
+}
+.duitkraft .outerColumn .container1 .login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.duitkraft .outerColumn .container1 .login-box .loginBtn {
+  background-color: #12497b;
+  border-radius: 30px;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 30%);
+}
+.duitkraft .outerColumn .container1 .login-box .loginBtn:hover {
+  background-color: #3b5d7e;
+}
+.duitkraft .outerColumn .container1 .login-box .loginBtn p {
+  margin: 10px 30px;
+}/*# sourceMappingURL=login.css.map */

@@ -4,11 +4,21 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import Login from './components/login and register/login';
-import Dashboard from './components/dashboard/dashboard2.js';
+import Dashboard2 from './components/dashboard/dashboard2.js';
+import Dashboard from './components/dashboard/dashboard.js';
+import Profile from './components/profilePage/profilePage.js';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Register from './components/login and register/register.js';
+import Chatbot from './components/chatbot/chatbot.js';
+import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
+
+Kommunicate.init("APP_ID", {
+  automaticChatOpenOnNavigation: true,
+  popupWidget: true
+});
 
 const router = createBrowserRouter([
   {
@@ -16,8 +26,20 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
+    path: "register",
+    element: <Register />
+  },
+  {
     path: "dashboard",
-    element: <Dashboard />,
+    element: <Dashboard2 />,
+  },
+  {
+    path: "profile",
+    element: <Profile />,
+  },
+  {
+    path: "test",
+    element: <Chatbot />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
