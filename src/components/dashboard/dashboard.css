@@ -4,6 +4,7 @@
     width: 95%;
 height: max-content;    justify-content: center;
     font:white;
+    
 }
 
 .dashboardedu2 {
@@ -16,7 +17,7 @@ height: max-content;    justify-content: center;
     display: relative;
     overflow-y: auto; 
     overflow-y: auto; 
-
+    margin-bottom: 40px;
 
 }
 .sortby{
@@ -36,8 +37,68 @@ height: max-content;    justify-content: center;
     display: relative;
 
 }
+
+
+
+.dashboardbudget4 {
+    background-color: rgba(128, 128, 128,0.1);
+    width: 80%;
+    min-width: max-content;    
+    padding: 10px;
+    height: 116%;
+    justify-content: center;
+    font:white;
+    overflow-y: auto; 
+    display: relative;
+    margin-top: 0px;
+    
+
+}
+
+
+.dashboardbudget1 {
+    background-color: #8080801a;
+    width: 28%;
+    min-width:min-content;
+    height: max-content;    
+    font:white;
+}
+
+.dashboardbudget1_5 {
+    /* background-color: rgba(128, 128, 128,0.1); */
+    /* padding: 10px; */
+    width: 100%;
+    /* justify-content: space-evenly; */
+    
+    overflow: auto;
+    height: max-content;    
+    font:white;
+}
+
+.dashboardbudget2_5 {
+
+    width: 100%;
+    overflow: auto;
+    height: max-content;    
+    font:white;
+}
+
+
+
+.dashboardbudget2 {
+    background-color: rgba(128, 128, 128,0.1);
+    width: 44.5%;
+    /* min-width:150px; */
+
+    height: max-content;    
+    justify-content: center;
+    font:white;
+}
 .CourseBar{
     background-color: rgba(0, 0, 0, 0.215)
+}
+.TransBar{
+    background-color: rgba(128, 128, 128,0.1)
 }
 .dashboard-container {
     overflow-x: auto;
@@ -51,15 +112,24 @@ height: max-content;    justify-content: center;
 
 .dashboard-container2{
     width: 65%;     
- 
     z-index: 5;
   
 }
+
+
 
 .dashboard-container3{
     width: 38%;    
      /* background-color: rgb(88, 93, 132); */
 }
+
+
+.dashboard-container4{
+    width: 30%;     
+    z-index: 5;
+  
+}
+
 ::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
   }
@@ -72,7 +142,8 @@ height: max-content;    justify-content: center;
 ::-webkit-scrollbar-thumb {
     background-color: #888; /* Color of the scrollbar thumb */
     border-radius: 4px; /* Border radius of the scrollbar thumb */
-  }
+    /* height: 50px;   */
+ }
   
 ::-webkit-scrollbar-thumb:hover {
     display: none;/* Color of the scrollbar thumb on hover */
@@ -131,6 +202,33 @@ height: max-content;    justify-content: center;
     height: 50px;
   }
   
+.fontsizexxs{
+font-size: 8px;
+}
+.item{
+    background-color: rgba(128, 128, 128, 0.1);
+    margin-bottom: 5px;
+    padding: 10px 20px;
+}
+.title{
+    justify-content: space-between;
+    display: flex;
+    font:white;
+
+    cursor: pointer;
+
+}
+.content{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0,1,0,1);
+
+}
+.content.show{
+    height: auto;
+    max-height: 999px;
+    transition: all 0.5s cubic-bezier(1,0,1,0);
+}
 @media screen and (max-width: 768px) {
 
     .dashboardedu1 {
@@ -140,13 +238,30 @@ height: max-content;    justify-content: center;
         justify-content: center;
         font:white;
     }
+
+    .dashboardbudget1 {
+        background-color: rgba(128, 128, 128,0.1);
+        width: 93%;
+        height:max-content;
+        justify-content: center;
+        font:white;
+        
+    }
+
+    
+    .dashboardbudget2 {
+        width: 93%;
+       height:max-content;
+        justify-content: center;
+        font:white;
+        
+    }
     
     .dashboardedu2 {
         background-color: rgba(128, 128, 128,0.1);
                 width: 93%;
         justify-content: center;
         font:white;
-        padding-bottom: 100;
     }
     .dashboardedu3 {
         background-color: rgba(128, 128, 128,0.1);
@@ -155,6 +270,9 @@ height: max-content;    justify-content: center;
         font:white;
         
     
+    }
+    .dashboardbudget4{
+        width: 93%;
     }
     
  
@@ -176,9 +294,18 @@ height: max-content;    justify-content: center;
     .dashboard-container3{
         width: 100%;     
         height: 120%;
-        margin-top: -20px;
+        /* margin-top: -20px; */
    
     }
-    
+
+    .dashboardbudget2_5{
+        width: 100%;     
+            flex-wrap: wrap;
+
+    }
+    /* .dashboardbudget1_5
+   {
+    flex-wrap: wrap;
+   }  */
 
 }

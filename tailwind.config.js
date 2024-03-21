@@ -20,11 +20,17 @@ module.exports = {
 
       'progressbar':'#141326',
       'progressbarline':'#49E33C',
+      'progressbar2':'#C7D3EB',
+      'progressbarline2':'#47B2FF',
+
       'continuebutton':'#9FEF00',
       'becolour':'#6C40D9',
       'incolour':'#00A6C2',
       'adcolour':'#E3823C',
       'yellowtext':'#E3B53C',
+      'greentrans':'#5DFF6D',
+      'redtrans':'#FF0000',
+
 
 
 

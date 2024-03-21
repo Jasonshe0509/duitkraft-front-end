@@ -1,9 +1,9 @@
 import "../navigation/navistyle.css";
 import "../dashboard/dashboard.css";
 import dashboard_bg from "../assets/dashboard_bg.png";
-import Navigation from "../navigation/navigation";
-import Header from "../navigation/header";
-import ProgressBar from "../dashboard/progress.js";
+import Navigation from "../navigation/navigation.js";
+import Header from "../navigation/header.js";
+import ProgressBar from "./progress.js";
 import coursebg from "../assets/coursebg.jpg";
 
 
@@ -22,7 +22,7 @@ const Dashboard = () => {
             <Header title={"Dashboard"}/>
             <div className="dashboard-container transition-all flex-1">
               <div className="  dashboard-container2 ">
-                <div className={" dashboardedu1 text-fontColor m-5  pt-10  shadow-xl"}>
+                <div className={" dashboardedu1 rounded text-fontColor m-5  pt-10  shadow-xl"}>
                 <div className="flex flex-wrap justify-center items-center mb-2">
 
       <div className="flex-start  my-1 flex flex-col md:mx-10 sm:mx-2 ">  
@@ -47,7 +47,7 @@ const Dashboard = () => {
           cy="95"
               r="60"
               stroke="#141326"
-              stroke-width="20"
+              stroke-width="18"
               fill="transparent"
               className="text-gray-700"
             />
@@ -92,7 +92,7 @@ const Dashboard = () => {
           cy="95"
               r="60"
               stroke="#141326"
-              stroke-width="20"
+              stroke-width="18"
               fill="transparent"
               className="text-gray-700"
             />
@@ -136,7 +136,7 @@ const Dashboard = () => {
           cy="95"
               r="60"
               stroke="#141326"
-              stroke-width="20"
+              stroke-width="18"
               fill="transparent"
               className="text-gray-700"
             />
@@ -175,7 +175,7 @@ const Dashboard = () => {
           </svg>
         </div>
                 </div>
-                <div className={"  dashboardedu2 text-fontColor m-5 mb-10  shadow-xl"}>
+                <div className={"  dashboardedu2 text-fontColor m-5 mb-10 rounded shadow-xl"}>
                 <div className="flex justify-between ">
   <div className={"text-fontColor  m-2 mb-4"}>Course Bar</div>
   <div className={"  px-5 py-1 m-2 mb-4 sortby"}>Sort By</div>
@@ -256,7 +256,7 @@ const Dashboard = () => {
                 </div>
               </div>
               <div className="  dashboard-container3 ">
-                <div className={"  dashboardedu3 text-fontColour m-5 pt-15 text-fontColor  shadow-xl"}>
+                <div className={"  dashboardedu3 text-fontColour m-5 pt-15 text-fontColor rounded shadow-xl"}>
 
                 
                 <div className="flex justify-between ">
