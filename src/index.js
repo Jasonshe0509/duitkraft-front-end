@@ -10,8 +10,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Register from './components/login and register/register.js';
-import Chatbot from './components/chatbot/chatbot.js';
+// import Chatbot from './components/chatbot/chatbot.js';
 import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
+import News from './components/news/news.js'
+import TestNews from './components/news/TestNews.js'
+import MarketNews from './components/news/marketNews.js'
 
 Kommunicate.init("APP_ID", {
   automaticChatOpenOnNavigation: true,
@@ -37,7 +40,15 @@ const router = createBrowserRouter([
   },
   {
     path: "test",
-    element: <Chatbot />,
+    element: <TestNews />,
+  },
+  {
+    path: "news",
+    element: <News/>,
+  },
+  {
+    path: "marketNews",
+    element: <MarketNews />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
