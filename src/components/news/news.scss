@@ -1,0 +1,30 @@
+.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    object-position: center;
+}
+
+.newsContainer {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: calc(100% - 1%);
+    min-width: calc(100% - 20%);
+    height: 85vh;
+
+    .btnAll,
+    .btnCrypto,
+    .btnMarket,
+    .btnCompany,
+    .btnFinance,
+    .btnEconomy {
+        border-radius: 20px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .container1{
+        width: 100%;
+    }
+}
