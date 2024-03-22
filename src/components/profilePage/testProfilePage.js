@@ -44,7 +44,7 @@ function TestProfilePage() {
 
   //Edit Profile
   const [showPassword, setShowPassword] = useState(false);
-  const [password, setPassword] = useState('11223344');
+  const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState("Bernard Ong");
   const [username, setUsername] = useState("bernard_ong");
   const [email, setEmail] = useState("bernard_ong@gmail.com");
