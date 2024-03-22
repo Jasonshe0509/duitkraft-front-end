@@ -308,8 +308,8 @@ function TestProfilePage() {
         </div>
       </div>
       <Chatbot />
-      {success && <EditProfileModal />}
-      {/* {accountModalOpen && <AccountModal setOpenModal={setAccountModalOpen} handleAddAccount={handleAddAccount} />}
+      {/* {success && <EditProfileModal />}
+      {accountModalOpen && <AccountModal setOpenModal={setAccountModalOpen} handleAddAccount={handleAddAccount} />}
       {proVersionModalOpen && <ProVersionModal setOpenModal={setProVersionModalOpen} />}
       {categoryModalOpen && <CategoryModal setOpenModal={setCategoryModalOpen} />} */}
       {/* </div> */}
