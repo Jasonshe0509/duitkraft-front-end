@@ -45,9 +45,9 @@ function TestProfilePage() {
   //Edit Profile
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState('');
-  const [fullName, setFullName] = useState("Bernard Ong");
-  const [username, setUsername] = useState("bernard_ong");
-  const [email, setEmail] = useState("bernard_ong@gmail.com");
+  const [fullName, setFullName] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedGender, setSelectedGender] = useState("");
 
@@ -73,15 +73,15 @@ function TestProfilePage() {
     setEditMode(false);
     setSuccess(true);
   };
-  useEffect(() => {
-    if (success) {
-      const timeoutId = setTimeout(() => {
-        setSuccess(false);
-      }, 2000);
+  // useEffect(() => {
+  //   if (success) {
+  //     const timeoutId = setTimeout(() => {
+  //       setSuccess(false);
+  //     }, 2000);
 
-      return () => clearTimeout(timeoutId); // Cleanup on unmount
-    }
-  }, [success]);
+  //     return () => clearTimeout(timeoutId); // Cleanup on unmount
+  //   }
+  // }, [success]);
 
   //account
   const [accountModalOpen, setAccountModalOpen] = useState(false);
