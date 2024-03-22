@@ -18,7 +18,7 @@ import { GiPayMoney } from "react-icons/gi";
 import CategoryModal from './categoryModal';
 
 function ProfilePage() {
-  const [mounted,setMounted] = useState(false);
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -94,6 +94,10 @@ function ProfilePage() {
   const handleAddAccount = (newAccount) => {
     setAccounts([...accounts, newAccount]);
   };
+
+  if (!mounted) {
+    return '';
+  }
 
   return (
     <main>
