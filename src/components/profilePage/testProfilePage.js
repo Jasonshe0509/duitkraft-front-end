@@ -44,10 +44,10 @@ function TestProfilePage() {
 
   //Edit Profile
   const [showPassword, setShowPassword] = useState(false);
-  const [password, setPassword] = useState('');
-  const [fullName, setFullName] = useState("");
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState('11223344');
+  const [fullName, setFullName] = useState("Bernard Ong");
+  const [username, setUsername] = useState("bernard_ong");
+  const [email, setEmail] = useState("bernard_ong@gmail.com");
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedGender, setSelectedGender] = useState("");
 
@@ -73,29 +73,15 @@ function TestProfilePage() {
     setEditMode(false);
     setSuccess(true);
   };
-  // useEffect(() => {
-  //   if (success) {
-  //     const timeoutId = setTimeout(() => {
-  //       setSuccess(false);
-  //     }, 2000);
+  useEffect(() => {
+    if (success) {
+      const timeoutId = setTimeout(() => {
+        setSuccess(false);
+      }, 2000);
 
-  //     return () => clearTimeout(timeoutId); // Cleanup on unmount
-  //   }
-  // }, [success]);
-
-  //account
-  const [accountModalOpen, setAccountModalOpen] = useState(false);
-  const [accounts, setAccounts] = useState([]);
-
-  const handleAddAccount = (newAccount) => {
-    setAccounts([...accounts, newAccount]);
-  };
-
-  //pro version
-  const [proVersionModalOpen, setProVersionModalOpen] = useState(false);
-
-  //category
-  const [categoryModalOpen, setCategoryModalOpen] = useState(false);
+      return () => clearTimeout(timeoutId); // Cleanup on unmount
+    }
+  }, [success]);
 
   return (
     <main>
@@ -198,13 +184,7 @@ function TestProfilePage() {
                       <p className='text-darkYellow'>Cash</p>
                       <p className='text-fontColor'><span>MYR</span> 10000</p>
                     </div>
-                    {accounts.map((account, index) => (
-                      <div key={index} className='container3'>
-                        <p className='text-darkYellow'>{account.type}</p>
-                        <p className='text-fontColor'><span>MYR</span> {account.amount}</p>
-                      </div>
-                    ))}
-                    <div className='container3 cursor-pointer' onClick={() => { setAccountModalOpen(true); }}>
+                    <div className='container3 cursor-pointer'>
                       <PlusIcon className='h-5 w-5 text-fontColor flex relative top-0 left-[50%] translate-x-[-50%] translate-y-1/2'></PlusIcon>
                     </div>
                   </div>
@@ -212,7 +192,7 @@ function TestProfilePage() {
                 {/* Experience Earned */}
                 <div className="row-span-2 container2 relative">
                   <h2 className='text-darkYellow flex relative h-fit'>Level 1</h2>
-                  <button className='proBtn text-[12px] text-fontColor flex absolute right-[3%] translate-y-[20%]' onClick={() => { setProVersionModalOpen(true); }}>Pro Version</button>
+                  <button className='proBtn text-[12px] text-fontColor flex absolute right-[3%] translate-y-[20%]' >Pro Version</button>
                   <p className='text-fontColor text-[18px] my-[10px]'>{formattedDate}</p>
                   <p className='text-[36px] text-lightBlue mb-[10px]'>12 <span className='text-[18px]'>/ 300 xp earned</span></p>
                   <div className="w-full bg-darkGray rounded-full h-2.5 mb-[10px]">
@@ -295,7 +275,7 @@ function TestProfilePage() {
                       </>
                     )}
                     <div className='container4'>
-                      <div className='bg-darkGray rounded-[50%] w-[50px] mr-[10px] cursor-pointer' onClick={() => { setCategoryModalOpen(true); }}>
+                      <div className='bg-darkGray rounded-[50%] w-[50px] mr-[10px] cursor-pointer'>
                         <PlusIcon className='w-[30px] text-fontColor text-center translate-x-[33%] translate-y-[35%]'></PlusIcon>
                       </div>
                       <p className='text-fontColor my-auto text-[18px]'>category</p>
@@ -308,10 +288,10 @@ function TestProfilePage() {
         </div>
       </div>
       <Chatbot />
-      {/* {success && <EditProfileModal />}
+      {/* {success && <EditProfileModal />} */}
       {accountModalOpen && <AccountModal setOpenModal={setAccountModalOpen} handleAddAccount={handleAddAccount} />}
       {proVersionModalOpen && <ProVersionModal setOpenModal={setProVersionModalOpen} />}
-      {categoryModalOpen && <CategoryModal setOpenModal={setCategoryModalOpen} />} */}
+      {categoryModalOpen && <CategoryModal setOpenModal={setCategoryModalOpen} />}
       {/* </div> */}
     </main>
   );
