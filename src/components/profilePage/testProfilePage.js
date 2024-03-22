@@ -287,7 +287,7 @@ function TestProfilePage() {
           </div>
         </div>
       </div>
-      <Chatbot />
+      {/* <Chatbot /> */}
       {success && <EditProfileModal />}
       {/* {accountModalOpen && <AccountModal setOpenModal={setAccountModalOpen} handleAddAccount={handleAddAccount} />}
       {proVersionModalOpen && <ProVersionModal setOpenModal={setProVersionModalOpen} />}
