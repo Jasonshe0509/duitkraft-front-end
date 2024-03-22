@@ -17,6 +17,7 @@ import CryptoNews from './components/news/cryptoNews.js'
 import CompanyNews from './components/news/companyNews.js'
 import FinanceNews from './components/news/financeNews.js';
 import EconomyNews from './components/news/economyNews.js';
+import TestProfilePage from './components/profilePage/testProfilePage.js';
 
 Kommunicate.init("APP_ID", {
   automaticChatOpenOnNavigation: true,
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
   },
   {
     path: "profile",
-    element: <Profile />,
+    element: <TestProfilePage />,
   },
   {
     path: "news",
