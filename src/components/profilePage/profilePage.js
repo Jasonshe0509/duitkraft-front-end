@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import '../profilePage/profilePage.css';
 import '../styles/main.css';
 import Navigation from "../navigation/navigation";
@@ -6,7 +6,6 @@ import Header from "../navigation/header";
 import profile_bg from "../assets/bg3.png";
 import { PlusIcon, PencilIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid'
 import Select2 from 'react-select2';
-import React, { useState, useEffect } from 'react';
 import Chatbot from '../chatbot/chatbot';
 import EditProfileModal from './editProfileModal';
 import AccountModal from './accountModal';
@@ -18,10 +17,30 @@ import { RiRedPacketFill } from "react-icons/ri";
 import { GiPayMoney } from "react-icons/gi";
 import CategoryModal from './categoryModal';
 
-
-
-
 function ProfilePage() {
+  const [mounted,setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState('11223344');
+  const [fullName, setFullName] = useState("Bernard Ong");
+  const [username, setUsername] = useState("bernard_ong");
+  const [email, setEmail] = useState("bernard_ong@gmail.com");
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [selectedGender, setSelectedGender] = useState("");
+
+  const [editMode, setEditMode] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const [accountModalOpen, setAccountModalOpen] = useState(false);
+  const [accounts, setAccounts] = useState([]);
+
+  const [proVersionModalOpen, setProVersionModalOpen] = useState(false);
+
+  const [categoryModalOpen, setCategoryModalOpen] = useState(false);
+
   //Current Date
   const today = new Date();
   const dd = String(today.getDate()).padStart(2, '0');
@@ -43,14 +62,6 @@ function ProfilePage() {
   };
 
   //Edit Profile
-  const [showPassword, setShowPassword] = useState(false);
-  const [password, setPassword] = useState('11223344');
-  const [fullName, setFullName] = useState("Bernard Ong");
-  const [username, setUsername] = useState("bernard_ong");
-  const [email, setEmail] = useState("bernard_ong@gmail.com");
-  const [selectedCountry, setSelectedCountry] = useState("");
-  const [selectedGender, setSelectedGender] = useState("");
-
   const handleTogglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -62,9 +73,6 @@ function ProfilePage() {
   };
 
   //Edit Mode and Edit Profile Pop Up
-  const [editMode, setEditMode] = useState(false);
-  const [success, setSuccess] = useState(false);
-
   const handleToggleEditMode = () => {
     setEditMode(!editMode); // Toggle edit mode
   };
@@ -83,19 +91,9 @@ function ProfilePage() {
     }
   }, [success]);
 
-  //account
-  const [accountModalOpen, setAccountModalOpen] = useState(false);
-  const [accounts, setAccounts] = useState([]);
-
   const handleAddAccount = (newAccount) => {
     setAccounts([...accounts, newAccount]);
   };
-
-  //pro version
-  const [proVersionModalOpen, setProVersionModalOpen] = useState(false);
-
-  //category
-  const [categoryModalOpen, setCategoryModalOpen] = useState(false);
 
   return (
     <main>
