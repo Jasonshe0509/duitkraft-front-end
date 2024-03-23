@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Case Study
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Case Study 2: Enhancing Financial Literacy on Capital Marke
 
-## Available Scripts
+## Project Title
 
-In the project directory, you can run:
+DuitKraft Online Education & Budgeting System
 
-### `npm start`
+## Project Slogan
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+FINANCIAL EDUCATION · BUDGETTING · FUN
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Description
 
-### `npm test`
+At DuitKraft, we're on a mission to revolutionize the way you approach your finances. Through our platform, you'll embark on an exciting journey towards mastering essential financial skills and achieving your monetary goals with confidence.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Our platform offers an array of incredible features designed to empower you on your financial journey:
 
-### `npm run build`
+1. **Online Financial Education**
+    * Dive into our comprehensive library of resources, where you'll find everything you need to know about managing your finances effectively. From budgeting basics to advanced investment strategies, our curated content covers it all. Whether you're a beginner or a seasoned pro, there's always something new to learn and explore.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Budget Record System**
+    * Take control of your finances like never before with our intuitive budget record system. Track your income, expenses, and savings effortlessly, and gain valuable insights into your spending habits. Set personalized financial goals, create budgets, and monitor your progress in real-time. With our powerful tools at your fingertips, achieving financial success is within reach.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Gamification Features**
+    * Say goodbye to boring finance lessons and budgeting websites! Welcome to DuitKraft, where learning about money is like playing a game. Just enter your income and spending to earn points and move up levels. No need to pay for courses—your progress unlocks new stuff. Want to speed things up? Use our special cards to level up faster. Join DuitKraft now and start your fun journey to mastering money!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## List of programming languages used
 
-### `npm run eject`
+1. React.js
+2. Tailwind CSS
+3. SCSS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
