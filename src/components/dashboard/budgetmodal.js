@@ -34,10 +34,10 @@ function BudgetModal({ onClose }) {
                 <div className={"text-fontColor  m-2 "}>Budget</div>
 
                 <div className={"flex"}>
-                  <div className="text-fontColor m-2 " onClick={handleAdd}>
+                  <div className="text-fontColor m-2 cursor-pointer" onClick={handleAdd}>
                     +
                   </div>
-                  <div className="px-1 py-1 m-2 text-fontColor rounded-full  cursor-pointer" onClick={onClose}>
+                  <div className="px-1 py-1 m-2 text-fontColor rounded-full cursor-pointer" onClick={onClose}>
                     <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>

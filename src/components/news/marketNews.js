@@ -66,34 +66,23 @@ function MarketNews() {
                                     <div className='text-fontColor bg-darkGreen btnFinance hover:bg-grayGreen focus:bg-grayGreen'>Finance</div>
                                     <div className='text-fontColor bg-darkGreen1 btnEconomy hover:bg-grayGreen1 focus:bg-grayGreen1'>Economy</div>
                                 </div>
-                                <div className='grid grid-cols-1 gap-5 md:grid-cols-5'>
-                                    <div className='bg-blackOpacity rounded-[15px] p-5 md:p-10 col-span-3'>
-                                        {Markets.map((market, index) => (
-                                            <div key={index}>
-                                                <img src={market.image} className='h-[250px] object-cover object-left mb-4'></img>
-                                                <h2 className='text-fontColor'>{market.title}</h2>
-                                                <p className='text-fontColor my-2'>Published on: {market.date}</p>
-                                                {marketTag}
-                                                <p className='text-fontColor text-justify'>{market.content}</p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className='bg-blackOpacity rounded-[15px] p-5 md:p-10 col-span-2'>
-                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
-                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
-                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
-                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
-                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
-                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
-                                        <p>Consectetur eiusmod eiusmod occaecat minim veniam magna consectetur et pariatur duis aliquip et aute labore.</p>
-                                    </div>
+                                <div className='bg-blackOpacity rounded-[15px] p-5'>
+                                    {Markets.map((market, index) => (
+                                        <div key={index}>
+                                            <img src={market.image} className='h-[250px] object-cover object-left mb-4'></img>
+                                            <h2 className='text-fontColor'>{market.title}</h2>
+                                            <p className='text-fontColor my-2'>Published on: {market.date}</p>
+                                            {marketTag}
+                                            <p className='text-fontColor text-justify'>{market.content}</p>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <Chatbot/>
+            <Chatbot />
         </main>
     )
 }
