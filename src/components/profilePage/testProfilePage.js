@@ -7,6 +7,7 @@ import profile_bg from "../assets/bg3.png";
 import Header from '../navigation/header';
 import { PlusIcon, PencilIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid';
 import EditProfileModal from './editProfileModal';
+import AccountModal from './accountModal';
 
 
 
@@ -27,6 +28,9 @@ function ProfilePage() {
 
   const [editMode, setEditMode] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  const [accountModalOpen, setAccountModalOpen] = useState(false);
+  const [accounts, setAccounts] = useState([]);
 
   //Edit Profile
   const handleTogglePasswordVisibility = () => {
@@ -57,6 +61,10 @@ function ProfilePage() {
       return () => clearTimeout(timeoutId); // Cleanup on unmount
     }
   }, [success]);
+
+  const handleAddAccount = (newAccount) => {
+    setAccounts([...accounts, newAccount]);
+  };
 
   if (!mounted) {
     return '';
@@ -147,6 +155,33 @@ function ProfilePage() {
                     </form>
                   </div>
                 </div>
+                {/* Account */}
+                <div className="row-span-2 container2">
+                  <h2 className='text-fontColor'>Account</h2>
+                  <div className='grid grid-cols-1 gap-3 w-full p-5 md:grid-cols-2'>
+                    <div className='container3'>
+                      <p className='text-darkYellow'>Cash</p>
+                      <p className='text-fontColor'><span>MYR</span> 10000</p>
+                    </div>
+                    <div className='container3'>
+                      <p className='text-darkYellow'>Cash</p>
+                      <p className='text-fontColor'><span>MYR</span> 10000</p>
+                    </div>
+                    <div className='container3'>
+                      <p className='text-darkYellow'>Cash</p>
+                      <p className='text-fontColor'><span>MYR</span> 10000</p>
+                    </div>
+                    {accounts.map((account, index) => (
+                      <div key={index} className='container3'>
+                        <p className='text-darkYellow'>{account.type}</p>
+                        <p className='text-fontColor'><span>MYR</span> {account.amount}</p>
+                      </div>
+                    ))}
+                    <div className='container3 cursor-pointer' onClick={() => { setAccountModalOpen(true); }}>
+                      <PlusIcon className='h-5 w-5 text-fontColor flex relative top-0 left-[50%] translate-x-[-50%] translate-y-1/2'></PlusIcon>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -154,6 +189,8 @@ function ProfilePage() {
       </div>
       <Chatbot />
       {success && <EditProfileModal />}
+      {accountModalOpen && <AccountModal setOpenModal={setAccountModalOpen} handleAddAccount={handleAddAccount} />}
+
 
     </main>
   );
