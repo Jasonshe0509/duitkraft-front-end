@@ -41,7 +41,7 @@ function CompanyNews() {
                                     {Companys.map((company, index) => (
                                         <div key={index}>
                                             <img src={company.image} className='h-[250px] object-cover object-left mb-4'></img>
-                                            <h3 className='text-fontColor'>{company.title}</h3>
+                                            <h2 className='text-fontColor'>{company.title}</h2>
                                             <p className='text-fontColor my-2'>Published on: {company.date}</p>
                                             {companyTag}
                                             <p className='text-fontColor text-justify'>{company.content}</p>

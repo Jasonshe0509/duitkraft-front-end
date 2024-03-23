@@ -70,7 +70,7 @@ function MarketNews() {
                                         {Markets.map((market, index) => (
                                             <div key={index}>
                                                 <img src={market.image} className='h-[250px] object-cover object-left mb-4'></img>
-                                                <h3 className='text-fontColor'>{market.title}</h3>
+                                                <h2 className='text-fontColor'>{market.title}</h2>
                                                 <p className='text-fontColor my-2'>Published on: {market.date}</p>
                                                 {marketTag}
                                                 <p className='text-fontColor text-justify'>{market.content}</p>

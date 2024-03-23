@@ -51,7 +51,7 @@ function CryptoNews() {
                                     {Cryptos.map((crypto, index) => (
                                         <div key={index}>
                                             <img src={crypto.image} className='h-[250px] object-cover object-left mb-4'></img>
-                                            <h3 className='text-fontColor'>{crypto.title}</h3>
+                                            <h2 className='text-fontColor'>{crypto.title}</h2>
                                             <p className='text-fontColor my-2'>Published on: {crypto.date}</p>
                                             {cryptoTag}
                                             <p className='text-fontColor text-justify'>{crypto.content}</p>

@@ -19,6 +19,11 @@ import CryptoNews from './components/news/cryptoNews.js'
 import CompanyNews from './components/news/companyNews.js'
 import FinanceNews from './components/news/financeNews.js';
 import EconomyNews from './components/news/economyNews.js';
+import Course from './components/course/course.js';
+import CourseOverview from './components/course/courseOverview.js';
+import CourseDetails1 from './components/course/courseDetails.js';
+import CourseDetails2 from './components/course/courseDetails1.js';
+import CourseDetails3 from './components/course/courseDetails2.js';
 
 Kommunicate.init("APP_ID", {
   automaticChatOpenOnNavigation: true,
@@ -69,6 +74,26 @@ const router = createBrowserRouter([
   {
     path: "news/economyNews",
     element: <EconomyNews />,
+  },
+  {
+    path: "course",
+    element: <Course />,
+  },
+  {
+    path: "course/courseOverview",
+    element: <CourseOverview />,
+  },
+  {
+    path: "course/financial-foundations-1",
+    element: <CourseDetails1 />,
+  },
+  {
+    path: "course/financial-foundations-2",
+    element: <CourseDetails2 />,
+  },
+  {
+    path: "course/financial-foundations-3",
+    element: <CourseDetails3 />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

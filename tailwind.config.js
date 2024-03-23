@@ -36,6 +36,17 @@ module.exports = {
       'darkGreen1':'#6E7B46',
       'grayGreen1':'#7f8864',
       'hotTrends':'rgba(210, 210, 210, 0.1)',
+      'lvlBeg':'#5ba8ae',
+      'lvlInt':'#786c91',
+      'lvlAdv':'#996161',
+      'allLvl':'#6B9C6D',
+      'courseSection':'#0169C9',
+      'duration':'#4B36CA',
+      'experience':'#3C7D6E',
+      'unlock':'#9FEF00',
+      'start':'#EFD700',
+      'black':'#000000',
+      'blackOpacity1':'rgba(2,2,2,0.2)'
     },
   
     extend: {

@@ -41,7 +41,7 @@ function EconomyNews() {
                                     {Economys.map((economy, index) => (
                                         <div key={index}>
                                             <img src={economy.image} className='h-[250px] object-cover object-left mb-4'></img>
-                                            <h3 className='text-fontColor'>{economy.title}</h3>
+                                            <h2 className='text-fontColor'>{economy.title}</h2>
                                             <p className='text-fontColor my-2'>Published on: {economy.date}</p>
                                             {ecomonyTag}
                                             <p className='text-fontColor text-justify'>{economy.content}</p>
