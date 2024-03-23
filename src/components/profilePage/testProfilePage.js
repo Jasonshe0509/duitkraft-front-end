@@ -17,10 +17,6 @@ import { GiPayMoney } from "react-icons/gi";
 import CategoryModal from './categoryModal';
 import Select2 from 'react-select2';
 
-
-
-
-
 function ProfilePage() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -215,16 +211,6 @@ function ProfilePage() {
                     </div>
                   </div>
                 </div>
-                {/* Experience Earned */}
-                <div className="row-span-2 container2 relative">
-                  <h2 className='text-darkYellow flex relative h-fit'>Level 1</h2>
-                  <button className='proBtn text-[12px] text-fontColor flex absolute right-[3%] translate-y-[20%]' onClick={() => { setProVersionModalOpen(true); }}>Pro Version</button>
-                  <p className='text-fontColor text-[18px] my-[10px]'>{formattedDate}</p>
-                  <p className='text-[36px] text-lightBlue mb-[10px]'>12 <span className='text-[18px]'>/ 300 xp earned</span></p>
-                  <div className="w-full bg-darkGray rounded-full h-2.5 mb-[10px]">
-                    <div className="bg-red h-2.5 rounded-full w-[45%]" />
-                  </div>
-                </div>
                 {/* Add Categories */}
                 <div className="row-span-3 container2 relative">
                   <h2 className='text-fontColor h-fit'>Category</h2>
@@ -271,7 +257,6 @@ function ProfilePage() {
       <Chatbot />
       {success && <EditProfileModal />}
       {accountModalOpen && <AccountModal setOpenModal={setAccountModalOpen} handleAddAccount={handleAddAccount} />}
-      {proVersionModalOpen && <ProVersionModal setOpenModal={setProVersionModalOpen} />}
       {categoryModalOpen && <CategoryModal setOpenModal={setCategoryModalOpen} />}
     </main>
   );
