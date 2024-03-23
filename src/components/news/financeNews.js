@@ -63,7 +63,7 @@ function FinanceNews() {
                                     {Finances.map((finance, index) => (
                                         <div key={index}>
                                             <img src={finance.image} className='h-[250px] object-cover object-left mb-4'></img>
-                                            <h3 className='text-fontColor'>{finance.title}</h3>
+                                            <h2 className='text-fontColor'>{finance.title}</h2>
                                             <p className='text-fontColor my-2'>Published on: {finance.date}</p>
                                             {financeTag}
                                             <p className='text-fontColor text-justify'>{finance.content}</p>
