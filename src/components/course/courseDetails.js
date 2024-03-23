@@ -5,14 +5,15 @@ import Header from "../navigation/header";
 import logoOnly from '../assets/sm_logo_only.png';
 import course_bg from '../assets/bg4.png';
 import { Link } from "react-router-dom";
-import { CheckCircleIcon, PlayCircleIcon } from '@heroicons/react/24/outline'
+import { CheckCircleIcon, PlayCircleIcon, ClipboardDocumentListIcon } from '@heroicons/react/24/outline'
+import Chatbot from '../chatbot/chatbot';
 
 
 function CourseDetails() {
     const couDetails = [
         {
             title: 'Financial Foundations: Building Your Financial Future', level: 'Beginner', section: '3', duration: '30', xp: '10',
-            next: <div className='flex'> Mark as Completed<CheckCircleIcon className='w-[15px] ml-[5px]'></CheckCircleIcon></div>
+            next: 'Mark as completed'
         }
     ]
     return (
@@ -60,25 +61,25 @@ function CourseDetails() {
                                                 <p className='mb-4'>Welcome to the first section of our course, where we'll dive into the fundamental principles of personal finance management. In this section, we'll cover essential topics that form the bedrock of financial literacy, empowering you to take control of your financial future.</p>
                                                 <ol className='list-decimal ml-4 mb-4'>
                                                     <li>Budgeting Essentials
-                                                    <ul className='ml-4 mb-4'>
-                                                        <li>Learn how to create a comprehensive personal budget tailored to your income and expenses.</li>
-                                                        <li>Understand the importance of tracking your spending habits to identify areas for improvement.</li>
-                                                        <li>Explore budgeting tools and techniques to help you effectively manage your finances.</li>
-                                                    </ul>
+                                                        <ul className='ml-4 mb-4'>
+                                                            <li>Learn how to create a comprehensive personal budget tailored to your income and expenses.</li>
+                                                            <li>Understand the importance of tracking your spending habits to identify areas for improvement.</li>
+                                                            <li>Explore budgeting tools and techniques to help you effectively manage your finances.</li>
+                                                        </ul>
                                                     </li>
                                                     <li>Savings Strategies
-                                                    <ul className='ml-4 mb-4'>
-                                                        <li>Discover various saving methods, including setting up emergency funds and saving for short-term and long-term goals.</li>
-                                                        <li>Explore strategies to automate your savings and make saving a habit.</li>
-                                                        <li>Learn how to prioritize your savings goals and allocate your resources accordingly.</li>
-                                                    </ul>
+                                                        <ul className='ml-4 mb-4'>
+                                                            <li>Discover various saving methods, including setting up emergency funds and saving for short-term and long-term goals.</li>
+                                                            <li>Explore strategies to automate your savings and make saving a habit.</li>
+                                                            <li>Learn how to prioritize your savings goals and allocate your resources accordingly.</li>
+                                                        </ul>
                                                     </li>
                                                     <li>Debt Management
-                                                    <ul className='ml-4 mb-4'>
-                                                        <li>Understand the different types of debt and their associated risks.</li>
-                                                        <li>Learn effective strategies for debt repayment, such as the snowball and avalanche methods.</li>
-                                                        <li>Discover techniques to negotiate lower interest rates or consolidate debt for easier repayment.</li>
-                                                    </ul>
+                                                        <ul className='ml-4 mb-4'>
+                                                            <li>Understand the different types of debt and their associated risks.</li>
+                                                            <li>Learn effective strategies for debt repayment, such as the snowball and avalanche methods.</li>
+                                                            <li>Discover techniques to negotiate lower interest rates or consolidate debt for easier repayment.</li>
+                                                        </ul>
                                                     </li>
                                                 </ol>
                                                 <p className='mb-4'>By the end of this section, you'll have gained practical skills and knowledge to build a strong financial foundation, enabling you to manage your finances with confidence and clarity.</p>
@@ -108,15 +109,15 @@ function CourseDetails() {
                                                 </Link>
                                             </div>
                                             <div className="flex items-center mt-2 justify-end text-xs text-center">
-                                                {couDetail.next === <div className='flex'> Mark as Completed<CheckCircleIcon className='w-[15px] ml-[5px]'></CheckCircleIcon></div> ?
+                                                {couDetail.next === 'Mark as completed' ?
                                                     <Link to='/course/financial-foundations-2'>
-                                                        <button className="mt-2 mr-2 py-[6px] px-[10px] bg-start rounded-[9px] w-[60px] text-black cursor-pointer">
-                                                            {couDetail.next}
+                                                        <button className="mt-2 mr-2 py-[6px] px-[10px] bg-unlock rounded-[9px] text-black cursor-pointer text-nowrap">
+                                                            <div className='flex'> Mark as Completed<CheckCircleIcon className='w-[15px] ml-[5px]'></CheckCircleIcon></div>
                                                         </button>
                                                     </Link>
                                                     :
                                                     <button className="mt-2 mr-2 py-[6px] px-[10px] bg-unlock rounded-[9px] text-black cursor-pointer text-nowrap">
-                                                        {couDetail.next}
+                                                        <div className='flex'> Quiz<ClipboardDocumentListIcon className='w-[15px] ml-[5px]'></ClipboardDocumentListIcon></div>
                                                     </button>
                                                 }
                                             </div>
@@ -129,6 +130,7 @@ function CourseDetails() {
                     </div>
                 </div>
             </div>
+            <Chatbot />
         </main>
     );
 }
