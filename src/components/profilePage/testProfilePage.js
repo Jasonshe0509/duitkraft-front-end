@@ -8,6 +8,7 @@ import Header from '../navigation/header';
 import { PlusIcon, PencilIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid';
 import EditProfileModal from './editProfileModal';
 import AccountModal from './accountModal';
+import ProVersionModal from './proVersionModal';
 
 
 
@@ -31,6 +32,16 @@ function ProfilePage() {
 
   const [accountModalOpen, setAccountModalOpen] = useState(false);
   const [accounts, setAccounts] = useState([]);
+
+  const [proVersionModalOpen, setProVersionModalOpen] = useState(false);
+
+  //Current Date
+  const today = new Date();
+  const dd = String(today.getDate()).padStart(2, '0');
+  const mm = String(today.getMonth() + 1).padStart(2, '0'); // Jan = 0, so add 1
+  const yyyy = today.getFullYear();
+
+  const formattedDate = `${dd}/${mm}/${yyyy}`;
 
   //Edit Profile
   const handleTogglePasswordVisibility = () => {
@@ -65,7 +76,6 @@ function ProfilePage() {
   const handleAddAccount = (newAccount) => {
     setAccounts([...accounts, newAccount]);
   };
-
   if (!mounted) {
     return '';
   }
@@ -182,6 +192,16 @@ function ProfilePage() {
                     </div>
                   </div>
                 </div>
+                {/* Experience Earned */}
+                <div className="row-span-2 container2 relative">
+                  <h2 className='text-darkYellow flex relative h-fit'>Level 1</h2>
+                  <button className='proBtn text-[12px] text-fontColor flex absolute right-[3%] translate-y-[20%]' onClick={() => { setProVersionModalOpen(true); }}>Pro Version</button>
+                  <p className='text-fontColor text-[18px] my-[10px]'>{formattedDate}</p>
+                  <p className='text-[36px] text-lightBlue mb-[10px]'>12 <span className='text-[18px]'>/ 300 xp earned</span></p>
+                  <div className="w-full bg-darkGray rounded-full h-2.5 mb-[10px]">
+                    <div className="bg-red h-2.5 rounded-full w-[45%]" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -190,6 +210,7 @@ function ProfilePage() {
       <Chatbot />
       {success && <EditProfileModal />}
       {accountModalOpen && <AccountModal setOpenModal={setAccountModalOpen} handleAddAccount={handleAddAccount} />}
+      {proVersionModalOpen && <ProVersionModal setOpenModal={setProVersionModalOpen} />}
 
 
     </main>
