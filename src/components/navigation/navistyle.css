@@ -134,9 +134,30 @@ p {
   .menu::-webkit-scrollbar-thumb:horizontal {
     display: none;
 }
+.greyCBackground{
+background-color: rgba(103, 103, 103, 0.143);
+padding: 12px 10px 12px 10px;
+border-color: rgba(166, 186, 188, 0.705) ;
+border-width:1px;
+border-radius: 10px;
 
+}
+.greyCBackground.active{
+    background-color: rgba(80, 80, 80, 0.239);
+    padding: 12px 10px 12px 10px;
+    border-color: rgba(227, 181, 60) ;
+    border-width:2px;
+    border-radius: 10px;
+    
+    }
+.CSave{
+    border-color: rgba(166, 186, 188, 0.705) ;
+    border-width:1px;
+    
+    }
 .menu .menuone {
     background-color: rgba(0, 0, 0, 0.201);
+ 
     }
 
     .search {

@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Register from './components/login and register/register.js';
+import Chatbot from './components/chatbot/chatbot.js';
 import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
 import News from './components/news/news.js'
 import MarketNews from './components/news/marketNews.js'
@@ -46,28 +47,8 @@ const router = createBrowserRouter([
     element: <ProfilePage />,
   },
   {
-    path: "news",
-    element: <News/>,
-  },
-  {
-    path: "news/marketNews",
-    element: <MarketNews />,
-  },
-  {
-    path: "news/cryptoNews",
-    element: <CryptoNews />,
-  },
-  {
-    path: "news/companyNews",
-    element: <CompanyNews />,
-  },
-  {
-    path: "news/financeNews",
-    element: <FinanceNews />,
-  },
-  {
-    path: "news/economyNews",
-    element: <EconomyNews />,
+    path: "test",
+    element: <Chatbot />,
   },
   {
     path: "course",
