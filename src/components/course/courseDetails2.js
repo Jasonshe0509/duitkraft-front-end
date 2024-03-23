@@ -6,13 +6,17 @@ import logoOnly from '../assets/sm_logo_only.png';
 import course_bg from '../assets/bg4.png';
 import { Link } from "react-router-dom";
 import { CheckCircleIcon, PlayCircleIcon, CheckBadgeIcon, ClipboardDocumentListIcon } from '@heroicons/react/24/outline'
+import Chatbot from '../chatbot/chatbot';
+import { useState } from 'react';
+import QuizModal from './quizModal';
 
 
 function CourseDetails() {
+    const [quizOpenModal, setQuizOpenModal] = useState(false);
     const couDetails = [
         {
             title: 'Financial Foundations: Building Your Financial Future', level: 'Beginner', section: '3', duration: '30', xp: '10',
-            next: <div className='flex'> Quiz<ClipboardDocumentListIcon className='w-[15px] ml-[5px]'></ClipboardDocumentListIcon></div>
+            next: 'Quizz'
         }
     ]
     return (
@@ -90,15 +94,15 @@ function CourseDetails() {
                                                 </Link>
                                             </div>
                                             <div className="flex items-center mt-2 justify-end text-xs text-center">
-                                                {couDetail.next === <div className='flex'> Mark as Completed <CheckCircleIcon className='w-[15px]'></CheckCircleIcon></div> ?
-                                                    <Link>
-                                                        <button className="mt-2 mr-2 py-[6px] px-[10px] bg-start rounded-[9px] w-[60px] text-black cursor-pointer">
-                                                            {couDetail.next}
+                                                {couDetail.next === 'Mark as completed' ?
+                                                    <Link to='/course/financial-foundations-2'>
+                                                        <button className="mt-2 mr-2 py-[6px] px-[10px] bg-unlock rounded-[9px] text-black cursor-pointer text-nowrap">
+                                                            <div className='flex'> Mark as Completed<CheckCircleIcon className='w-[15px] ml-[5px]'></CheckCircleIcon></div>
                                                         </button>
                                                     </Link>
                                                     :
-                                                    <button className="mt-2 mr-2 py-[6px] px-[10px] bg-unlock rounded-[9px] text-black cursor-pointer text-nowrap">
-                                                        {couDetail.next}
+                                                    <button className="mt-2 mr-2 py-[6px] px-[10px] bg-unlock rounded-[9px] text-black cursor-pointer text-nowrap" onClick={() => { setQuizOpenModal(true); }}>
+                                                        <div className='flex'> Quiz<ClipboardDocumentListIcon className='w-[15px] ml-[5px]'></ClipboardDocumentListIcon></div>
                                                     </button>
                                                 }
                                             </div>
@@ -106,11 +110,12 @@ function CourseDetails() {
                                     </div>
                                 ))}
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
+            <Chatbot />
+            {quizOpenModal && <QuizModal setOpenModal={setQuizOpenModal} />}
         </main>
     );
 }
