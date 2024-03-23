@@ -39,7 +39,7 @@ function Login() {
                   {showPassword ? <EyeIcon className='h-5 w-5' /> : <EyeSlashIcon className='h-5 w-5' />}
                 </div>
               </div>
-              <Link to='/dashboard'>
+              <Link to='/edu-dashboard'>
                 <button className='loginBtn max-md:translate-x-[-50%] translate-y-[50%]'>
                   <p className='text-fontColor'>Login</p>
                 </button>

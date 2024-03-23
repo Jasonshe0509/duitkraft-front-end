@@ -167,4 +167,422 @@
   align-items: flex-start;
   /* Start from the top */
   text-align: center;
+}
+
+.accountModalContainer {
+  width: 350px;
+  height: 320px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.63);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (width < 768px) {
+  .accountModalContainer {
+    width: 300px;
+    height: 300px;
+  }
+}
+.accountModalContainer .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px;
+  margin-top: -18px;
+}
+.accountModalContainer .account-box {
+  position: relative;
+  max-width: 400px;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+@media screen and (width < 768px) {
+  .accountModalContainer .account-box {
+    padding-top: 10px;
+  }
+}
+.accountModalContainer .account-box .input-box {
+  position: relative;
+}
+.accountModalContainer .account-box .input-box input {
+  width: 110%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.accountModalContainer .account-box .input-box input:focus + label, .accountModalContainer .account-box .input-box input:valid + label {
+  top: -20px;
+  font-size: 14px;
+  color: #bdb8b8;
+}
+.accountModalContainer .account-box .input-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.accountModalContainer .account-box .saveBtn {
+  background-color: #6072f6;
+  border-radius: 30px;
+  display: flex;
+  position: absolute;
+  left: 35%;
+}
+.accountModalContainer .account-box .saveBtn:hover {
+  background-color: #6f7bd1;
+}
+.accountModalContainer .account-box .saveBtn p {
+  margin: 10px 30px;
+}
+
+.proVersionModalContainer {
+  width: 680px;
+  height: 580px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.63);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 767px) {
+  .proVersionModalContainer {
+    max-width: 340px;
+    overflow-y: auto;
+    /* Adjust height as needed */
+  }
+}
+.proVersionModalContainer .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px;
+  margin-top: -18px;
+}
+.proVersionModalContainer .pro-container {
+  display: flex;
+  padding: 10px 0 10px;
+}
+.proVersionModalContainer .radio-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.proVersionModalContainer .radio-inputs > * {
+  margin: 6px;
+}
+.proVersionModalContainer .radio-input {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.proVersionModalContainer .radio-input:checked + .radio-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #2260ff;
+}
+.proVersionModalContainer .radio-input:checked + .radio-tile:before {
+  transform: scale(1);
+  opacity: 1;
+  background-color: #2260ff;
+  border-color: #2260ff;
+}
+.proVersionModalContainer .radio-input:focus + .radio-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+}
+.proVersionModalContainer .radio-input:focus + .radio-tile:before {
+  transform: scale(1);
+  opacity: 1;
+}
+.proVersionModalContainer .radio-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 400px;
+  border-radius: 0.5rem;
+  background-color: rgba(128, 128, 128, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.15s ease;
+  cursor: pointer;
+  position: relative;
+}
+.proVersionModalContainer .radio-tile:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid #b5bfd9;
+  background-color: rgba(128, 128, 128, 0.4);
+  border-radius: 50%;
+  top: 0.25rem;
+  left: 0.25rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.25s ease;
+}
+.proVersionModalContainer .radio-tile:hover {
+  border-color: #2260ff;
+}
+.proVersionModalContainer .radio-tile:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+.proVersionModalContainer .radio-tile .radio-label {
+  transition: 0.375s ease;
+  text-align: center;
+}
+.proVersionModalContainer .radio-tile .features {
+  margin-left: 20px;
+}
+.proVersionModalContainer .purchaseBtn {
+  background-color: #6072f6;
+  border-radius: 30px;
+  display: flex;
+  position: relative;
+  left: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  bottom: 15px;
+  transform: translate(-50%, 30%);
+}
+.proVersionModalContainer .purchaseBtn:hover {
+  background-color: #6f7bd1;
+}
+.proVersionModalContainer .purchaseBtn p {
+  margin: 10px 30px;
+}
+
+.categoryModalContainer {
+  width: 450px;
+  height: 440px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.63);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (width < 768px) {
+  .categoryModalContainer {
+    width: 300px;
+  }
+}
+.categoryModalContainer .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px;
+  margin-top: -18px;
+}
+.categoryModalContainer .account-box {
+  position: relative;
+  max-width: 400px;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (width < 768px) {
+  .categoryModalContainer .account-box {
+    padding-top: 10px;
+  }
+}
+.categoryModalContainer .account-box .input-box {
+  position: relative;
+}
+.categoryModalContainer .account-box .input-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.categoryModalContainer .account-box .input-box input:focus + label, .categoryModalContainer .account-box .input-box input:valid + label {
+  top: -20px;
+  font-size: 14px;
+  color: #bdb8b8;
+}
+.categoryModalContainer .account-box .input-box select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.categoryModalContainer .account-box .input-box .category-type {
+  top: -20px;
+  font-size: 14px;
+  color: #bdb8b8;
+}
+.categoryModalContainer .account-box .input-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.categoryModalContainer .account-box .container4 {
+  min-height: 50px;
+  text-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
+.categoryModalContainer .account-box .saveBtn {
+  background-color: #6072f6;
+  border-radius: 30px;
+  display: flex;
+  position: absolute;
+  left: 38%;
+}
+@media screen and (width < 768px) {
+  .categoryModalContainer .account-box .saveBtn {
+    left: 30%;
+  }
+}
+.categoryModalContainer .account-box .saveBtn:hover {
+  background-color: #6f7bd1;
+}
+.categoryModalContainer .account-box .saveBtn p {
+  margin: 10px 30px;
+}
+
+.quizModalContainer {
+  width: 500px;
+  height: 450px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.63);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (width < 768px) {
+  .quizModalContainer {
+    width: 350px;
+    height: 550px;
+  }
+}
+.quizModalContainer .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px;
+  margin-top: -18px;
+}
+.quizModalContainer .radio-container {
+  margin-left: 20px;
+  margin-top: 10px;
+  max-width: 450px;
+  color: white;
+}
+.quizModalContainer .radio-container .radio-wrapper {
+  margin-bottom: 20px;
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button input[type=radio] {
+  display: none;
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button input[type=radio]:checked ~ .radio-checkmark:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button .radio-checkmark {
+  display: inline-block;
+  position: relative;
+  min-width: 18px;
+  height: 18px;
+  margin-right: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button .radio-checkmark:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button .radio-label {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: justify;
+}
+.quizModalContainer .submitBtn {
+  background-color: #6072f6;
+  border-radius: 30px;
+  display: flex;
+  position: absolute;
+  left: 38%;
+  top: 80%;
+}
+@media screen and (width < 768px) {
+  .quizModalContainer .submitBtn {
+    left: 35%;
+    top: 80%;
+  }
+}
+.quizModalContainer .submitBtn:hover {
+  background-color: #6f7bd1;
+}
+.quizModalContainer .submitBtn p {
+  margin: 10px 30px;
+}
+
+input[type=radio]:checked ~ .container4 .icon {
+  color: #84c1f9;
 }/*# sourceMappingURL=popup.css.map */

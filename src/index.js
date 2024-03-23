@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Login from './components/login and register/login';
-import Dashboard from './components/dashboard/dashboard.js';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -23,6 +22,8 @@ import CourseDetails1 from './components/course/courseDetails.js';
 import CourseDetails2 from './components/course/courseDetails1.js';
 import CourseDetails3 from './components/course/courseDetails2.js';
 import ProfilePage from './components/profilePage/profilePage.js';
+import EduDashboard from './components/dashboard/dashboard.js';
+import BudgetDashboard from './components/dashboard/dashboard2.js';
 
 Kommunicate.init("APP_ID", {
   automaticChatOpenOnNavigation: true,
@@ -39,8 +40,12 @@ const router = createBrowserRouter([
     element: <Register />
   },
   {
-    path: "dashboard",
-    element: <Dashboard />,
+    path: "edu-dashboard",
+    element: <EduDashboard />,
+  },
+  {
+    path: "budget-dashboard",
+    element: <BudgetDashboard />,
   },
   {
     path: "profile",
@@ -49,6 +54,30 @@ const router = createBrowserRouter([
   {
     path: "test",
     element: <Chatbot />,
+  },
+  {
+    path: "news",
+    element: <News/>,
+  },
+  {
+    path: "news/marketNews",
+    element: <MarketNews />,
+  },
+  {
+    path: "news/cryptoNews",
+    element: <CryptoNews />,
+  },
+  {
+    path: "news/companyNews",
+    element: <CompanyNews />,
+  },
+  {
+    path: "news/financeNews",
+    element: <FinanceNews />,
+  },
+  {
+    path: "news/economyNews",
+    element: <EconomyNews />,
   },
   {
     path: "course",

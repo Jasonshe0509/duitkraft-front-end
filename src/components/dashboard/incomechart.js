@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ApexCharts from 'apexcharts';
 
-const DonutChart = () => {
+const IncomeChart = () => {
   const [chart, setChart] = useState(null);
 
   useEffect(() => {
@@ -108,4 +108,4 @@ const DonutChart = () => {
   );
 };
 
-export default DonutChart;
+export default IncomeChart;
