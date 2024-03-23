@@ -18,6 +18,7 @@ import CompanyNews from './components/news/companyNews.js'
 import FinanceNews from './components/news/financeNews.js';
 import EconomyNews from './components/news/economyNews.js';
 import TestProfilePage from './components/profilePage/testProfilePage.js';
+import CategoryModal from './components/profilePage/categoryModal.js';
 
 Kommunicate.init("APP_ID", {
   automaticChatOpenOnNavigation: true,
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
     path: "news/economyNews",
     element: <EconomyNews />,
   },
+  {
+    path: "test",
+    element: <CategoryModal />,
+  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
