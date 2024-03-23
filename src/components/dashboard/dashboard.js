@@ -5,11 +5,16 @@ import Navigation from "../navigation/navigation.js";
 import Header from "../navigation/header.js";
 import ProgressBar from "./progress.js";
 import coursebg from "../assets/coursebg.jpg";
-
+import { useState } from "react";
 
 const Dashboard = () => {
   const progress = 50; 
   const circumference = 2 * Math.PI * 60;
+  const [isEDashChecked, setisEDashChecked] = useState(true)
+  
+  const handleCheckboxChange = () => {
+    setisEDashChecked(!isEDashChecked)
+  }
 
 
   return (
@@ -20,6 +25,39 @@ const Dashboard = () => {
           <Navigation />
           <div className="w-screen  justify-between ">
             <Header title={"Dashboard"}/>
+
+              {/* session2 */}
+              <div className="flex justify-center">
+
+  <label className='themeSwitcherTwo relative cursor-pointer select-none items-center'>
+    <input
+      type='checkbox'
+      checked={isEDashChecked}
+      onChange={handleCheckboxChange}
+      className='sr-only'
+    />
+    <span className="w-44 rounded-full flex">
+      <span
+        className={`slider px-5 w-20 text-xs flex h-5 items-center rounded-full p-1 duration-200 ${
+          isEDashChecked ? 'translate-x-[12px,12px] bg-[#A8DC42]' : 'bg-[#FFFFFF]'
+        }`}
+      >
+        <span className="w-full px-3 flex text-center justify-center">
+          Education
+        </span>
+      </span>
+      <span
+        className={`slider w-20 text-xs p-1 px-5 flex h-5 w-full items-center rounded-full p-1 duration-200 ${
+          isEDashChecked ? 'bg-[#FFFFFF]' : 'bg-[#0042AD] bg-[#0042AD]'
+        }`}
+      >
+        <span className="w-full px-3 flex justify-center">
+          Budget
+        </span>
+      </span>
+    </span>
+  </label>
+</div>
             <div className="dashboard-container transition-all flex-1">
               <div className="  dashboard-container2 ">
                 <div className={" dashboardedu1 rounded text-fontColor m-5  pt-10  shadow-xl"}>

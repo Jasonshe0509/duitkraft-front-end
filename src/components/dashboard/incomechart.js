@@ -36,7 +36,7 @@ const DonutChart = () => {
                 color: '#FFFFFF',
                 formatter: (w) => {
                   const sum = w.globals.seriesTotals.reduce((a, b) => a + b, 0);
-                  return `$${sum.toFixed(1)}k`;
+                  return `MYR 1,600`;
                 },
               },
               value: {
@@ -94,7 +94,7 @@ const DonutChart = () => {
       desktop: [15.1, 22.5, 4.4, 8.4],
       tablet: [25.1, 26.5, 1.4, 3.4],
       mobile: [45.1, 27.5, 8.4, 2.4],
-    }[checkbox.value] || [35.1, 23.5, 2.4, 5.4];
+    };
 
     if (checkbox.checked) {
       chart.updateSeries(newSeriesData); // Update chart with new data

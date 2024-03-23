@@ -6,6 +6,15 @@
     position: fixed;
     opacity: 0.8;
 }
+.backgroundbudget {
+    height: 100vw;
+    width: 200%;
+    object-position: center;
+    object-fit: cover;
+
+    position: fixed;
+    opacity: 0.8;
+}
 .profileModalContainer {
     width: 320px;
     height: 300px;
@@ -43,8 +52,47 @@
 
 
 .TransactionModalContainer {    
-    width: 900px;
-    height:max-content;
+    width: 50%;
+    min-width:fit-content;
+    height:90%;
+    border-radius: 12px;
+    overflow:scroll;
+    background-color: rgba(0, 0, 0, 0.63);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    @media screen and (max-width: 768px) {
+        
+        width: 100%;
+        height: 100%;
+        
+
+    }
+    
+
+    .body {
+        flex: 50%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Start from the top */
+    text-align: center;
+    }
+}
+
+
+    
+.BudgetTransactionModal {    
+    min-width:fit-content;
+    width: 30%;
+height: 80%;
+    max-height: fit-content;
+    overflow-y: auto;
     border-radius: 12px;
     background-color: rgba(0, 0, 0, 0.63);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -55,9 +103,59 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+z-index: 50;
     
+    @media screen and (max-width: 768px) {
+        
+        width: 100%;
+        height: 100%;
+        .bottom-content{
+            height: 150%;
+        }
 
+    }
+    .body {
+        flex: 50%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Start from the top */
+    text-align: center;
+    }
+}
+
+
+ 
+.BudgetPopUpModal {    
+    min-width:fit-content;
+    width: 30%;
+height: 80%;
+    max-height: fit-content;
+    overflow-y: auto;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.63);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+z-index: 50;
+    
+    @media screen and (max-width: 768px) {
+        
+        width: 100%;
+        height: 100%;
+        .bottom-content{
+            height: 150%;
+        }
+
+    }
+    .test{
+        margin-top: 185px;
+        margin-left: 55px;
+    }
     .body {
         flex: 50%;
     display: flex;

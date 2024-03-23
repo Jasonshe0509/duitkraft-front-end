@@ -71,7 +71,8 @@ height: max-content;    justify-content: center;
     /* justify-content: space-evenly; */
     
     overflow: auto;
-    height: max-content;    
+    height:max-content;  
+      
     font:white;
 }
 
@@ -94,12 +95,24 @@ height: max-content;    justify-content: center;
     justify-content: center;
     font:white;
 }
+
+.containerA{
+    width: 10%;
+    display: flex;
+    /* overflow: auto; */
+}
+
 .CourseBar{
     background-color: rgba(0, 0, 0, 0.215)
 }
+
 .TransBar{
-    background-color: rgba(128, 128, 128,0.1)
+    background-color: rgba(128, 128, 128,0.1);
+    width: 100%;
+  
 }
+
+
 .dashboard-container {
     overflow-x: auto;
     overflow-y: auto;
@@ -129,7 +142,16 @@ height: max-content;    justify-content: center;
     z-index: 5;
   
 }
-
+.weee{
+    filter:blur(50px);
+    -webkit-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+}
+select#underline_select option {
+    background-color: rgba(0, 0, 0, 0.889);
+    color: white; /* Optionally, you can change the text color */
+  }
 ::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
   }
@@ -329,6 +351,14 @@ font-size: 8px;
             flex-wrap: wrap;
 
     }
+
+    .containerA{
+        width: 10%;
+    }
+  
+.tolin{
+font: 800;
+}
     /* .dashboardbudget1_5
    {
     flex-wrap: wrap;

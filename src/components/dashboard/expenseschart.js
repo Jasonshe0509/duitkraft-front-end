@@ -36,7 +36,7 @@ const DonutChart = () => {
                 color: '#FFFFFF',
                 formatter: (w) => {
                   const sum = w.globals.seriesTotals.reduce((a, b) => a + b, 0);
-                  return `$${sum.toFixed(1)}k`;
+                  return `MYR 700`;
                 },
               },
               value: {

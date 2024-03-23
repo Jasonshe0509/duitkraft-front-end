@@ -34,7 +34,9 @@ module.exports = {
       'darkGray':'rgba(17,17,17,0.5)',
       'red':'#E3463C',
       'moncol':'#C95959',
-
+      
+      'whitew':'#FFFFFF',
+'transparent': 'transparent',
       'lightBlue':'#C7DDFF',
       'blackOpacity':'rgba(128, 128, 128, 0.1)',
       'grayOpacity':'rgba(50, 42, 42, 0.3)',

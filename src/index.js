@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import Login from './components/login and register/login.js';
-//  import Dashboard2 from './components/dashboard/Modal.js';
-import Dashboard from './components/dashboard/Modal.js';
+import Login from './components/dashboard/dashboard2.js';
+import Dashboard from './components/navigation/header.js';
 import Profile from './components/profilePage/profilePage.js';
 import {
   createBrowserRouter,
@@ -41,6 +40,7 @@ const router = createBrowserRouter([
     path: "test",
     element: <Chatbot />,
   },
+ 
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
