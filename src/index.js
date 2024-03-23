@@ -4,7 +4,6 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Login from './components/login and register/login';
 import Dashboard from './components/dashboard/dashboard.js';
-import Profile from './components/profilePage/profilePage.js';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -17,6 +16,7 @@ import CryptoNews from './components/news/cryptoNews.js'
 import CompanyNews from './components/news/companyNews.js'
 import FinanceNews from './components/news/financeNews.js';
 import EconomyNews from './components/news/economyNews.js';
+import ProfilePage from './components/profilePage/profilePage.js';
 
 Kommunicate.init("APP_ID", {
   automaticChatOpenOnNavigation: true,
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
   },
   {
     path: "profile",
-    element: <Profile />,
+    element: <ProfilePage />,
   },
   {
     path: "news",
