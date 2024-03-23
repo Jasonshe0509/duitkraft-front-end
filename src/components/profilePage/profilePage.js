@@ -13,7 +13,7 @@ import { MdLocalDrink } from "react-icons/md";
 import { PiBowlFoodFill } from "react-icons/pi";
 import { FaSquareParking, FaMoneyBillWave } from "react-icons/fa6";
 import { RiRedPacketFill } from "react-icons/ri";
-import { GiPayMoney } from "react-icons/gi";
+import { GiPayMoney, GiThreeFriends, GiSofa, GiCommercialAirplane   } from "react-icons/gi";
 import CategoryModal from './categoryModal';
 
 function ProfilePage() {
@@ -51,7 +51,8 @@ function ProfilePage() {
   //Filter Expenses, Income
   const [selectedFilter, setSelectedFilter] = useState('expenses');
   const categories = [
-    { text: 'Expenses', value: 'expenses', subCategories: [{ name: 'food', icon: PiBowlFoodFill }, { name: 'beverage', icon: MdLocalDrink }, { name: 'parking', icon: FaSquareParking }] },
+    { text: 'Expenses', value: 'expenses', subCategories: [{ name: 'food', icon: PiBowlFoodFill }, { name: 'beverage', icon: MdLocalDrink }, { name: 'parking', icon: FaSquareParking }, 
+    { name: 'social', icon: GiThreeFriends },{ name: 'amenities', icon: GiSofa  }, { name: 'travel', icon: GiCommercialAirplane  }] },
     { text: 'Income', value: 'income', subCategories: [{ name: 'pocket money', icon: RiRedPacketFill }, { name: 'salary', icon: FaMoneyBillWave }, { name: 'interest', icon: GiPayMoney }] },
   ];
 

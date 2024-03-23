@@ -6,13 +6,12 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [open, setOpen] = useState(true);
-  const Menus = [{ title: "Dashboard", icon: <HomeIcon className="w-6 h-6 text-fontColor" />, link: "/dashboard" },
+  const Menus = [{ title: "Dashboard", icon: <HomeIcon className="w-6 h-6 text-fontColor" />, link: "/edu-dashboard" },
   {
-    title: "Education", icon: <AcademicCapIcon className="w-6 h-6 text-fontColor" />,
-    submenu: true, submenuItems: [{ title: "Course", icon: <DocumentIcon className="w-6 h-6 text-fontColor" />, link: "/course" }, { title: "Module", icon: <DocumentDuplicateIcon className="w-6 h-6 text-fontColor" />, link: "/dashboard" }]
+    title: "Course", icon: <AcademicCapIcon className="w-6 h-6 text-fontColor"/>, link:"/course"
+    // submenu: true, submenuItems: [{ title: "Course", icon: <DocumentIcon className="w-6 h-6 text-fontColor" />, link: "/course" }, { title: "Module", icon: <DocumentDuplicateIcon className="w-6 h-6 text-fontColor" />, link: "/edu-dashboard" }]
   },
-  { title: "News", icon: <NewspaperIcon className="w-6 h-6 text-fontColor" />, link: "/news" },
-  { title: "Market Value", icon: <ChartBarIcon className="w-6 h-6 text-fontColor" />, link: "/dashboard" }];
+  { title: "News", icon: <NewspaperIcon className="w-6 h-6 text-fontColor" />, link: "/news" }];
 
 
 
@@ -24,7 +23,7 @@ const Navigation = () => {
             <div className="menuone right-0 mr-0 flex flex-col items-center justify-center h-full text-fontColor shadow-xl">></div>
           </div>
 
-          <Link to='/dashboard'>
+          <Link to='/edu-dashboard'>
             <div className={`logowithword w-12 h-12 text-fontColor p-1 ${open ? "" : "hidden"}`}></div>
             <div className={`logoonly w-12 h-12 text-fontColor p-1 ${open && "hidden"}`}></div>
           </Link>
@@ -37,7 +36,7 @@ const Navigation = () => {
           </Link>
           <div className="flex justify-center">
             <span className={`username2 text-fontColor focus:outline-none ${!open && "hidden"}`}>lvl1</span>
-            <span className={`username3 text-fontColor focus:outline-none ${!open && "hidden"}`}>hiadddaa</span>
+            <span className={`username3 text-fontColor focus:outline-none ${!open && "hidden"} pl-2`}>12/300xp</span>
           </div>
           <div className="lines"></div>
           <ul className="pt-1 text-fontColor margin-10 center">

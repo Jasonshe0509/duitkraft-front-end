@@ -9,6 +9,17 @@
   opacity: 0.8;
 }
 
+.backgroundbudget {
+  height: 100vw;
+  width: 200%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: fixed;
+  opacity: 0.8;
+}
+
 .profileModalContainer {
   width: 320px;
   height: 300px;
@@ -42,9 +53,48 @@
   text-align: center;
 }
 
-.accountModalContainer {
-  width: 350px;
-  height: 320px;
+.TransactionModalContainer {
+  width: 50%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 90%;
+  border-radius: 12px;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.63);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+@media screen and (max-width: 768px) {
+  .TransactionModalContainer {
+    width: 100%;
+    height: 100%;
+  }
+}
+.TransactionModalContainer .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: flex-start;
+  /* Start from the top */
+  text-align: center;
+}
+
+.BudgetTransactionModal {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: 30%;
+  height: 80%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  overflow-y: auto;
   border-radius: 12px;
   background-color: rgba(0, 0, 0, 0.63);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -55,73 +105,68 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 50;
 }
-@media screen and (width < 768px) {
-  .accountModalContainer {
-    width: 300px;
-    height: 300px;
+@media screen and (max-width: 768px) {
+  .BudgetTransactionModal {
+    width: 100%;
+    height: 100%;
+  }
+  .BudgetTransactionModal .bottom-content {
+    height: 150%;
   }
 }
-.accountModalContainer .header {
+.BudgetTransactionModal .body {
+  flex: 50%;
   display: flex;
-  justify-content: space-between;
-  padding: 10px 0 10px;
-  margin-top: -18px;
-}
-.accountModalContainer .account-box {
-  position: relative;
-  max-width: 400px;
-  padding-top: 20px;
-  align-items: center;
   justify-content: center;
-  display: flex;
+  /* Center horizontally */
+  align-items: flex-start;
+  /* Start from the top */
+  text-align: center;
 }
-@media screen and (width < 768px) {
-  .accountModalContainer .account-box {
-    padding-top: 10px;
+
+.BudgetPopUpModal {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: 30%;
+  height: 80%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  overflow-y: auto;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.63);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+@media screen and (max-width: 768px) {
+  .BudgetPopUpModal {
+    width: 100%;
+    height: 100%;
+  }
+  .BudgetPopUpModal .bottom-content {
+    height: 150%;
   }
 }
-.accountModalContainer .account-box .user-box {
-  position: relative;
+.BudgetPopUpModal .test {
+  margin-top: 185px;
+  margin-left: 55px;
 }
-.accountModalContainer .account-box .user-box input {
-  width: 110%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-}
-.accountModalContainer .account-box .user-box input:focus + label, .accountModalContainer .account-box .user-box input:valid + label {
-  top: -20px;
-  font-size: 14px;
-  color: #bdb8b8;
-}
-.accountModalContainer .account-box .user-box label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: 0.5s;
-}
-.accountModalContainer .account-box .saveBtn {
-  background-color: #6072f6;
-  border-radius: 30px;
+.BudgetPopUpModal .body {
+  flex: 50%;
   display: flex;
-  position: absolute;
-  left: 35%;
-}
-.accountModalContainer .account-box .saveBtn:hover {
-  background-color: #6f7bd1;
-}
-.accountModalContainer .account-box .saveBtn p {
-  margin: 10px 30px;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: flex-start;
+  /* Start from the top */
+  text-align: center;
 }
 
 .accountModalContainer {

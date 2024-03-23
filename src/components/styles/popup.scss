@@ -7,6 +7,16 @@
     opacity: 0.8;
 }
 
+.backgroundbudget {
+    height: 100vw;
+    width: 200%;
+    object-position: center;
+    object-fit: cover;
+
+    position: fixed;
+    opacity: 0.8;
+}
+
 .profileModalContainer {
     width: 320px;
     height: 300px;
@@ -42,9 +52,52 @@
     }
 }
 
-.accountModalContainer {
-    width: 350px;
-    height: 320px;
+
+.TransactionModalContainer {
+    width: 50%;
+    min-width: fit-content;
+    height: 90%;
+    border-radius: 12px;
+    overflow: scroll;
+    background-color: rgba(0, 0, 0, 0.63);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+
+    @media screen and (max-width: 768px) {
+
+        width: 100%;
+        height: 100%;
+
+
+    }
+
+
+    .body {
+        flex: 50%;
+        display: flex;
+        justify-content: center;
+        /* Center horizontally */
+        align-items: flex-start;
+        /* Start from the top */
+        text-align: center;
+    }
+}
+
+
+
+.BudgetTransactionModal {
+    min-width: fit-content;
+    width: 30%;
+    height: 80%;
+    max-height: fit-content;
+    overflow-y: auto;
     border-radius: 12px;
     background-color: rgba(0, 0, 0, 0.63);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -55,83 +108,74 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 50;
 
-    @media screen and (width<768px) {
-        width: 300px;
-        height: 300px;
+    @media screen and (max-width: 768px) {
+
+        width: 100%;
+        height: 100%;
+
+        .bottom-content {
+            height: 150%;
+        }
+
     }
 
-    .header {
+    .body {
+        flex: 50%;
         display: flex;
-        justify-content: space-between;
-        padding: 10px 0 10px;
-        margin-top: -18px;
-    }
-
-    .account-box {
-        position: relative;
-        max-width: 400px;
-        padding-top: 20px;
-        align-items: center;
         justify-content: center;
+        /* Center horizontally */
+        align-items: flex-start;
+        /* Start from the top */
+        text-align: center;
+    }
+}
+
+
+
+.BudgetPopUpModal {
+    min-width: fit-content;
+    width: 30%;
+    height: 80%;
+    max-height: fit-content;
+    overflow-y: auto;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.63);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+
+    @media screen and (max-width: 768px) {
+
+        width: 100%;
+        height: 100%;
+
+        .bottom-content {
+            height: 150%;
+        }
+
+    }
+
+    .test {
+        margin-top: 185px;
+        margin-left: 55px;
+    }
+
+    .body {
+        flex: 50%;
         display: flex;
-
-        @media screen and (width<768px) {
-            padding-top: 10px;
-        }
-
-        .user-box {
-            position: relative;
-
-            input {
-                width: 110%;
-                padding: 10px 0;
-                font-size: 16px;
-                color: #fff;
-                margin-bottom: 30px;
-                border: none;
-                border-bottom: 1px solid #fff;
-                outline: none;
-                background: transparent;
-
-                &:focus,
-                &:valid {
-                    +label {
-                        top: -20px;
-                        font-size: 14px;
-                        color: #bdb8b8;
-                    }
-                }
-            }
-
-            label {
-                position: absolute;
-                top: 0;
-                left: 0;
-                padding: 10px 0;
-                font-size: 16px;
-                color: #fff;
-                pointer-events: none;
-                transition: 0.5s;
-            }
-
-        }
-
-        .saveBtn {
-            background-color: #6072f6;
-            border-radius: 30px;
-            display: flex;
-            position: absolute;
-            left: 35%;
-
-            &:hover {
-                background-color: #6f7bd1;
-            }
-
-            p {
-                margin: 10px 30px;
-            }
-        }
+        justify-content: center;
+        /* Center horizontally */
+        align-items: flex-start;
+        /* Start from the top */
+        text-align: center;
     }
 }
 
@@ -557,6 +601,7 @@
                 display: flex;
                 align-items: center;
                 cursor: pointer;
+
                 input[type="radio"] {
                     display: none;
 
@@ -602,6 +647,7 @@
             }
         }
     }
+
     .submitBtn {
         background-color: #6072f6;
         border-radius: 30px;

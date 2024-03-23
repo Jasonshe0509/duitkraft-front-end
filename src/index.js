@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Login from './components/login and register/login';
-import Dashboard from './components/dashboard/dashboard.js';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Register from './components/login and register/register.js';
+import Chatbot from './components/chatbot/chatbot.js';
 import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
 import News from './components/news/news.js'
 import MarketNews from './components/news/marketNews.js'
@@ -22,6 +22,8 @@ import CourseDetails1 from './components/course/courseDetails.js';
 import CourseDetails2 from './components/course/courseDetails1.js';
 import CourseDetails3 from './components/course/courseDetails2.js';
 import ProfilePage from './components/profilePage/profilePage.js';
+import EduDashboard from './components/dashboard/dashboard.js';
+import BudgetDashboard from './components/dashboard/dashboard2.js';
 
 Kommunicate.init("APP_ID", {
   automaticChatOpenOnNavigation: true,
@@ -38,12 +40,20 @@ const router = createBrowserRouter([
     element: <Register />
   },
   {
-    path: "dashboard",
-    element: <Dashboard />,
+    path: "edu-dashboard",
+    element: <EduDashboard />,
+  },
+  {
+    path: "budget-dashboard",
+    element: <BudgetDashboard />,
   },
   {
     path: "profile",
     element: <ProfilePage />,
+  },
+  {
+    path: "test",
+    element: <Chatbot />,
   },
   {
     path: "news",

@@ -1,123 +1,401 @@
 .dashboardedu1 {
-    background-color: rgba(128, 128, 128,0.1);
+    background-color: rgba(128, 128, 128, 0.1);
     padding: 10px;
     width: 95%;
-    height: 40%;
+    height: max-content;
     justify-content: center;
-    font:white;
+    font: white;
+
 }
 
 .dashboardedu2 {
-    background-color: rgba(128, 128, 128,0.1);
+    background-color: rgba(128, 128, 128, 0.1);
     padding: 10px;
-    width: 95%;
-    height: 50%;
+    width: 94%;
+    max-height: 80%;
     justify-content: center;
-    font:white;
+    font: white;
     display: relative;
+    overflow-y: auto;
+    overflow-y: auto;
+    margin-bottom: 40px;
+
 }
+
+.sortby {
+    background-color: rgba(50, 42, 42, 0.3);
+    font-size: 11px;
+    font-weight: lighter;
+
+}
+
 .dashboardedu3 {
-    background-color: rgba(128, 128, 128,0.1);
-    width: 80%;    
+    background-color: rgba(128, 128, 128, 0.1);
+    width: 80%;
     padding: 10px;
-    height: 100px;
+    height: 100%;
     justify-content: center;
-    font:white;
-    overflow-y: auto; 
+    font: white;
+    overflow-y: auto;
     display: relative;
 
 }
+
+
+
+.dashboardbudget4 {
+    background-color: rgba(128, 128, 128, 0.1);
+    width: 80%;
+    min-width: max-content;
+    padding: 10px;
+    height: 100%;
+    justify-content: center;
+    font: white;
+    overflow-y: auto;
+    display: relative;
+    margin-top: 0px;
+
+
+}
+
+
+.dashboardbudget1 {
+    background-color: #8080801a;
+    width: 28%;
+    min-width: min-content;
+    height: max-content;
+    font: white;
+}
+
+.dashboardbudget1_5 {
+    /* background-color: rgba(128, 128, 128,0.1); */
+    /* padding: 10px; */
+    width: 100%;
+    /* justify-content: space-evenly; */
+
+    overflow: auto;
+    height: max-content;
+
+    font: white;
+}
+
+.dashboardbudget2_5 {
+
+    width: 100%;
+    overflow: auto;
+    height: max-content;
+    font: white;
+}
+
+
+
+.dashboardbudget2 {
+    background-color: rgba(128, 128, 128, 0.1);
+    width: 44.5%;
+    /* min-width:150px; */
+
+    height: max-content;
+    justify-content: center;
+    font: white;
+}
+
+.containerA {
+    width: 10%;
+    display: flex;
+    /* overflow: auto; */
+}
+
+.CourseBar {
+    background-color: rgba(0, 0, 0, 0.215)
+}
+
+.TransBar {
+    background-color: rgba(128, 128, 128, 0.1);
+    width: 100%;
+
+}
+
 
 .dashboard-container {
-    /* background-color: rgb(37, 164, 45); */
-    overflow-x: hidden;
-    overflow-y: hidden;
-    /* align-items: flex-start; */
+    overflow-x: auto;
+    overflow-y: auto;
     display: flex;
-    width:100%; /* Maximum width is 100% of the screen width minus the menu's minimum width */
-    max-width: calc(100% - 1%); /* Maximum width is 100% of the screen width minus the menu's minimum width */
+    max-width: calc(100% - 1%);
+    /* Maximum width is 100% of the screen width minus the menu's minimum width */
     min-width: calc(100% - 20%);
-    height: 85vh; /* Ensure the dashboard container fills the screen height */
+    height: 85vh;
+    /* Ensure the dashboard container fills the screen height */
 }
 
-.dashboard-container2{
-    width: 60%;      
-    /* background-color: rgb(132, 88, 88); */
+.dashboard-container2 {
+    width: 65%;
     z-index: 5;
-  
+
 }
 
-.dashboard-container3{
-    width: 38%;    
-     /* background-color: rgb(88, 93, 132); */
-}
-.dashboardedu3::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
-  }
-  
-  .dashboardedu3::-webkit-scrollbar-thumb {
-    background-color: #888; /* Color of the scrollbar thumb */
-    border-radius: 4px; /* Border radius of the scrollbar thumb */
-  }
-  
-  .dashboardedu3::-webkit-scrollbar-thumb:hover {
-    display: none;/* Color of the scrollbar thumb on hover */
-  }
 
-  
-  .dashboardedu3::-webkit-scrollbar-thumb:horizontal {
+
+.dashboard-container3 {
+    width: 38%;
+    /* background-color: rgb(88, 93, 132); */
+}
+
+
+.dashboard-container4 {
+    width: 30%;
+    z-index: 5;
+
+}
+
+.weee {
+    filter: blur(50px);
+    -webkit-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+}
+
+select#underline_select option {
+    background-color: rgba(0, 0, 0, 0.889);
+    color: white;
+    /* Optionally, you can change the text color */
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+.mycourse::-webkit-scrollbar {
     display: none;
+}
+
+.dashboardedu3::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Color of the scrollbar thumb */
+    border-radius: 4px;
+    /* Border radius of the scrollbar thumb */
+    /* height: 50px;   */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    display: none;
+    /* Color of the scrollbar thumb on hover */
+}
+
+
+::-webkit-scrollbar-thumb:horizontal {
+    display: none;
+}
+
+.difficult {
+    background-color: rgba(38, 38, 38, 0.587);
+    border-radius: 5px;
+    text-align: center;
+    /* Center the text horizontally */
+
+    font-size: 10px;
+    display: inline-block;
+}
+
+.continue {
+    background-color: rgba(159, 239, 0);
+    border-radius: 5px;
+    /* text-align: center; Center the text horizontally */
+    font-size: 10px;
+    display: inline-block;
+
+
+}
+
+.viewmore {
+    font-size: 10px;
+
+
+}
+
+.mycouse {
+    overflow-x: scroll;
+    overflow: auto;
+}
+
+.coursecat {
+    background-color: rgba(38, 38, 38, 0.587);
+    border-radius: 5px;
+    text-align: center;
+    /* Center the text horizontally */
+
+    font-size: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.courseblog {
+    background-color: rgba(2, 2, 2, 0.38);
+}
+
+.mySvg {
+    fill: rgb(90, 202, 29);
+    width: 50px;
+    height: 50px;
+}
+
+.fontsizexxs {
+    font-size: 8px;
+}
+
+.item {
+    background-color: rgba(128, 128, 128, 0.1);
+    margin-bottom: 5px;
+    padding: 10px 20px;
+}
+
+.title {
+    justify-content: space-between;
+    display: flex;
+    font: white;
+
+    cursor: pointer;
+
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+
+}
+
+.content.show {
+    height: auto;
+    max-height: 999px;
+    transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.tableNotCurrentPage {
+    margin-left: 2px;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 2px 2px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.tableNotCurrentPage:hover {
+    background-color: #9ca3af;
+    /* BlueGray lighter on hover */
+}
+
+.tableCurrentPage {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    /* Adjust font size as needed */
+    font-weight: 600;
+    /* Adjust font weight as needed */
+    color: black;
+    /* Change text color as needed */
+    background-color: var(--fontColor);
+    /* Change background color as needed */
+    border-radius: 0.25rem;
+    /* Adjust border radius as needed */
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
 
     .dashboardedu1 {
-        background-color: rgba(128, 128, 128,0.1);
+        background-color: rgba(128, 128, 128, 0.1);
         width: 93%;
-        height: 45%;
+        height: max-content;
         justify-content: center;
-        font:white;
+        font: white;
     }
-    
+
+    .dashboardbudget1 {
+        background-color: rgba(128, 128, 128, 0.1);
+        width: 93%;
+        height: max-content;
+        justify-content: center;
+        font: white;
+
+    }
+
+
+    .dashboardbudget2 {
+        width: 93%;
+        height: max-content;
+        justify-content: center;
+        font: white;
+
+    }
+
     .dashboardedu2 {
-        background-color: rgba(128, 128, 128,0.1);
+        background-color: rgba(128, 128, 128, 0.1);
         width: 93%;
-        height: 50%;
         justify-content: center;
-        font:white;
+        font: white;
     }
+
     .dashboardedu3 {
-        background-color: rgba(128, 128, 128,0.1);
-        width: 93%;    
-        height: 50%;
+        background-color: rgba(128, 128, 128, 0.1);
+        width: 93%;
         justify-content: center;
-        font:white;
-        overflow-y: hidden; 
-    
+        font: white;
+
+
     }
-    
- 
-    .dashboard-container{
+
+    .dashboardbudget4 {
+        width: 93%;
+    }
+
+
+    .dashboard-container {
         flex-wrap: wrap;
         overflow-y: auto;
         overflow-x: hidden;
-        max-height: max-content;
+        width: 90%;
 
     }
-    
-    
-    .dashboard-container2{
-        width: 100%;    
-        height: 100%;
+
+
+    .dashboard-container2 {
+        width: 100%;
+        padding: -10;
 
     }
-    
-    .dashboard-container3{
-        width: 100%;     
-        padding-top: 20px;
-        height: 100%;
-   
+
+    .dashboard-container3 {
+        width: 100%;
+        height: 120%;
+        /* margin-top: -20px; */
+
     }
-    
+
+    .dashboardbudget2_5 {
+        width: 100%;
+        flex-wrap: wrap;
+
+    }
+
+    .containerA {
+        width: 10%;
+    }
+
+    .tolin {
+        font: 800;
+    }
+
+    /* .dashboardbudget1_5
+   {
+    flex-wrap: wrap;
+   }  */
 
 }
