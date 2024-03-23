@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import IncomeChart from "./incomechart.js";
 import ExpensesChart from "./expenseschart.js";
 import { PiBowlFoodFill } from "react-icons/pi";
-import { GiPayMoney, GiThreeFriends, GiSofa, GiCommercialAirplane  } from "react-icons/gi";
+import {GiThreeFriends, GiSofa, GiCommercialAirplane  } from "react-icons/gi";
 import Chatbot from "../chatbot/chatbot.js";
 
 

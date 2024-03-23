@@ -1,4 +1,3 @@
-import registerIcon from "../assets/register success icon.png";
 import "../styles/popup.css";
 import "../styles/main.css";
 import "../dashboard/dashboard.css";
@@ -19,10 +18,6 @@ function BudgetPopUp({ onClose }) {
   };
   const handleSave = () => {
     setSessionVisible(1); // Switch to session 1
-  };
-
-  const hanldeCloseModal = () => {
-    onClose(false);
   };
 
   return (
@@ -702,10 +697,12 @@ function BudgetPopUp({ onClose }) {
                     <div className="flex justify-end  ">
                       <select id="underline_select" class="block mr-5 py-1 px-0 w-full text-s text-fontColor bg-transparent border-0 border-b-2 border-yellowtext appearance dark:text-blueGray-400 dark:border-blueGray focus:outline-none focus:ring-0 focus:border-blueGray-200 ">
                         <option selected></option>
-                        <option value="All" class="text-xs">Education</option>
                         <option value="FD" class="text-xs">Food</option>
+                        <option value="BV" class="text-xs">Beverage</option>
+                        <option value="P" class="text-xs">Parking</option>
                         <option value="SC" class="text-xs">Social</option>
                         <option value="AM" class="text-xs">Amenities</option>
+                        <option value="TV" class="text-xs">Travel</option>
                       </select>
                     </div>
                   </div>
@@ -812,8 +809,8 @@ function BudgetPopUp({ onClose }) {
                 <div className="cursor-pointer  rounded-lg py-2 CSave mr-2 w-3/4 text-yellowtext text-center rounded sortby cursor-pointer" onClick={onClose}>
                   Save
                 </div>
-                <div className="cursor-pointer rounded-lg  w-1/4 CSave px-5 py-2 text-fontColor text-center rounded sortby cursor-pointer" onClick={hanldeCloseModal}>
-                  Cancel
+                <div className="cursor-pointer rounded-lg  w-1/4 CSave px-5 py-2 text-fontColor text-center rounded sortby cursor-pointer">
+                  Continue
                 </div>
               </div>
             </div>

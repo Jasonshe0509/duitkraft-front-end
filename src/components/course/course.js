@@ -115,7 +115,7 @@ function Course() {
                                                                 (details.level === 'Intermediate' ? <div className="mt-2 mr-2 py-1.5 px-2 bg-lvlInt rounded-[20px]">{details.level}</div> : <div className="mt-2 mr-2 py-1.5 px-2 bg-lvlAdv rounded-[20px]">{details.level}</div>)
                                                             }
                                                             <div className="mt-2 mr-2 py-1.5 px-2 bg-courseSection rounded-[20px]">
-                                                                {details.section} sections
+                                                                {details.section} chapters
                                                             </div>
                                                             <div className="mt-2 mr-2 py-1.5 px-2 bg-duration rounded-[20px]">
                                                                 {details.duration} mins

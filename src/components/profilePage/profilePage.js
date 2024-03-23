@@ -9,7 +9,7 @@ import Chatbot from '../chatbot/chatbot';
 import EditProfileModal from './editProfileModal';
 import AccountModal from './accountModal';
 import ProVersionModal from './proVersionModal';
-import { MdLocalDrink } from "react-icons/md";
+import { MdLocalDrink, MdAutoGraph  } from "react-icons/md";
 import { PiBowlFoodFill } from "react-icons/pi";
 import { FaSquareParking, FaMoneyBillWave } from "react-icons/fa6";
 import { RiRedPacketFill } from "react-icons/ri";
@@ -53,7 +53,7 @@ function ProfilePage() {
   const categories = [
     { text: 'Expenses', value: 'expenses', subCategories: [{ name: 'food', icon: PiBowlFoodFill }, { name: 'beverage', icon: MdLocalDrink }, { name: 'parking', icon: FaSquareParking }, 
     { name: 'social', icon: GiThreeFriends },{ name: 'amenities', icon: GiSofa  }, { name: 'travel', icon: GiCommercialAirplane  }] },
-    { text: 'Income', value: 'income', subCategories: [{ name: 'pocket money', icon: RiRedPacketFill }, { name: 'salary', icon: FaMoneyBillWave }, { name: 'interest', icon: GiPayMoney }] },
+    { text: 'Income', value: 'income', subCategories: [{ name: 'Allowance', icon: RiRedPacketFill }, { name: 'salary', icon: FaMoneyBillWave }, { name: 'Bonus', icon: GiPayMoney },{name:'Investment', icon: MdAutoGraph }] },
   ];
 
   const handleFilterChange = (event) => {
@@ -189,7 +189,7 @@ function ProfilePage() {
                   <h2 className='text-fontColor'>Account</h2>
                   <div className='grid grid-cols-1 gap-3 w-full p-5 md:grid-cols-2'>
                     <div className='container3'>
-                      <p className='text-darkYellow'>Cash</p>
+                      <p className='text-darkYellow'>Bank</p>
                       <p className='text-fontColor'><span>MYR</span> 10000</p>
                     </div>
                     <div className='container3'>
@@ -197,7 +197,7 @@ function ProfilePage() {
                       <p className='text-fontColor'><span>MYR</span> 10000</p>
                     </div>
                     <div className='container3'>
-                      <p className='text-darkYellow'>Cash</p>
+                      <p className='text-darkYellow'>Touch N Go</p>
                       <p className='text-fontColor'><span>MYR</span> 10000</p>
                     </div>
                     {accounts.map((account, index) => (

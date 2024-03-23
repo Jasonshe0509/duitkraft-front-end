@@ -303,14 +303,18 @@ const EduDashboard = () => {
                       <p class="font-medium text-indigo-500 text-md">
                         🔥Data-Driven Investment Strategies: Unlocking Opportunities with Analytics
                       </p>
-                      <div class="flex flex-wrap items-center justify-starts">
-                        <div className="mt-2 mr-2 py-1 px-4 w-[100px] text-[12px] h-[24px] bg-lvlInt rounded-[20px]">Intermediate</div>
-                        <div className="mt-2 mr-2 py-1 px-5 w-[100px] text-[12px] h-[24px] bg-courseSection rounded-[20px]">5 chapters</div>
-                        <div className="mt-2 mr-2 py-1 px-5 w-[85px] text-[12px] h-[24px] bg-duration rounded-[20px]">60 mins</div>
-                        <div className='flex mt-2 mr-2 py-1 px-2  w-[68px] text-[12px] h-[24px] bg-experience rounded-[20px] justify-center'>
+                      <div class="flex flex-wrap items-center justify-starts text-xs text-center">
+                        <div className="mt-2 mr-2 py-1 px-2 bg-lvlInt rounded-[20px]">Intermediate</div>
+                        <div className="mt-2 mr-2 py-1 px-2 bg-courseSection rounded-[20px]">
+                          5 chapters
+                        </div>
+                        <div className="mt-2 mr-2 py-1 px-2 bg-duration rounded-[20px]">
+                          60 mins
+                        </div>
+                        <div className='flex mt-2 mr-2 py-1 px-2 bg-experience rounded-[20px] justify-center'>
                           <img src={logoOnly} alt='experience rate' width={'20px'} className='object-contain mr-[3px]'></img>
                           <div>
-                            +20
+                            + 20
                           </div>
                         </div>
                       </div>
@@ -328,16 +332,20 @@ const EduDashboard = () => {
                     <img alt="blog photo" src={cou3} class="object-cover w-full max-h-40" />
                     <div class="w-full p-4 courseblog mb-10">
                       <p class="font-medium text-indigo-500 text-md">
-                        🔥Data-Driven Investment Strategies: Unlocking Opportunities with Analytics
+                        🔥Sustainable Finance and Impact Investing: Driving Positive Change through Finance
                       </p>
-                      <div class="flex flex-wrap items-center justify-starts">
-                        <div className="mt-2 mr-2 py-1 px-3 w-[80px] text-[12px] h-[24px] bg-lvlAdv rounded-[20px]">Advanced</div>
-                        <div className="mt-2 mr-2 py-1 px-5 w-[105px] text-[12px] h-[24px] bg-courseSection rounded-[20px]">15 chapters</div>
-                        <div className="mt-2 mr-2 py-1 px-5 w-[90px] text-[12px] h-[24px] bg-duration rounded-[20px]">360 mins</div>
-                        <div className='flex mt-2 mr-2 py-1 px-2  w-[68px] text-[12px] h-[24px] bg-experience rounded-[20px] justify-center'>
+                      <div class="flex flex-wrap items-center justify-starts text-xs text-center">
+                        <div className="mt-2 mr-2 py-1 px-2 bg-lvlInt rounded-[20px]">Advanced</div>
+                        <div className="mt-2 mr-2 py-1 px-2 bg-courseSection rounded-[20px]">
+                          15 chapters
+                        </div>
+                        <div className="mt-2 mr-2 py-1 px-2 bg-duration rounded-[20px]">
+                          360 mins
+                        </div>
+                        <div className='flex mt-2 mr-2 py-1 px-2 bg-experience rounded-[20px] justify-center'>
                           <img src={logoOnly} alt='experience rate' width={'20px'} className='object-contain mr-[3px]'></img>
                           <div>
-                            +20
+                            + 30
                           </div>
                         </div>
                       </div>
