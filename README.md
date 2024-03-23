@@ -22,7 +22,7 @@ Our platform offers an array of incredible features designed to empower you on y
 2. **Budget Record System**
     * Take control of your finances like never before with our intuitive budget record system. Track your income, expenses, and savings effortlessly, and gain valuable insights into your spending habits. Set personalized financial goals, create budgets, and monitor your progress in real-time. With our powerful tools at your fingertips, achieving financial success is within reach.
 
-3. **Gamification Features**
+3. **Gamification Learning Features**
     * Say goodbye to boring finance lessons and budgeting websites! Welcome to DuitKraft, where learning about money is like playing a game. Just enter your income and spending to earn points and move up levels. No need to pay for courses—your progress unlocks new stuff. Want to speed things up? Use our special cards to level up faster. Join DuitKraft now and start your fun journey to mastering money!
 
 ## List of programming languages used
