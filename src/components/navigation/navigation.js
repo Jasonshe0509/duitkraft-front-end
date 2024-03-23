@@ -33,7 +33,7 @@ const Navigation = () => {
             <div >
               <img src={profile_image} className="w-16 h-16 m-2 rounded-full" />
             </div>
-            <div className={`username text-fontColor focus:outline-none ${!open && "hidden"}`}>username</div>
+            <div className={`username text-fontColor focus:outline-none ${!open && "hidden"}`}>bernard_ong</div>
           </Link>
           <div className="flex justify-center">
             <span className={`username2 text-fontColor focus:outline-none ${!open && "hidden"}`}>lvl1</span>

@@ -4,16 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Login from './components/login and register/login';
 import Dashboard from './components/dashboard/dashboard.js';
-import Profile from './components/profilePage/profilePage.js';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Register from './components/login and register/register.js';
-// import Chatbot from './components/chatbot/chatbot.js';
 import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
 import News from './components/news/news.js'
-import TestNews from './components/news/TestNews.js'
 import MarketNews from './components/news/marketNews.js'
 import CryptoNews from './components/news/cryptoNews.js'
 import CompanyNews from './components/news/companyNews.js'
@@ -24,6 +21,7 @@ import CourseOverview from './components/course/courseOverview.js';
 import CourseDetails1 from './components/course/courseDetails.js';
 import CourseDetails2 from './components/course/courseDetails1.js';
 import CourseDetails3 from './components/course/courseDetails2.js';
+import ProfilePage from './components/profilePage/profilePage.js';
 
 Kommunicate.init("APP_ID", {
   automaticChatOpenOnNavigation: true,
@@ -45,11 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "profile",
-    element: <Profile />,
-  },
-  {
-    path: "test",
-    element: <TestNews />,
+    element: <ProfilePage />,
   },
   {
     path: "news",

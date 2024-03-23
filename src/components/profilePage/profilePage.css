@@ -99,6 +99,12 @@
   pointer-events: none;
   transition: 0.5s;
 }
+.profileContainer .container2 .register-box .user-box .gender {
+  left: 51%;
+  top: -20px;
+  font-size: 14px;
+  color: #bdb8b8;
+}
 .profileContainer .container2 .container3 {
   background-color: rgba(128, 128, 128, 0.1);
   border-radius: 15px;

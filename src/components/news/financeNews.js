@@ -4,6 +4,7 @@ import Navigation from "../navigation/navigation";
 import Header from "../navigation/header";
 import news_bg from "../assets/bg2.png"
 import finance1 from "../assets/News/vanguard savers.webp"
+import Chatbot from '../chatbot/chatbot';
 
 function FinanceNews() {
     const financeTag = (
@@ -74,6 +75,7 @@ function FinanceNews() {
                     </div>
                 </div>
             </div>
+            <Chatbot/>
         </main>
     )
 }

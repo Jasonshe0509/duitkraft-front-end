@@ -4,6 +4,7 @@ import Navigation from "../navigation/navigation";
 import Header from "../navigation/header";
 import news_bg from "../assets/bg2.png"
 import company1 from "../assets/News/CISCO.webp"
+import Chatbot from '../chatbot/chatbot';
 
 function CompanyNews() {
     const companyTag = (
@@ -53,6 +54,7 @@ function CompanyNews() {
                     </div>
                 </div>
             </div>
+            <Chatbot/>
         </main>
     )
 }

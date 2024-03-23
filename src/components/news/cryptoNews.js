@@ -4,6 +4,7 @@ import Navigation from "../navigation/navigation";
 import Header from "../navigation/header";
 import news_bg from "../assets/bg2.png"
 import crypto1 from "../assets/News/Bitcoin and Ether Prices Fall.webp"
+import Chatbot from '../chatbot/chatbot';
 
 function CryptoNews() {
     const cryptoTag = (
@@ -63,6 +64,7 @@ function CryptoNews() {
                     </div>
                 </div>
             </div>
+            <Chatbot/>
         </main>
     )
 }

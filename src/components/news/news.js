@@ -10,8 +10,9 @@ import company1 from "../assets/News/CISCO.webp"
 import economy1 from "../assets/News/homebuilders.webp"
 import finance1 from "../assets/News/vanguard savers.webp"
 import { Link } from "react-router-dom";
+import Chatbot from '../chatbot/chatbot';
 
-function TestNews() {
+function News() {
     const trendingTag = (<div className="text-xs py-1.5 px-2 text-fontColor bg-hotTrends rounded-[20px]">🔥Trending</div>);
     const cryptoTag = (<div className="text-xs py-1.5 px-2 text-fontColor bg-darkYellow1 rounded-[20px] w-fit">Crypto</div>);
     const marketTag = (<div className="text-xs py-1.5 px-2 text-fontColor bg-darkRed rounded-[20px] w-fit">Market</div>);
@@ -222,8 +223,9 @@ function TestNews() {
                     </div>
                 </div>
             </div>
+            <Chatbot/>
         </main>
     );
 }
 
-export default TestNews;
+export default News;
