@@ -373,7 +373,7 @@
     }
 
     .purchaseBtn {
-        background-color: #12497b;
+        background-color: #6072f6;
         border-radius: 30px;
         display: flex;
         position: relative;
@@ -384,7 +384,7 @@
         transform: translate(-50%, 30%);
 
         &:hover {
-            background-color: #3b5d7e;
+            background-color: #6f7bd1;
         }
 
         p {
@@ -485,9 +485,6 @@
         }
 
         .container4 {
-            // background-color: transparent;
-            // border-radius: 15px;
-            // width: 100%;
             min-height: 50px;
             text-wrap: wrap;
             display: flex;
