@@ -9,6 +9,14 @@ import { PlusIcon, PencilIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24
 import EditProfileModal from './editProfileModal';
 import AccountModal from './accountModal';
 import ProVersionModal from './proVersionModal';
+import { MdLocalDrink } from "react-icons/md";
+import { PiBowlFoodFill } from "react-icons/pi";
+import { FaSquareParking, FaMoneyBillWave } from "react-icons/fa6";
+import { RiRedPacketFill } from "react-icons/ri";
+import { GiPayMoney } from "react-icons/gi";
+import CategoryModal from './categoryModal';
+import Select2 from 'react-select2';
+
 
 
 
@@ -34,6 +42,9 @@ function ProfilePage() {
   const [accounts, setAccounts] = useState([]);
 
   const [proVersionModalOpen, setProVersionModalOpen] = useState(false);
+
+  const [categoryModalOpen, setCategoryModalOpen] = useState(false);
+
 
   //Current Date
   const today = new Date();
@@ -75,6 +86,18 @@ function ProfilePage() {
 
   const handleAddAccount = (newAccount) => {
     setAccounts([...accounts, newAccount]);
+  };
+
+  //Filter Expenses, Income
+  const [selectedFilter, setSelectedFilter] = useState('expenses');
+  const categories = [
+    { text: 'Expenses', value: 'expenses', subCategories: [{ name: 'food', icon: PiBowlFoodFill }, { name: 'beverage', icon: MdLocalDrink }, { name: 'parking', icon: FaSquareParking }] },
+    { text: 'Income', value: 'income', subCategories: [{ name: 'pocket money', icon: RiRedPacketFill }, { name: 'salary', icon: FaMoneyBillWave }, { name: 'interest', icon: GiPayMoney }] },
+  ];
+
+  const handleFilterChange = (event) => {
+    console.log(event)
+    setSelectedFilter(event.target.value);
   };
   if (!mounted) {
     return '';
@@ -202,6 +225,44 @@ function ProfilePage() {
                     <div className="bg-red h-2.5 rounded-full w-[45%]" />
                   </div>
                 </div>
+                {/* Add Categories */}
+                <div className="row-span-3 container2 relative">
+                  <h2 className='text-fontColor h-fit'>Category</h2>
+                  <Select2 className='bg-grayOpacity text-fontColor p-2 rounded-[5px] text-[13px] flex absolute right-[3%] translate-y-[-90%] focus:border border-lightBlue hover:border border-lightBlue'
+                    value={selectedFilter} onClick={handleFilterChange}
+                    defaultValue={1}
+                    data={[
+                      { text: 'Expenses', id: 1, value: 'Expenses' },
+                      { text: 'Income', id: 2, value: 'Income' },
+                    ]}
+                  />
+                  <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 w-full pt-5'>
+                    {selectedFilter && (
+                      <>
+                        {categories.filter((category) =>
+                          category.value.toLowerCase().startsWith(selectedFilter.toLowerCase())
+                        ).map((category) => (
+                          <>
+                            {category.subCategories.map((subCategory) => (
+                              <div key={subCategory} className='container4'>
+                                <div className='bg-darkGray rounded-[50%] w-[50px] mr-[10px]'>
+                                  <subCategory.icon className='w-[25px] h-[25px] text-fontColor ml-1 mt-1 text-center translate-x-[33%] translate-y-[35%]'></subCategory.icon>
+                                </div>
+                                <p className='text-fontColor my-auto text-[18px]'>{subCategory.name}</p>
+                              </div>
+                            ))}
+                          </>
+                        ))}
+                      </>
+                    )}
+                    <div className='container4'>
+                      <div className='bg-darkGray rounded-[50%] w-[50px] mr-[10px] cursor-pointer' onClick={() => { setCategoryModalOpen(true); }}>
+                        <PlusIcon className='w-[30px] text-fontColor text-center translate-x-[33%] translate-y-[35%]'></PlusIcon>
+                      </div>
+                      <p className='text-fontColor my-auto text-[18px]'>category</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -211,8 +272,7 @@ function ProfilePage() {
       {success && <EditProfileModal />}
       {accountModalOpen && <AccountModal setOpenModal={setAccountModalOpen} handleAddAccount={handleAddAccount} />}
       {proVersionModalOpen && <ProVersionModal setOpenModal={setProVersionModalOpen} />}
-
-
+      {categoryModalOpen && <CategoryModal setOpenModal={setCategoryModalOpen} />}
     </main>
   );
 }
