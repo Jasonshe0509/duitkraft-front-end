@@ -6,6 +6,7 @@ import logoOnly from '../assets/sm_logo_only.png';
 import cou1 from '../assets/Course/Beginneer Level Financial Foundations Building Your Financial Future.png';
 import course_bg from '../assets/bg4.png';
 import { Link } from "react-router-dom";
+import Chatbot from '../chatbot/chatbot';
 
 function CourseOverview() {
     const Overviews = [
@@ -81,6 +82,7 @@ function CourseOverview() {
                     </div>
                 </div>
             </div>
+            <Chatbot/>
         </main>
 
     );

@@ -321,7 +321,7 @@
   margin-left: 20px;
 }
 .proVersionModalContainer .purchaseBtn {
-  background-color: #12497b;
+  background-color: #6072f6;
   border-radius: 30px;
   display: flex;
   position: relative;
@@ -332,7 +332,7 @@
   transform: translate(-50%, 30%);
 }
 .proVersionModalContainer .purchaseBtn:hover {
-  background-color: #3b5d7e;
+  background-color: #6f7bd1;
 }
 .proVersionModalContainer .purchaseBtn p {
   margin: 10px 30px;
@@ -442,6 +442,99 @@
   background-color: #6f7bd1;
 }
 .categoryModalContainer .account-box .saveBtn p {
+  margin: 10px 30px;
+}
+
+.quizModalContainer {
+  width: 500px;
+  height: 450px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.63);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (width < 768px) {
+  .quizModalContainer {
+    width: 350px;
+    height: 550px;
+  }
+}
+.quizModalContainer .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px;
+  margin-top: -18px;
+}
+.quizModalContainer .radio-container {
+  margin-left: 20px;
+  margin-top: 10px;
+  max-width: 450px;
+  color: white;
+}
+.quizModalContainer .radio-container .radio-wrapper {
+  margin-bottom: 20px;
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button input[type=radio] {
+  display: none;
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button input[type=radio]:checked ~ .radio-checkmark:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button .radio-checkmark {
+  display: inline-block;
+  position: relative;
+  min-width: 18px;
+  height: 18px;
+  margin-right: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button .radio-checkmark:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+.quizModalContainer .radio-container .radio-wrapper .radio-button .radio-label {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: justify;
+}
+.quizModalContainer .submitBtn {
+  background-color: #6072f6;
+  border-radius: 30px;
+  display: flex;
+  position: absolute;
+  left: 38%;
+  top: 80%;
+}
+@media screen and (width < 768px) {
+  .quizModalContainer .submitBtn {
+    left: 35%;
+    top: 80%;
+  }
+}
+.quizModalContainer .submitBtn:hover {
+  background-color: #6f7bd1;
+}
+.quizModalContainer .submitBtn p {
   margin: 10px 30px;
 }
 

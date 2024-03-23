@@ -500,7 +500,7 @@
             left: 38%;
 
             @media screen and (width<768px) {
-                left:30%;
+                left: 30%;
             }
 
             &:hover {
@@ -514,6 +514,118 @@
         }
     }
 }
-input[type="radio"]:checked ~ .container4 .icon {
+
+.quizModalContainer {
+    width: 500px;
+    height: 450px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.63);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media screen and (width<768px) {
+        width: 350px;
+        height: 550px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0 10px;
+        margin-top: -18px;
+    }
+
+    $color_1: white;
+    $background-color_1: #333;
+
+    .radio-container {
+        margin-left: 20px;
+        margin-top: 10px;
+        max-width: 450px;
+        color: $color_1;
+
+        .radio-wrapper {
+            margin-bottom: 20px;
+
+            .radio-button {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                input[type="radio"] {
+                    display: none;
+
+                    &:checked {
+                        ~ {
+                            .radio-checkmark {
+                                &:before {
+                                    transform: translate(-50%, -50%) scale(1);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .radio-checkmark {
+                    display: inline-block;
+                    position: relative;
+                    min-width: 18px;
+                    height: 18px;
+                    margin-right: 16px;
+                    border: 2px solid #ffffff;
+                    border-radius: 50%;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) scale(0);
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: white;
+                        transition: all 0.2s ease-in-out;
+                    }
+                }
+
+                .radio-label {
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+    .submitBtn {
+        background-color: #6072f6;
+        border-radius: 30px;
+        display: flex;
+        position: absolute;
+        left: 38%;
+        top: 80%;
+
+        @media screen and (width<768px) {
+            left: 35%;
+            top: 80%;
+        }
+
+        &:hover {
+            background-color: #6f7bd1;
+        }
+
+        p {
+            margin: 10px 30px;
+        }
+
+    }
+}
+
+input[type="radio"]:checked~.container4 .icon {
     color: #84c1f9;
 }
