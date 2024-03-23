@@ -5,7 +5,6 @@ import Navigation from "../navigation/navigation";
 import Header from "../navigation/header";
 import profile_bg from "../assets/bg3.png";
 import { PlusIcon, PencilIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid'
-import Select2 from 'react-select2';
 import Chatbot from '../chatbot/chatbot';
 import EditProfileModal from './editProfileModal';
 import AccountModal from './accountModal';
@@ -225,14 +224,14 @@ function ProfilePage() {
                 {/* Add Categories */}
                 <div className="row-span-3 container2 relative">
                   <h2 className='text-fontColor h-fit'>Category</h2>
-                  <Select2 className='bg-grayOpacity text-fontColor p-2 rounded-[5px] text-[13px] flex absolute right-[3%] translate-y-[-90%] focus:border border-lightBlue hover:border border-lightBlue'
-                    value={selectedFilter} onClick={handleFilterChange}
-                    defaultValue={1}
-                    data={[
-                      { text: 'Expenses', id: 1, value: 'Expenses' },
-                      { text: 'Income', id: 2, value: 'Income' },
-                    ]}
-                  />
+                  <select
+                    className='bg-grayOpacity text-fontColor p-2 rounded-[5px] text-[13px] flex absolute right-[3%] translate-y-[-90%] focus:border border-lightBlue hover:border border-lightBlue'
+                    value={selectedFilter}
+                    onChange={handleFilterChange}
+                  >
+                    <option value="expenses">Expenses</option>
+                    <option value="income">Income</option>
+                  </select>
                   {/* <Select2 className='bg-grayOpacity text-fontColor p-2 rounded-[5px] text-[13px] flex absolute right-[3%] translate-y-[-90%] focus:border border-lightBlue hover:border border-lightBlue'
                     value={selectedFilter} onChange={handleFilterChange} options={categories.map((option) => ({ value: option.value, label: option.text }))}
                     defaultValue={2}
