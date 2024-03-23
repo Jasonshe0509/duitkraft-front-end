@@ -15,7 +15,6 @@ import { FaSquareParking, FaMoneyBillWave } from "react-icons/fa6";
 import { RiRedPacketFill } from "react-icons/ri";
 import { GiPayMoney } from "react-icons/gi";
 import CategoryModal from './categoryModal';
-import Select2 from 'react-select2';
 
 function ProfilePage() {
   const [mounted, setMounted] = useState(false);
@@ -224,14 +223,14 @@ function ProfilePage() {
                 {/* Add Categories */}
                 <div className="row-span-3 container2 relative">
                   <h2 className='text-fontColor h-fit'>Category</h2>
-                  <Select2 className='bg-grayOpacity text-fontColor p-2 rounded-[5px] text-[13px] flex absolute right-[3%] translate-y-[-90%] focus:border border-lightBlue hover:border border-lightBlue'
-                    value={selectedFilter} onClick={handleFilterChange}
-                    defaultValue={1}
-                    data={[
-                      { text: 'Expenses', id: 1, value: 'Expenses' },
-                      { text: 'Income', id: 2, value: 'Income' },
-                    ]}
-                  />
+                  <select
+                    className='bg-grayOpacity text-fontColor p-2 rounded-[5px] text-[13px] flex absolute right-[3%] translate-y-[-90%] focus:border border-lightBlue hover:border border-lightBlue'
+                    value={selectedFilter}
+                    onChange={handleFilterChange}
+                  >
+                    <option value="expenses">Expenses</option>
+                    <option value="income">Income</option>
+                  </select>
                   <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 w-full pt-5'>
                     {selectedFilter && (
                       <>
