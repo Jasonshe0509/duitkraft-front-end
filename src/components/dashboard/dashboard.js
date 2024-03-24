@@ -256,7 +256,9 @@ const EduDashboard = () => {
                             <div className="py-1 px-4 w-[84px] h-[24px] bg-lvlBeg rounded-[20px]">Beginner</div>
                           </td>
                           <td className="border-t-0 px-1 align-middle border-l-0 border border-r-0 text-xs whitespace-nowrap ">
-                            <div className={`continue bg-continuebutton text-black  py-1 px-5  cursor-pointer text-clip font-medium  `}>Continue</div>
+                            <Link to='/course/financial-foundations-1'>
+                              <div className={`continue bg-continuebutton text-black  py-1 px-5  cursor-pointer text-clip font-medium  `}>Continue</div>
+                            </Link>
                           </td>
                         </tr>
 
@@ -275,7 +277,9 @@ const EduDashboard = () => {
                             <div className="py-1 px-4 w-[84px] h-[24px] bg-lvlBeg rounded-[20px]">Beginner</div>
                           </td>
                           <td className="border-t-0 px-1 align-middle border-l-0 border border-r-0 text-xs whitespace-nowrap ">
-                            <div className={`continue bg-continuebutton text-black  py-1 px-5  cursor-pointer text-clip font-medium  `}>Continue</div>
+                            <Link to='/course/financial-foundations-2'>
+                              <div className={`continue bg-continuebutton text-black  py-1 px-5  cursor-pointer text-clip font-medium  `}>Continue</div>
+                            </Link>
                           </td>
                         </tr>
                       </tbody>
